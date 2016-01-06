@@ -1,5 +1,5 @@
 //
-//  VCRURLSession.h
+//  VCRURLSessionRecorder.h
 //  VCRURLSession
 //
 //  Created by Plunien, Johannes on 06/01/16.
@@ -8,10 +8,12 @@
 
 #import <Foundation/Foundation.h>
 
-@interface VCRURLSession : NSObject
+@protocol VCRURLSessionRecorderDelegate;
+
+@interface VCRURLSessionRecorder : NSURLProtocol
 
 + (BOOL)isRecording;
-+ (void)startRecording;
++ (void)startRecordingWithDelegate:(id<VCRURLSessionRecorderDelegate>)delegate;
 + (void)stopRecording;
 
 @end
