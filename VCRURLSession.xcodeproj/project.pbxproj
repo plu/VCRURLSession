@@ -9,7 +9,18 @@
 /* Begin PBXBuildFile section */
 		670A40FA1C3CD85200613511 /* VCRURLSession.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 670A40F91C3CD85200613511 /* VCRURLSession.h */; };
 		670A40FC1C3CD85200613511 /* VCRURLSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 670A40FB1C3CD85200613511 /* VCRURLSession.m */; };
+		670A410B1C3CD9AB00613511 /* libVCRURLSession.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 670A40F61C3CD85200613511 /* libVCRURLSession.a */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		670A410C1C3CD9AB00613511 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 670A40EE1C3CD85200613511 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 670A40F51C3CD85200613511;
+			remoteInfo = VCRURLSession;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		670A40F41C3CD85200613511 /* CopyFiles */ = {
@@ -28,6 +39,8 @@
 		670A40F61C3CD85200613511 /* libVCRURLSession.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libVCRURLSession.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		670A40F91C3CD85200613511 /* VCRURLSession.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VCRURLSession.h; sourceTree = "<group>"; };
 		670A40FB1C3CD85200613511 /* VCRURLSession.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VCRURLSession.m; sourceTree = "<group>"; };
+		670A41061C3CD9AB00613511 /* VCRURLSessionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VCRURLSessionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		670A410A1C3CD9AB00613511 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +51,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		670A41031C3CD9AB00613511 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				670A410B1C3CD9AB00613511 /* libVCRURLSession.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -45,6 +66,7 @@
 			isa = PBXGroup;
 			children = (
 				670A40F81C3CD85200613511 /* VCRURLSession */,
+				670A41071C3CD9AB00613511 /* VCRURLSessionTests */,
 				670A40F71C3CD85200613511 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -53,6 +75,7 @@
 			isa = PBXGroup;
 			children = (
 				670A40F61C3CD85200613511 /* libVCRURLSession.a */,
+				670A41061C3CD9AB00613511 /* VCRURLSessionTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -64,6 +87,14 @@
 				670A40FB1C3CD85200613511 /* VCRURLSession.m */,
 			);
 			path = VCRURLSession;
+			sourceTree = "<group>";
+		};
+		670A41071C3CD9AB00613511 /* VCRURLSessionTests */ = {
+			isa = PBXGroup;
+			children = (
+				670A410A1C3CD9AB00613511 /* Info.plist */,
+			);
+			path = VCRURLSessionTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -86,6 +117,24 @@
 			productReference = 670A40F61C3CD85200613511 /* libVCRURLSession.a */;
 			productType = "com.apple.product-type.library.static";
 		};
+		670A41051C3CD9AB00613511 /* VCRURLSessionTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 670A410E1C3CD9AB00613511 /* Build configuration list for PBXNativeTarget "VCRURLSessionTests" */;
+			buildPhases = (
+				670A41021C3CD9AB00613511 /* Sources */,
+				670A41031C3CD9AB00613511 /* Frameworks */,
+				670A41041C3CD9AB00613511 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				670A410D1C3CD9AB00613511 /* PBXTargetDependency */,
+			);
+			name = VCRURLSessionTests;
+			productName = VCRURLSessionTests;
+			productReference = 670A41061C3CD9AB00613511 /* VCRURLSessionTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -96,6 +145,9 @@
 				ORGANIZATIONNAME = "Johannes Plunien";
 				TargetAttributes = {
 					670A40F51C3CD85200613511 = {
+						CreatedOnToolsVersion = 7.2;
+					};
+					670A41051C3CD9AB00613511 = {
 						CreatedOnToolsVersion = 7.2;
 					};
 				};
@@ -113,9 +165,20 @@
 			projectRoot = "";
 			targets = (
 				670A40F51C3CD85200613511 /* VCRURLSession */,
+				670A41051C3CD9AB00613511 /* VCRURLSessionTests */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		670A41041C3CD9AB00613511 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		670A40F21C3CD85200613511 /* Sources */ = {
@@ -126,7 +189,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		670A41021C3CD9AB00613511 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		670A410D1C3CD9AB00613511 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 670A40F51C3CD85200613511 /* VCRURLSession */;
+			targetProxy = 670A410C1C3CD9AB00613511 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		670A40FD1C3CD85200613511 /* Debug */ = {
@@ -227,6 +305,26 @@
 			};
 			name = Release;
 		};
+		670A410F1C3CD9AB00613511 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = VCRURLSessionTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.plunien.VCRURLSessionTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		670A41101C3CD9AB00613511 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = VCRURLSessionTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.plunien.VCRURLSessionTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -247,6 +345,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		670A410E1C3CD9AB00613511 /* Build configuration list for PBXNativeTarget "VCRURLSessionTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				670A410F1C3CD9AB00613511 /* Debug */,
+				670A41101C3CD9AB00613511 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
