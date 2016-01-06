@@ -1,0 +1,6 @@
+framework module Pods_VCRURLSessionTests {
+  umbrella header "Pods-VCRURLSessionTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
