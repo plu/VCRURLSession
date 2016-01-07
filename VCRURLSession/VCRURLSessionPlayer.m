@@ -77,8 +77,14 @@ static VCRURLSessionPlayerMode VCRURLSessionPlayerSharedMode = VCRURLSessionPlay
         return;
     }
 
-    [self.client URLProtocol:self didReceiveResponse:record.response cacheStoragePolicy:NSURLCacheStorageNotAllowed];
-    [self.client URLProtocol:self didLoadData:record.data];
+    if (record.response) {
+        [self.client URLProtocol:self didReceiveResponse:record.response cacheStoragePolicy:NSURLCacheStorageNotAllowed];
+    }
+
+    if (record.data) {
+        [self.client URLProtocol:self didLoadData:record.data];
+    }
+
     [self.client URLProtocolDidFinishLoading:self];
 }
 
