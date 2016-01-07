@@ -31,9 +31,17 @@ static NSString *VCRURLSessionRecordErrorKey = @"error";
     self = [super init];
     if (self) {
         _request = [[NSURLRequest alloc] VCRURLSession_initWithDictionary:recordDictionary[VCRURLSessionRecordRequestKey]];
-        _response = [[NSHTTPURLResponse alloc] VCRURLSession_initWithDictionary:recordDictionary[VCRURLSessionRecordResponseKey]];
-        _data = [_response VCRURLSession_decodedDataFromDictionary:recordDictionary[VCRURLSessionRecordResponseKey]];
-        _error = [[NSError alloc] VCRURLSession_initWithDictionary:recordDictionary[VCRURLSessionRecordErrorKey]];
+
+        NSDictionary *responseDictionary = recordDictionary[VCRURLSessionRecordResponseKey];
+        if (responseDictionary.count) {
+            _response = [[NSHTTPURLResponse alloc] VCRURLSession_initWithDictionary:responseDictionary];
+            _data = [_response VCRURLSession_decodedDataFromDictionary:responseDictionary];
+        }
+
+        NSDictionary *errorDictionary = recordDictionary[VCRURLSessionRecordErrorKey];
+        if (errorDictionary.count) {
+            _error = [[NSError alloc] VCRURLSession_initWithDictionary:errorDictionary];
+        }
     }
     return self;
 }
@@ -54,8 +62,8 @@ static NSString *VCRURLSessionRecordErrorKey = @"error";
 {
     return @{
         VCRURLSessionRecordErrorKey : self.error.VCRURLSession_dictionaryValue ?: @{},
-        VCRURLSessionRecordRequestKey : self.request.VCRURLSession_dictionaryValue,
-        VCRURLSessionRecordResponseKey : [self.response VCRURLSession_dictionaryValueWithData:self.data],
+        VCRURLSessionRecordRequestKey : self.request.VCRURLSession_dictionaryValue ?: @{},
+        VCRURLSessionRecordResponseKey : [self.response VCRURLSession_dictionaryValueWithData:self.data] ?: @{},
     };
 }
 

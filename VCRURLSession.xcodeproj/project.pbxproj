@@ -24,6 +24,7 @@
 		674770361C3D1A16004D0FCE /* VCRURLSessionSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 674770351C3D1A16004D0FCE /* VCRURLSessionSpec.swift */; };
 		674770381C3E0EAC004D0FCE /* VCRURLSessionCategoriesSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 674770371C3E0EAC004D0FCE /* VCRURLSessionCategoriesSpec.swift */; };
 		67693EFF1C3E4C610045F65B /* VCRURLSessionPlayerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67693EFE1C3E4C610045F65B /* VCRURLSessionPlayerSpec.swift */; };
+		67693F011C3E619A0045F65B /* errors.json in Resources */ = {isa = PBXBuildFile; fileRef = 67693F001C3E619A0045F65B /* errors.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +83,7 @@
 		674770371C3E0EAC004D0FCE /* VCRURLSessionCategoriesSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCRURLSessionCategoriesSpec.swift; sourceTree = "<group>"; };
 		67693EFD1C3E489A0045F65B /* VCRURLSessionPlayerMode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VCRURLSessionPlayerMode.h; sourceTree = "<group>"; };
 		67693EFE1C3E4C610045F65B /* VCRURLSessionPlayerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCRURLSessionPlayerSpec.swift; sourceTree = "<group>"; };
+		67693F001C3E619A0045F65B /* errors.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = errors.json; sourceTree = "<group>"; };
 		C7A80408B2E2BF41A26DC6CE /* Pods-VCRURLSessionTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VCRURLSessionTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VCRURLSessionTests/Pods-VCRURLSessionTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -182,6 +184,7 @@
 			isa = PBXGroup;
 			children = (
 				6725C10B1C3E38BF009AAE93 /* cassette1.json */,
+				67693F001C3E619A0045F65B /* errors.json */,
 			);
 			path = Cassettes;
 			sourceTree = "<group>";
@@ -297,6 +300,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				67693F011C3E619A0045F65B /* errors.json in Resources */,
 				6725C10C1C3E38BF009AAE93 /* cassette1.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

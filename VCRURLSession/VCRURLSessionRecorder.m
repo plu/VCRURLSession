@@ -80,10 +80,7 @@ static id<VCRURLSessionRecorderDelegate> VCRURLSessionRecorderSharedDelegate = n
                             }
                             [self.client URLProtocolDidFinishLoading:self];
 
-                            if ([response isKindOfClass:[NSHTTPURLResponse class]]) {
-                                NSHTTPURLResponse *httpURLResponse = (NSHTTPURLResponse *)response;
-                                [VCRURLSessionRecorderSharedDelegate recordRequest:self.request response:httpURLResponse data:data error:error];
-                            }
+                            [VCRURLSessionRecorderSharedDelegate recordRequest:self.request response:(NSHTTPURLResponse *)response data:data error:error];
                         }];
 
     [[self class] setProperty:task forKey:VCRURLSessionRecorderTaskKey inRequest:self.request.mutableCopy];

@@ -18,6 +18,60 @@ class VCRURLSessionSpec: QuickSpec {
             VCRURLSession.stopReplaying()
         }
 
+        describe("errors.json") {
+            describe("recording") {
+                pending("change `pending` to `describe` to generate the cassette") {
+                    it("records all requests") {
+                        let cassette = VCRURLSessionCassette()
+                        VCRURLSession.startRecordingOnCassette(cassette)
+
+                        // 1. Invalid port
+                        self.testSession.dataTaskWithRequest(NSMutableURLRequest.init(URL: NSURL.init(string: "http://localhost:70000/")!)).resume()
+                        expect(cassette.records.count).toEventually(equal(1))
+
+                        // 2. Invalid scheme
+                        self.testSession.dataTaskWithRequest(NSMutableURLRequest.init(URL: NSURL.init(string: "asdf://localhost/")!)).resume()
+                        expect(cassette.records.count).toEventually(equal(2))
+
+                        // 3. Invalid domain
+                        self.testSession.dataTaskWithRequest(NSMutableURLRequest.init(URL: NSURL.init(string: "http://invalid.plunien.com/")!)).resume()
+                        expect(cassette.records.count).toEventually(equal(3))
+
+                        cassette.writeToFile(VCRURLSessionTestsHelper.pathToCassetteWithName("errors.json"))
+                    }
+                }
+            }
+
+            describe("playing") {
+                it("plays all records in correct order") {
+                    var responseError: NSError?
+                    let cassette = VCRURLSessionCassette.init(contentsOfFile: VCRURLSessionTestsHelper.pathToCassetteWithName("errors.json"))
+                    VCRURLSession.startReplayingWithCassette(cassette, mode: .Normal)
+
+                    // 1. Invalid port
+                    self.testSession.dataTaskWithRequest(NSMutableURLRequest.init(URL: NSURL.init(string: "http://localhost:70000/")!), completionHandler: { (data, response, error) -> Void in
+                        responseError = error
+                    }).resume()
+                    expect(responseError?.code).toEventually(equal(-1004))
+                    expect(responseError?.localizedDescription).to(equal("Could not connect to the server."))
+
+                    // 2. Invalid scheme
+                    self.testSession.dataTaskWithRequest(NSMutableURLRequest.init(URL: NSURL.init(string: "asdf://localhost/")!), completionHandler: { (data, response, error) -> Void in
+                        responseError = error
+                    }).resume()
+                    expect(responseError?.code).toEventually(equal(-1002))
+                    expect(responseError?.localizedDescription).to(equal("unsupported URL"))
+
+                    // 3. Invalid domain
+                    self.testSession.dataTaskWithRequest(NSMutableURLRequest.init(URL: NSURL.init(string: "http://invalid.plunien.com/")!), completionHandler: { (data, response, error) -> Void in
+                        responseError = error
+                    }).resume()
+                    expect(responseError?.code).toEventually(equal(-1003))
+                    expect(responseError?.localizedDescription).to(equal("A server with the specified hostname could not be found."))
+                }
+            }
+        }
+
         describe("cassette1.json") {
             describe("recording") {
                 pending("run `ruby api.rb` and change `pending` to `describe` to generate the cassette") {

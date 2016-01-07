@@ -40,7 +40,7 @@ static NSString *VCRURLSessionResponseURLKey = @"url";
 {
     return @{
         VCRURLSessionResponseBodyKey : [self VCRURLSession_bodyValue:data],
-        VCRURLSessionResponseHeadersKey : self.allHeaderFields,
+        VCRURLSessionResponseHeadersKey : self.allHeaderFields ?: @{},
         VCRURLSessionResponseStatusCodeKey : @(self.statusCode),
         VCRURLSessionResponseURLKey : self.URL.absoluteString,
     };
