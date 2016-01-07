@@ -14,6 +14,15 @@ static NSString *VCRURLSessionRequestURLKey = @"url";
 
 @implementation NSURLRequest (VCRURLSession)
 
+- (instancetype)VCRURLSession_initWithDictionary:(NSDictionary *)dictionary
+{
+    NSURL *url = [[NSURL alloc] initWithString:dictionary[VCRURLSessionRequestURLKey]];
+    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:url];
+    request.HTTPMethod = dictionary[VCRURLSessionRequestMethodKey];
+    request.allHTTPHeaderFields = dictionary[VCRURLSessionRequestHeadersKey];
+    return request.copy;
+}
+
 - (NSDictionary *)VCRURLSession_dictionaryValue
 {
     return @{

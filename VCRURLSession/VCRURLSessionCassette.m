@@ -27,6 +27,19 @@
     return self;
 }
 
+- (instancetype)initWithContentsOfFile:(NSString *)path
+{
+    self = [self init];
+    if (self) {
+        NSData *data = [[NSData alloc] initWithContentsOfFile:path];
+        NSArray *records = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+        for (NSDictionary *recordDictionary in records) {
+            [self.data addObject:[[VCRURLSessionRecord alloc] initWithDictionary:recordDictionary]];
+        }
+    }
+    return self;
+}
+
 - (NSArray<VCRURLSessionRecord *> *)records
 {
     return self.data.copy;
@@ -55,6 +68,26 @@
 {
     VCRURLSessionRecord *record = [[VCRURLSessionRecord alloc] initWithRequest:request response:response data:data error:error];
     [self.data addObject:record];
+}
+
+#pragma mark - VCRURLSessionPlayerDelegate
+
+- (VCRURLSessionRecord *_Nullable)recordForRequest:(NSURLRequest *)request
+{
+    VCRURLSessionRecord *matchingRecord;
+    for (VCRURLSessionRecord *record in self.data) {
+        if (record.wasPlayedAlready) {
+            continue;
+        }
+
+        BOOL hasMatchingMethod = [record.request.HTTPMethod isEqualToString:request.HTTPMethod];
+        BOOL hasMatchingURL = [record.request.URL isEqual:request.URL];
+        if (hasMatchingMethod && hasMatchingURL) {
+            matchingRecord = record;
+            break;
+        }
+    }
+    return matchingRecord;
 }
 
 @end

@@ -12,6 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface NSHTTPURLResponse (VCRURLSession)
 
+- (instancetype)VCRURLSession_initWithDictionary:(NSDictionary *)dictionary;
+- (NSData *)VCRURLSession_decodedDataFromDictionary:(NSDictionary *)dictionary;
 - (NSDictionary *)VCRURLSession_dictionaryValueWithData:(NSData *_Nullable)data;
 
 @end

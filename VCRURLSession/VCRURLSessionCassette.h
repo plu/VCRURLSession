@@ -6,6 +6,7 @@
 //  Copyright © 2016 Johannes Plunien. All rights reserved.
 //
 
+#import "VCRURLSessionPlayerDelegate.h"
 #import "VCRURLSessionRecorderDelegate.h"
 #import <Foundation/Foundation.h>
 
@@ -13,10 +14,11 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface VCRURLSessionCassette : NSObject <VCRURLSessionRecorderDelegate>
+@interface VCRURLSessionCassette : NSObject <VCRURLSessionPlayerDelegate, VCRURLSessionRecorderDelegate>
 
 @property (nonatomic, readonly) NSArray<VCRURLSessionRecord *> *records;
 
+- (instancetype)initWithContentsOfFile:(NSString *)path;
 - (BOOL)writeToFile:(NSString *)path;
 
 @end

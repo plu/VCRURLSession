@@ -10,6 +10,11 @@
 
 @implementation NSError (VCRURLSession)
 
+- (instancetype)VCRURLSession_initWithDictionary:(NSDictionary *)dictionary
+{
+    return nil;
+}
+
 - (NSDictionary *)VCRURLSession_dictionaryValue
 {
     return @{};

@@ -18,6 +18,10 @@ NS_ASSUME_NONNULL_BEGIN
 + (void)startRecordingOnCassette:(VCRURLSessionCassette *)cassette;
 + (void)stopRecording;
 
++ (BOOL)isReplaying;
++ (void)startReplayingWithCassette:(VCRURLSessionCassette *)cassette;
++ (void)stopReplaying;
+
 + (NSURLSession *)prepareURLSession:(NSURLSession *)session;
 
 @end

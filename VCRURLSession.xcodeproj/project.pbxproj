@@ -13,6 +13,9 @@
 		670A410B1C3CD9AB00613511 /* libVCRURLSession.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 670A40F61C3CD85200613511 /* libVCRURLSession.a */; };
 		670A41191C3CDC9D00613511 /* VCRURLSessionRecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = 670A41181C3CDC9D00613511 /* VCRURLSessionRecorder.m */; };
 		670A411C1C3CDD0800613511 /* VCRURLSessionRecorderSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670A411B1C3CDD0800613511 /* VCRURLSessionRecorderSpec.swift */; };
+		6725C1051C3E23D4009AAE93 /* VCRURLSessionPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6725C1041C3E23D4009AAE93 /* VCRURLSessionPlayer.m */; };
+		6725C10A1C3E37A6009AAE93 /* VCRURLSessionTestsHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 6725C1091C3E37A6009AAE93 /* VCRURLSessionTestsHelper.m */; };
+		6725C10C1C3E38BF009AAE93 /* cassette1.json in Resources */ = {isa = PBXBuildFile; fileRef = 6725C10B1C3E38BF009AAE93 /* cassette1.json */; };
 		674770241C3D07B4004D0FCE /* VCRURLSessionCassette.m in Sources */ = {isa = PBXBuildFile; fileRef = 674770231C3D07B4004D0FCE /* VCRURLSessionCassette.m */; };
 		674770271C3D0AC3004D0FCE /* VCRURLSessionRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 674770261C3D0AC3004D0FCE /* VCRURLSessionRecord.m */; };
 		6747702A1C3D1301004D0FCE /* NSHTTPURLResponse+VCRURLSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 674770291C3D1301004D0FCE /* NSHTTPURLResponse+VCRURLSession.m */; };
@@ -57,6 +60,12 @@
 		670A41181C3CDC9D00613511 /* VCRURLSessionRecorder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VCRURLSessionRecorder.m; sourceTree = "<group>"; };
 		670A411A1C3CDD0700613511 /* VCRURLSessionTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "VCRURLSessionTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		670A411B1C3CDD0800613511 /* VCRURLSessionRecorderSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCRURLSessionRecorderSpec.swift; sourceTree = "<group>"; };
+		6725C1031C3E23D4009AAE93 /* VCRURLSessionPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VCRURLSessionPlayer.h; sourceTree = "<group>"; };
+		6725C1041C3E23D4009AAE93 /* VCRURLSessionPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VCRURLSessionPlayer.m; sourceTree = "<group>"; };
+		6725C1061C3E2485009AAE93 /* VCRURLSessionPlayerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VCRURLSessionPlayerDelegate.h; sourceTree = "<group>"; };
+		6725C1081C3E37A6009AAE93 /* VCRURLSessionTestsHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VCRURLSessionTestsHelper.h; sourceTree = "<group>"; };
+		6725C1091C3E37A6009AAE93 /* VCRURLSessionTestsHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VCRURLSessionTestsHelper.m; sourceTree = "<group>"; };
+		6725C10B1C3E38BF009AAE93 /* cassette1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = cassette1.json; sourceTree = "<group>"; };
 		6747701B1C3CF2DF004D0FCE /* VCRURLSessionRecorderDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VCRURLSessionRecorderDelegate.h; sourceTree = "<group>"; };
 		674770221C3D07B4004D0FCE /* VCRURLSessionCassette.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VCRURLSessionCassette.h; sourceTree = "<group>"; };
 		674770231C3D07B4004D0FCE /* VCRURLSessionCassette.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VCRURLSessionCassette.m; sourceTree = "<group>"; };
@@ -130,6 +139,9 @@
 				670A40FB1C3CD85200613511 /* VCRURLSession.m */,
 				674770221C3D07B4004D0FCE /* VCRURLSessionCassette.h */,
 				674770231C3D07B4004D0FCE /* VCRURLSessionCassette.m */,
+				6725C1031C3E23D4009AAE93 /* VCRURLSessionPlayer.h */,
+				6725C1041C3E23D4009AAE93 /* VCRURLSessionPlayer.m */,
+				6725C1061C3E2485009AAE93 /* VCRURLSessionPlayerDelegate.h */,
 				674770251C3D0AC3004D0FCE /* VCRURLSessionRecord.h */,
 				674770261C3D0AC3004D0FCE /* VCRURLSessionRecord.m */,
 				670A41171C3CDC9D00613511 /* VCRURLSessionRecorder.h */,
@@ -142,6 +154,8 @@
 		670A41071C3CD9AB00613511 /* VCRURLSessionTests */ = {
 			isa = PBXGroup;
 			children = (
+				6725C1071C3E3645009AAE93 /* Cassettes */,
+				6725C10D1C3E39C3009AAE93 /* Helper */,
 				670A411D1C3CDD2100613511 /* Resources */,
 				674770371C3E0EAC004D0FCE /* VCRURLSessionCategoriesSpec.swift */,
 				670A411B1C3CDD0800613511 /* VCRURLSessionRecorderSpec.swift */,
@@ -157,6 +171,23 @@
 				670A411A1C3CDD0700613511 /* VCRURLSessionTests-Bridging-Header.h */,
 			);
 			name = Resources;
+			sourceTree = "<group>";
+		};
+		6725C1071C3E3645009AAE93 /* Cassettes */ = {
+			isa = PBXGroup;
+			children = (
+				6725C10B1C3E38BF009AAE93 /* cassette1.json */,
+			);
+			path = Cassettes;
+			sourceTree = "<group>";
+		};
+		6725C10D1C3E39C3009AAE93 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				6725C1081C3E37A6009AAE93 /* VCRURLSessionTestsHelper.h */,
+				6725C1091C3E37A6009AAE93 /* VCRURLSessionTestsHelper.m */,
+			);
+			name = Helper;
 			sourceTree = "<group>";
 		};
 		674770311C3D1363004D0FCE /* Categories */ = {
@@ -261,6 +292,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6725C10C1C3E38BF009AAE93 /* cassette1.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -326,6 +358,7 @@
 				670A41191C3CDC9D00613511 /* VCRURLSessionRecorder.m in Sources */,
 				6747702A1C3D1301004D0FCE /* NSHTTPURLResponse+VCRURLSession.m in Sources */,
 				670A40FC1C3CD85200613511 /* VCRURLSession.m in Sources */,
+				6725C1051C3E23D4009AAE93 /* VCRURLSessionPlayer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -335,6 +368,7 @@
 			files = (
 				674770381C3E0EAC004D0FCE /* VCRURLSessionCategoriesSpec.swift in Sources */,
 				670A411C1C3CDD0800613511 /* VCRURLSessionRecorderSpec.swift in Sources */,
+				6725C10A1C3E37A6009AAE93 /* VCRURLSessionTestsHelper.m in Sources */,
 				674770361C3D1A16004D0FCE /* VCRURLSessionSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -453,6 +487,11 @@
 			baseConfigurationReference = C7A80408B2E2BF41A26DC6CE /* Pods-VCRURLSessionTests.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"COCOAPODS=1",
+					"CASSETTES_ROOT=\"\\\"$(SOURCE_ROOT)/VCRURLSessionTests/Cassettes\\\"\"",
+				);
 				INFOPLIST_FILE = VCRURLSessionTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = (

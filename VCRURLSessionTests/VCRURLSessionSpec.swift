@@ -11,32 +11,81 @@ import Nimble
 
 class VCRURLSessionSpec: QuickSpec {
     let testSession = VCRURLSession.prepareURLSession(NSURLSession.sharedSession())
-    let timeout = 5.0
-    let testURL = NSURL.init(string: "https://s3.eu-central-1.amazonaws.com/plu-test-responses/users.json")!
 
     override func spec() {
-        describe("startRecordingOnCassette") {
-            it("stores the record") {
-                let cassette = VCRURLSessionCassette()
-                VCRURLSession.startRecordingOnCassette(cassette)
-                self.testSession.dataTaskWithURL(self.testURL).resume()
-                expect(cassette.records.count).toEventually(equal(1), timeout: self.timeout)
+        afterEach {
+            VCRURLSession.stopRecording()
+            VCRURLSession.stopReplaying()
+        }
 
-                let record = cassette.records.first!
-                expect(record.data?.length).to(beGreaterThan(0))
-                expect(record.request).to(beAKindOf(NSURLRequest.self))
-                expect(record.response).to(beAKindOf(NSHTTPURLResponse.self))
-                expect(record.error).to(beNil())
+        describe("cassette1.json") {
+            describe("recording") {
+                pending("run `ruby api.rb` and change `pending` to `describe` to generate the cassette") {
+                    it("records all requests") {
+                        let cassette = VCRURLSessionCassette()
+                        VCRURLSession.startRecordingOnCassette(cassette)
+
+                        let getRequest = NSMutableURLRequest.init(URL: NSURL.init(string: "http://localhost:4567/")!)
+                        let postRequest = NSMutableURLRequest.init(URL: NSURL.init(string: "http://localhost:4567/")!)
+                        postRequest.HTTPMethod = "POST"
+
+                        // 1. GET /
+                        self.testSession.dataTaskWithRequest(getRequest).resume()
+                        expect(cassette.records.count).toEventually(equal(1))
+
+                        // 2. POST /
+                        postRequest.HTTPBody = "one".dataUsingEncoding(NSUTF8StringEncoding)
+                        self.testSession.dataTaskWithRequest(postRequest).resume()
+                        expect(cassette.records.count).toEventually(equal(2))
+
+                        // 3. POST /
+                        postRequest.HTTPBody = "two".dataUsingEncoding(NSUTF8StringEncoding)
+                        self.testSession.dataTaskWithRequest(postRequest).resume()
+                        expect(cassette.records.count).toEventually(equal(3))
+
+                        // 4. GET /
+                        self.testSession.dataTaskWithRequest(getRequest).resume()
+                        expect(cassette.records.count).toEventually(equal(4))
+
+                        cassette.writeToFile(VCRURLSessionTestsHelper.pathToCassetteWithName("cassette1.json"))
+                    }
+                }
             }
 
-            it("saves the cassette to file") {
-                let cassette = VCRURLSessionCassette()
-                VCRURLSession.startRecordingOnCassette(cassette)
-                self.testSession.dataTaskWithURL(self.testURL).resume()
-                expect(cassette.records.count).toEventually(equal(1), timeout: self.timeout)
+            describe("playing") {
+                it("plays all records in correct order") {
+                    var responseString: String?
+                    let cassette = VCRURLSessionCassette.init(contentsOfFile: VCRURLSessionTestsHelper.pathToCassetteWithName("cassette1.json"))
+                    VCRURLSession.startReplayingWithCassette(cassette)
 
-                cassette.writeToFile("/tmp/users.json")
-                expect(NSFileManager.defaultManager().fileExistsAtPath("/tmp/users.json")).to(beTrue())
+                    let getRequest = NSMutableURLRequest.init(URL: NSURL.init(string: "http://localhost:4567/")!)
+                    let postRequest = NSMutableURLRequest.init(URL: NSURL.init(string: "http://localhost:4567/")!)
+                    postRequest.HTTPMethod = "POST"
+
+                    // 1. GET /
+                    self.testSession.dataTaskWithRequest(getRequest, completionHandler: { (data, response, error) -> Void in
+                        responseString = String.init(data: data!, encoding: NSUTF8StringEncoding)
+                    }).resume()
+                    expect(responseString).toEventually(equal("[]"))
+
+                    // 2. POST /
+                    self.testSession.dataTaskWithRequest(postRequest, completionHandler: { (data, response, error) -> Void in
+                        responseString = String.init(data: data!, encoding: NSUTF8StringEncoding)
+                    }).resume()
+                    expect(responseString).toEventually(equal("Added new record: one"))
+
+                    // 3. POST /
+                    self.testSession.dataTaskWithRequest(postRequest, completionHandler: { (data, response, error) -> Void in
+                        responseString = String.init(data: data!, encoding: NSUTF8StringEncoding)
+                    }).resume()
+                    expect(responseString).toEventually(equal("Added new record: two"))
+
+                    // 4. GET /
+                    self.testSession.dataTaskWithRequest(getRequest, completionHandler: { (data, response, error) -> Void in
+                        responseString = String.init(data: data!, encoding: NSUTF8StringEncoding)
+                    }).resume()
+                    expect(responseString).toEventually(equal("[\"one\",\"two\"]"))
+                }
             }
         }
     }

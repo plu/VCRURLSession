@@ -16,6 +16,23 @@ static NSString *VCRURLSessionResponseURLKey = @"url";
 
 @implementation NSHTTPURLResponse (VCRURLSession)
 
+- (instancetype)VCRURLSession_initWithDictionary:(NSDictionary *)dictionary
+{
+    NSDictionary *headers = dictionary[VCRURLSessionResponseHeadersKey];
+    NSInteger statusCode = [dictionary[VCRURLSessionResponseStatusCodeKey] integerValue];
+    NSURL *url = [[NSURL alloc] initWithString:dictionary[VCRURLSessionResponseURLKey]];
+    return [[NSHTTPURLResponse alloc] initWithURL:url statusCode:statusCode HTTPVersion:@"HTTP/1.1" headerFields:headers];
+}
+
+- (NSData *)VCRURLSession_decodedDataFromDictionary:(NSDictionary *)dictionary
+{
+    NSString *body = dictionary[VCRURLSessionResponseBodyKey];
+    if ([self VCRURLSession_isJSONResponse] || [self VCRURLSession_isTextResponse]) {
+        return [body dataUsingEncoding:NSUTF8StringEncoding];
+    }
+    return [[NSData alloc] initWithBase64EncodedString:body options:0];
+}
+
 - (NSDictionary *)VCRURLSession_dictionaryValueWithData:(NSData *)data
 {
     return @{

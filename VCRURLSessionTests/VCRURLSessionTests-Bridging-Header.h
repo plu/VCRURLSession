@@ -10,3 +10,4 @@
 #import "VCRURLSessionRecord.h"
 #import "VCRURLSessionRecorder.h"
 #import "VCRURLSessionRecorderDelegate.h"
+#import "VCRURLSessionTestsHelper.h"

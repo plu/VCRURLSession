@@ -8,6 +8,8 @@
 
 #import "VCRURLSession.h"
 #import "VCRURLSessionCassette.h"
+#import "VCRURLSessionPlayer.h"
+#import "VCRURLSessionPlayerDelegate.h"
 #import "VCRURLSessionRecord.h"
 #import "VCRURLSessionRecorder.h"
 #import "VCRURLSessionRecorderDelegate.h"
@@ -30,7 +32,15 @@
     return sharedSession;
 }
 
-#pragma mark - Public methods
++ (NSURLSession *)prepareURLSession:(NSURLSession *)session
+{
+    NSURLSessionConfiguration *configuration = session.configuration.copy;
+    configuration.protocolClasses =
+        [@[ [VCRURLSessionPlayer class], [VCRURLSessionRecorder class] ] arrayByAddingObjectsFromArray:configuration.protocolClasses];
+    return [NSURLSession sessionWithConfiguration:configuration];
+}
+
+#pragma mark - Public recording methods
 
 + (BOOL)isRecording
 {
@@ -47,11 +57,21 @@
     [VCRURLSessionRecorder stopRecording];
 }
 
-+ (NSURLSession *)prepareURLSession:(NSURLSession *)session
+#pragma mark - Public replaying methods
+
++ (BOOL)isReplaying
 {
-    NSURLSessionConfiguration *configuration = session.configuration.copy;
-    configuration.protocolClasses = [@[ [VCRURLSessionRecorder class] ] arrayByAddingObjectsFromArray:configuration.protocolClasses];
-    return [NSURLSession sessionWithConfiguration:configuration];
+    return [VCRURLSessionPlayer isReplaying];
+}
+
++ (void)startReplayingWithCassette:(VCRURLSessionCassette *)cassette
+{
+    return [VCRURLSessionPlayer startReplayingWithDelegate:cassette];
+}
+
++ (void)stopReplaying
+{
+    [VCRURLSessionPlayer stopReplaying];
 }
 
 @end

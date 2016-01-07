@@ -26,6 +26,18 @@ static NSString *VCRURLSessionRecordErrorKey = @"error";
 
 @implementation VCRURLSessionRecord
 
+- (instancetype)initWithDictionary:(NSDictionary *)recordDictionary
+{
+    self = [super init];
+    if (self) {
+        _request = [[NSURLRequest alloc] VCRURLSession_initWithDictionary:recordDictionary[VCRURLSessionRecordRequestKey]];
+        _response = [[NSHTTPURLResponse alloc] VCRURLSession_initWithDictionary:recordDictionary[VCRURLSessionRecordResponseKey]];
+        _data = [_response VCRURLSession_decodedDataFromDictionary:recordDictionary[VCRURLSessionRecordResponseKey]];
+        _error = [[NSError alloc] VCRURLSession_initWithDictionary:recordDictionary[VCRURLSessionRecordErrorKey]];
+    }
+    return self;
+}
+
 - (instancetype)initWithRequest:(NSURLRequest *)request response:(NSHTTPURLResponse *)response data:(NSData *)data error:(NSError *)error
 {
     self = [super init];
