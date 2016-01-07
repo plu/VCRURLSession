@@ -47,7 +47,7 @@ static id<VCRURLSessionRecorderDelegate> VCRURLSessionRecorderSharedDelegate = n
 
 + (BOOL)canInitWithRequest:(NSURLRequest *)request
 {
-    return VCRURLSessionRecorderSharedDelegate != nil;
+    return [self isRecording];
 }
 
 + (NSURLRequest *)canonicalRequestForRequest:(NSURLRequest *)request
