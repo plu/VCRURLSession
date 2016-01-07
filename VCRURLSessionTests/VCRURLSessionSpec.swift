@@ -13,7 +13,7 @@ class VCRURLSessionSpec: QuickSpec {
     let testSession = VCRURLSession.prepareURLSession(NSURLSession.sharedSession())
 
     override func spec() {
-        afterEach {
+        beforeEach {
             VCRURLSession.stopRecording()
             VCRURLSession.stopReplaying()
         }

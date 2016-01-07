@@ -23,6 +23,11 @@ class VCRURLSessionRecorderSpec: QuickSpec {
     let testDelegate = VCRURLSessionRecorderTestDelegate()
 
     override func spec() {
+        beforeEach {
+            VCRURLSession.stopRecording()
+            VCRURLSession.stopReplaying()
+        }
+
         describe("stopRecording") {
             it("sets isRecording to false") {
                 VCRURLSessionRecorder.stopRecording()
