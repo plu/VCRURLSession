@@ -51,6 +51,11 @@
     return [data writeToFile:path atomically:YES];
 }
 
+- (NSString *)description
+{
+    return [NSString stringWithFormat:@"<%@:%p records:%zd>", NSStringFromClass([self class]), self, self.records.count];
+}
+
 #pragma mark - Private
 
 - (NSArray<NSDictionary *> *)dictionaryValues

@@ -67,4 +67,10 @@ static NSString *VCRURLSessionRecordErrorKey = @"error";
     };
 }
 
+- (NSString *)description
+{
+    return [NSString
+        stringWithFormat:@"<%@:%p url:%@ statusCode:%zd>", NSStringFromClass([self class]), self, self.request.URL.absoluteString, self.response.statusCode];
+}
+
 @end
