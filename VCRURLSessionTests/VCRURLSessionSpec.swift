@@ -56,7 +56,7 @@ class VCRURLSessionSpec: QuickSpec {
                 it("plays all records in correct order") {
                     var responseString: String?
                     let cassette = VCRURLSessionCassette.init(contentsOfFile: VCRURLSessionTestsHelper.pathToCassetteWithName("cassette1.json"))
-                    VCRURLSession.startReplayingWithCassette(cassette)
+                    VCRURLSession.startReplayingWithCassette(cassette, mode: .Normal)
 
                     let getRequest = NSMutableURLRequest.init(URL: NSURL.init(string: "http://localhost:4567/")!)
                     let postRequest = NSMutableURLRequest.init(URL: NSURL.init(string: "http://localhost:4567/")!)

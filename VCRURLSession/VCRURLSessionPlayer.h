@@ -6,6 +6,7 @@
 //  Copyright © 2016 Johannes Plunien. All rights reserved.
 //
 
+#import "VCRURLSessionPlayerMode.h"
 #import <Foundation/Foundation.h>
 
 @protocol VCRURLSessionPlayerDelegate;
@@ -15,7 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface VCRURLSessionPlayer : NSURLProtocol
 
 + (BOOL)isReplaying;
-+ (void)startReplayingWithDelegate:(id<VCRURLSessionPlayerDelegate>)delegate;
++ (void)startReplayingWithDelegate:(id<VCRURLSessionPlayerDelegate>)delegate mode:(VCRURLSessionPlayerMode)mode;
 + (void)stopReplaying;
 
 @end

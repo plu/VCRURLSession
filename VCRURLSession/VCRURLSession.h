@@ -7,6 +7,7 @@
 //
 
 #import "VCRURLSessionCassette.h"
+#import "VCRURLSessionPlayerMode.h"
 #import <Foundation/Foundation.h>
 
 NS_ASSUME_NONNULL_BEGIN
@@ -18,7 +19,7 @@ NS_ASSUME_NONNULL_BEGIN
 + (void)stopRecording;
 
 + (BOOL)isReplaying;
-+ (void)startReplayingWithCassette:(VCRURLSessionCassette *)cassette;
++ (void)startReplayingWithCassette:(VCRURLSessionCassette *)cassette mode:(VCRURLSessionPlayerMode)mode;
 + (void)stopReplaying;
 
 + (NSURLSession *)prepareURLSession:(NSURLSession *)session;

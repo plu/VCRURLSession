@@ -11,6 +11,7 @@
 #import "VCRURLSessionRecord.h"
 
 static id<VCRURLSessionPlayerDelegate> VCRURLSessionPlayerSharedDelegate = nil;
+static VCRURLSessionPlayerMode VCRURLSessionPlayerSharedMode = VCRURLSessionPlayerModeNormal;
 
 @implementation VCRURLSessionPlayer
 
@@ -26,9 +27,10 @@ static id<VCRURLSessionPlayerDelegate> VCRURLSessionPlayerSharedDelegate = nil;
     return VCRURLSessionPlayerSharedDelegate != nil;
 }
 
-+ (void)startReplayingWithDelegate:(id<VCRURLSessionPlayerDelegate>)delegate
++ (void)startReplayingWithDelegate:(id<VCRURLSessionPlayerDelegate>)delegate mode:(VCRURLSessionPlayerMode)mode
 {
     VCRURLSessionPlayerSharedDelegate = delegate;
+    VCRURLSessionPlayerSharedMode = mode;
 }
 
 + (void)stopReplaying
@@ -40,7 +42,14 @@ static id<VCRURLSessionPlayerDelegate> VCRURLSessionPlayerSharedDelegate = nil;
 
 + (BOOL)canInitWithRequest:(NSURLRequest *)request
 {
-    return [self isReplaying] && [VCRURLSessionPlayerSharedDelegate recordForRequest:request] != nil;
+    switch (VCRURLSessionPlayerSharedMode) {
+    // Handle only matching requests
+    case VCRURLSessionPlayerModeNormal:
+        return [VCRURLSessionPlayerSharedDelegate recordForRequest:request] != nil && [self isReplaying];
+    // Handle all requests as long as the delegate is set
+    case VCRURLSessionPlayerModeStrict:
+        return [self isReplaying];
+    }
 }
 
 + (NSURLRequest *)canonicalRequestForRequest:(NSURLRequest *)request
@@ -57,6 +66,8 @@ static id<VCRURLSessionPlayerDelegate> VCRURLSessionPlayerSharedDelegate = nil;
 {
     VCRURLSessionRecord *record = [VCRURLSessionPlayerSharedDelegate recordForRequest:self.request];
     if (!record) {
+        NSError *error = [NSError errorWithDomain:NSURLErrorDomain code:NSURLErrorNotConnectedToInternet userInfo:nil];
+        [self.client URLProtocol:self didFailWithError:error];
         return;
     }
 

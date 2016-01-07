@@ -64,9 +64,9 @@
     return [VCRURLSessionPlayer isReplaying];
 }
 
-+ (void)startReplayingWithCassette:(VCRURLSessionCassette *)cassette
++ (void)startReplayingWithCassette:(VCRURLSessionCassette *)cassette mode:(VCRURLSessionPlayerMode)mode
 {
-    return [VCRURLSessionPlayer startReplayingWithDelegate:cassette];
+    return [VCRURLSessionPlayer startReplayingWithDelegate:cassette mode:mode];
 }
 
 + (void)stopReplaying

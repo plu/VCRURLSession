@@ -79,6 +79,7 @@
 		6747702F1C3D135A004D0FCE /* NSError+VCRURLSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSError+VCRURLSession.m"; sourceTree = "<group>"; };
 		674770351C3D1A16004D0FCE /* VCRURLSessionSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCRURLSessionSpec.swift; sourceTree = "<group>"; };
 		674770371C3E0EAC004D0FCE /* VCRURLSessionCategoriesSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCRURLSessionCategoriesSpec.swift; sourceTree = "<group>"; };
+		67693EFD1C3E489A0045F65B /* VCRURLSessionPlayerMode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VCRURLSessionPlayerMode.h; sourceTree = "<group>"; };
 		C7A80408B2E2BF41A26DC6CE /* Pods-VCRURLSessionTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VCRURLSessionTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VCRURLSessionTests/Pods-VCRURLSessionTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -142,6 +143,7 @@
 				6725C1031C3E23D4009AAE93 /* VCRURLSessionPlayer.h */,
 				6725C1041C3E23D4009AAE93 /* VCRURLSessionPlayer.m */,
 				6725C1061C3E2485009AAE93 /* VCRURLSessionPlayerDelegate.h */,
+				67693EFD1C3E489A0045F65B /* VCRURLSessionPlayerMode.h */,
 				674770251C3D0AC3004D0FCE /* VCRURLSessionRecord.h */,
 				674770261C3D0AC3004D0FCE /* VCRURLSessionRecord.m */,
 				670A41171C3CDC9D00613511 /* VCRURLSessionRecorder.h */,
