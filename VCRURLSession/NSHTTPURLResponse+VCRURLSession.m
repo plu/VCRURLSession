@@ -12,6 +12,7 @@
 static NSString *VCRURLSessionResponseBodyKey = @"body";
 static NSString *VCRURLSessionResponseHeadersKey = @"headers";
 static NSString *VCRURLSessionResponseStatusCodeKey = @"statusCode";
+static NSString *VCRURLSessionResponseURLKey = @"url";
 
 @implementation NSHTTPURLResponse (VCRURLSession)
 
@@ -21,8 +22,11 @@ static NSString *VCRURLSessionResponseStatusCodeKey = @"statusCode";
         VCRURLSessionResponseBodyKey : [self VCRURLSession_bodyValue:data],
         VCRURLSessionResponseHeadersKey : self.allHeaderFields,
         VCRURLSessionResponseStatusCodeKey : @(self.statusCode),
+        VCRURLSessionResponseURLKey : self.URL.absoluteString,
     };
 }
+
+#pragma mark - Private
 
 - (id)VCRURLSession_bodyValue:(NSData *)data
 {

@@ -29,6 +29,13 @@ class VCRURLSessionCategoriesSpec: QuickSpec {
                     expect(result["statusCode"] as? Int).to(equal(statusCode))
                 }
 
+                it("stores url") {
+                    let response = NSHTTPURLResponse.init(URL: url, statusCode: statusCode, HTTPVersion: nil, headerFields: headers)
+                    let result: NSDictionary = response!.VCRURLSession_dictionaryValueWithData(nil)
+
+                    expect(result["url"] as? String).to(equal(url.absoluteString))
+                }
+
                 it("stores headers") {
                     let response = NSHTTPURLResponse.init(URL: url, statusCode: statusCode, HTTPVersion: nil, headerFields: headers)
                     let result: NSDictionary = response!.VCRURLSession_dictionaryValueWithData(nil)
