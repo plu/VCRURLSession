@@ -8,9 +8,13 @@
 
 #import <Foundation/Foundation.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
 @protocol VCRURLSessionRecorderDelegate <NSObject>
 
 @required
-- (void)recordRequest:(NSURLRequest *)request response:(NSHTTPURLResponse *)response data:(NSData *)data error:(NSError *)error;
+- (void)recordRequest:(NSURLRequest *)request response:(NSHTTPURLResponse *_Nullable)response data:(NSData *_Nullable)data error:(NSError *_Nullable)error;
 
 @end
+
+NS_ASSUME_NONNULL_END

@@ -8,10 +8,18 @@
 
 #import <Foundation/Foundation.h>
 
+@class VCRURLSessionCassette;
+
+NS_ASSUME_NONNULL_BEGIN
+
 @interface VCRURLSession : NSObject
 
 + (BOOL)isRecording;
-+ (void)startRecording;
++ (void)startRecordingOnCassette:(VCRURLSessionCassette *)cassette;
 + (void)stopRecording;
 
++ (NSURLSession *)prepareURLSession:(NSURLSession *)session;
+
 @end
+
+NS_ASSUME_NONNULL_END

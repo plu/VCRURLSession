@@ -18,11 +18,7 @@ class VCRURLSessionRecorderTestDelegate: NSObject, VCRURLSessionRecorderDelegate
 }
 
 class VCRURLSessionRecorderSpec: QuickSpec {
-    let testConfiguration: NSURLSessionConfiguration = {
-        let c = NSURLSessionConfiguration.defaultSessionConfiguration();
-        c.protocolClasses = [VCRURLSessionRecorder.self] as [AnyClass]
-        return c
-    }()
+    let testSession = VCRURLSession.prepareURLSession(NSURLSession.sharedSession())
     let testURL = NSURL.init(string: "http://www.google.com")!
     let testDelegate = VCRURLSessionRecorderTestDelegate()
 
@@ -52,7 +48,7 @@ class VCRURLSessionRecorderSpec: QuickSpec {
                     expect(error).to(beNil())
                 }
                 VCRURLSessionRecorder.startRecordingWithDelegate(self.testDelegate)
-                NSURLSession.init(configuration: self.testConfiguration).dataTaskWithURL(self.testURL).resume()
+                self.testSession.dataTaskWithURL(self.testURL).resume()
 
                 expect(recordHandlerCalled).toEventually(beTrue(), timeout: 5)
             }

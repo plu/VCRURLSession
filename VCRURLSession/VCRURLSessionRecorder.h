@@ -10,6 +10,8 @@
 
 @protocol VCRURLSessionRecorderDelegate;
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface VCRURLSessionRecorder : NSURLProtocol
 
 + (BOOL)isRecording;
@@ -17,3 +19,5 @@
 + (void)stopRecording;
 
 @end
+
+NS_ASSUME_NONNULL_END

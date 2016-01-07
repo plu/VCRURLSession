@@ -7,10 +7,14 @@
 //
 
 #import "VCRURLSession.h"
+#import "VCRURLSessionCassette.h"
+#import "VCRURLSessionRecord.h"
 #import "VCRURLSessionRecorder.h"
 #import "VCRURLSessionRecorderDelegate.h"
 
-@interface VCRURLSession () <VCRURLSessionRecorderDelegate>
+@interface VCRURLSession ()
+
+@property (nonatomic) VCRURLSessionCassette *cassette;
 
 @end
 
@@ -33,9 +37,9 @@
     return [VCRURLSessionRecorder isRecording];
 }
 
-+ (void)startRecording
++ (void)startRecordingOnCassette:(VCRURLSessionCassette *)cassette
 {
-    [VCRURLSessionRecorder startRecordingWithDelegate:[VCRURLSession sharedSession]];
+    [VCRURLSessionRecorder startRecordingWithDelegate:cassette];
 }
 
 + (void)stopRecording
@@ -43,10 +47,11 @@
     [VCRURLSessionRecorder stopRecording];
 }
 
-#pragma mark - VCRURLSessionRecorderDelegate
-
-- (void)recordRequest:(NSURLRequest *)request response:(NSURLResponse *)response data:(NSData *)data error:(NSError *)error
++ (NSURLSession *)prepareURLSession:(NSURLSession *)session
 {
+    NSURLSessionConfiguration *configuration = session.configuration.copy;
+    configuration.protocolClasses = [@[ [VCRURLSessionRecorder class] ] arrayByAddingObjectsFromArray:configuration.protocolClasses];
+    return [NSURLSession sessionWithConfiguration:configuration];
 }
 
 @end
