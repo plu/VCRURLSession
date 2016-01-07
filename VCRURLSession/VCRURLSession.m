@@ -52,9 +52,10 @@
     [VCRURLSessionRecorder startRecordingWithDelegate:cassette];
 }
 
-+ (void)stopRecording
++ (VCRURLSessionCassette *)stopRecording
 {
-    [VCRURLSessionRecorder stopRecording];
+    id<VCRURLSessionRecorderDelegate> delegate = [VCRURLSessionRecorder stopRecording];
+    return (VCRURLSessionCassette *)delegate;
 }
 
 #pragma mark - Public replaying methods

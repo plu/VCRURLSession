@@ -38,9 +38,11 @@ static id<VCRURLSessionRecorderDelegate> VCRURLSessionRecorderSharedDelegate = n
     VCRURLSessionRecorderSharedDelegate = delegate;
 }
 
-+ (void)stopRecording
++ (id<VCRURLSessionRecorderDelegate>)stopRecording
 {
+    id<VCRURLSessionRecorderDelegate> delegate = VCRURLSessionRecorderSharedDelegate;
     VCRURLSessionRecorderSharedDelegate = nil;
+    return delegate;
 }
 
 #pragma mark - Overridden methods

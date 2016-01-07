@@ -16,7 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (BOOL)isRecording;
 + (void)startRecordingWithDelegate:(id<VCRURLSessionRecorderDelegate>)delegate;
-+ (void)stopRecording;
++ (id<VCRURLSessionRecorderDelegate> _Nullable)stopRecording;
 
 @end
 
