@@ -26,8 +26,11 @@ static NSString *VCRURLSessionResponseURLKey = @"url";
 
 - (NSData *)VCRURLSession_decodedDataFromDictionary:(NSDictionary *)dictionary
 {
-    NSString *body = dictionary[VCRURLSessionResponseBodyKey];
-    if ([self VCRURLSession_isJSONResponse] || [self VCRURLSession_isTextResponse]) {
+    id body = dictionary[VCRURLSessionResponseBodyKey];
+    if ([self VCRURLSession_isJSONResponse] && [NSJSONSerialization isValidJSONObject:body]) {
+        return [NSJSONSerialization dataWithJSONObject:body options:0 error:nil];
+    }
+    if ([body isKindOfClass:[NSString class]] && [self VCRURLSession_isTextResponse]) {
         return [body dataUsingEncoding:NSUTF8StringEncoding];
     }
     return [[NSData alloc] initWithBase64EncodedString:body options:0];
