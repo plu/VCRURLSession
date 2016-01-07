@@ -7,6 +7,8 @@
 #import "NSURLRequest+VCRURLSession.h"
 #import "VCRURLSession.h"
 #import "VCRURLSessionCassette.h"
+#import "VCRURLSessionPlayer.h"
+#import "VCRURLSessionPlayerDelegate.h"
 #import "VCRURLSessionRecord.h"
 #import "VCRURLSessionRecorder.h"
 #import "VCRURLSessionRecorderDelegate.h"
