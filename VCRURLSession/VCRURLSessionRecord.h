@@ -17,7 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, readonly) NSData *_Nullable data;
 @property (nonatomic, readonly) NSError *_Nullable error;
 @property (nonatomic, readonly) NSDictionary *dictionaryValue;
-@property (nonatomic, getter=wasPlayedAlready) BOOL played;
+@property (nonatomic) BOOL played;
 
 - (instancetype)initWithDictionary:(NSDictionary *)recordDictionary;
 - (instancetype)initWithRequest:(NSURLRequest *)request

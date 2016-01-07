@@ -76,7 +76,7 @@
 {
     VCRURLSessionRecord *matchingRecord;
     for (VCRURLSessionRecord *record in self.data) {
-        if (record.wasPlayedAlready) {
+        if (record.played) {
             continue;
         }
 
