@@ -14,7 +14,7 @@ Pod::Spec.new do |s|
   s.default_subspec = 'Core'
   s.subspec 'Core' do |cs|
     cs.source_files = 'VCRURLSession/*.{h,m}'
-    cs.public_header_files = 'VCRURLSession/VCRURLSession.h'
+    cs.public_header_files = 'VCRURLSession/{VCRURLSession,VCRURLSessionCassette,VCRURLSessionPlayerDelegate,VCRURLSessionRecorderDelegate}.h'
   end
 
   s.subspec 'Dependencies' do |cs|

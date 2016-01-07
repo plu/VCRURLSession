@@ -6,9 +6,8 @@
 //  Copyright © 2016 Johannes Plunien. All rights reserved.
 //
 
+#import "VCRURLSessionCassette.h"
 #import <Foundation/Foundation.h>
-
-@class VCRURLSessionCassette;
 
 NS_ASSUME_NONNULL_BEGIN
 
