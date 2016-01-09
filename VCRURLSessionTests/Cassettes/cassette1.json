@@ -1,106 +1,108 @@
-[
-  {
-    "response" : {
-      "body" : "[]",
-      "headers" : {
-        "X-XSS-Protection" : "1; mode=block",
-        "X-Frame-Options" : "SAMEORIGIN",
-        "Content-Type" : "text\/html;charset=utf-8",
-        "Server" : "thin 1.5.1 codename Straight Razor",
-        "Content-Length" : "2",
-        "Connection" : "keep-alive",
-        "X-Content-Type-Options" : "nosniff"
+{
+  "records" : [
+    {
+      "response" : {
+        "body" : "[]",
+        "headers" : {
+          "X-XSS-Protection" : "1; mode=block",
+          "X-Frame-Options" : "SAMEORIGIN",
+          "Content-Type" : "text\/html;charset=utf-8",
+          "Server" : "thin 1.5.1 codename Straight Razor",
+          "Content-Length" : "2",
+          "Connection" : "keep-alive",
+          "X-Content-Type-Options" : "nosniff"
+        },
+        "statusCode" : 200,
+        "url" : "http:\/\/localhost:4567\/"
       },
-      "statusCode" : 200,
-      "url" : "http:\/\/localhost:4567\/"
-    },
-    "request" : {
-      "method" : "GET",
-      "url" : "http:\/\/localhost:4567\/",
-      "headers" : {
+      "request" : {
+        "method" : "GET",
+        "url" : "http:\/\/localhost:4567\/",
+        "headers" : {
+
+        }
+      },
+      "error" : {
 
       }
     },
-    "error" : {
-
-    }
-  },
-  {
-    "response" : {
-      "body" : "Added new record: one",
-      "headers" : {
-        "X-XSS-Protection" : "1; mode=block",
-        "X-Frame-Options" : "SAMEORIGIN",
-        "Content-Type" : "text\/html;charset=utf-8",
-        "Server" : "thin 1.5.1 codename Straight Razor",
-        "Content-Length" : "21",
-        "Connection" : "keep-alive",
-        "X-Content-Type-Options" : "nosniff"
+    {
+      "response" : {
+        "body" : "Added new record: one",
+        "headers" : {
+          "X-XSS-Protection" : "1; mode=block",
+          "X-Frame-Options" : "SAMEORIGIN",
+          "Content-Type" : "text\/html;charset=utf-8",
+          "Server" : "thin 1.5.1 codename Straight Razor",
+          "Content-Length" : "21",
+          "Connection" : "keep-alive",
+          "X-Content-Type-Options" : "nosniff"
+        },
+        "statusCode" : 200,
+        "url" : "http:\/\/localhost:4567\/"
       },
-      "statusCode" : 200,
-      "url" : "http:\/\/localhost:4567\/"
-    },
-    "request" : {
-      "method" : "POST",
-      "url" : "http:\/\/localhost:4567\/",
-      "headers" : {
-        "Content-Length" : "3"
-      }
-    },
-    "error" : {
-
-    }
-  },
-  {
-    "response" : {
-      "body" : "Added new record: two",
-      "headers" : {
-        "X-XSS-Protection" : "1; mode=block",
-        "X-Frame-Options" : "SAMEORIGIN",
-        "Content-Type" : "text\/html;charset=utf-8",
-        "Server" : "thin 1.5.1 codename Straight Razor",
-        "Content-Length" : "21",
-        "Connection" : "keep-alive",
-        "X-Content-Type-Options" : "nosniff"
+      "request" : {
+        "method" : "POST",
+        "url" : "http:\/\/localhost:4567\/",
+        "headers" : {
+          "Content-Length" : "3"
+        }
       },
-      "statusCode" : 200,
-      "url" : "http:\/\/localhost:4567\/"
-    },
-    "request" : {
-      "method" : "POST",
-      "url" : "http:\/\/localhost:4567\/",
-      "headers" : {
-        "Content-Length" : "3"
-      }
-    },
-    "error" : {
-
-    }
-  },
-  {
-    "response" : {
-      "body" : "[\"one\",\"two\"]",
-      "headers" : {
-        "X-XSS-Protection" : "1; mode=block",
-        "X-Frame-Options" : "SAMEORIGIN",
-        "Content-Type" : "text\/html;charset=utf-8",
-        "Server" : "thin 1.5.1 codename Straight Razor",
-        "Content-Length" : "13",
-        "Connection" : "keep-alive",
-        "X-Content-Type-Options" : "nosniff"
-      },
-      "statusCode" : 200,
-      "url" : "http:\/\/localhost:4567\/"
-    },
-    "request" : {
-      "method" : "GET",
-      "url" : "http:\/\/localhost:4567\/",
-      "headers" : {
+      "error" : {
 
       }
     },
-    "error" : {
+    {
+      "response" : {
+        "body" : "Added new record: two",
+        "headers" : {
+          "X-XSS-Protection" : "1; mode=block",
+          "X-Frame-Options" : "SAMEORIGIN",
+          "Content-Type" : "text\/html;charset=utf-8",
+          "Server" : "thin 1.5.1 codename Straight Razor",
+          "Content-Length" : "21",
+          "Connection" : "keep-alive",
+          "X-Content-Type-Options" : "nosniff"
+        },
+        "statusCode" : 200,
+        "url" : "http:\/\/localhost:4567\/"
+      },
+      "request" : {
+        "method" : "POST",
+        "url" : "http:\/\/localhost:4567\/",
+        "headers" : {
+          "Content-Length" : "3"
+        }
+      },
+      "error" : {
 
+      }
+    },
+    {
+      "response" : {
+        "body" : "[\"one\",\"two\"]",
+        "headers" : {
+          "X-XSS-Protection" : "1; mode=block",
+          "X-Frame-Options" : "SAMEORIGIN",
+          "Content-Type" : "text\/html;charset=utf-8",
+          "Server" : "thin 1.5.1 codename Straight Razor",
+          "Content-Length" : "13",
+          "Connection" : "keep-alive",
+          "X-Content-Type-Options" : "nosniff"
+        },
+        "statusCode" : 200,
+        "url" : "http:\/\/localhost:4567\/"
+      },
+      "request" : {
+        "method" : "GET",
+        "url" : "http:\/\/localhost:4567\/",
+        "headers" : {
+
+        }
+      },
+      "error" : {
+
+      }
     }
-  }
-]
+  ]
+}

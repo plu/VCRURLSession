@@ -9,6 +9,8 @@
 #import "VCRURLSessionCassette.h"
 #import "VCRURLSessionRecord.h"
 
+static NSString *VCRURLSessionCassetteRecordsKey = @"records";
+
 @interface VCRURLSessionCassette ()
 
 @property (nonatomic) NSMutableArray<VCRURLSessionRecord *> *data;
@@ -32,7 +34,8 @@
     self = [self init];
     if (self) {
         NSData *data = [[NSData alloc] initWithContentsOfFile:path];
-        NSArray *records = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+        NSDictionary *cassette = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+        NSArray *records = cassette[VCRURLSessionCassetteRecordsKey];
         for (NSDictionary *recordDictionary in records) {
             [self.data addObject:[[VCRURLSessionRecord alloc] initWithDictionary:recordDictionary]];
         }
@@ -58,13 +61,13 @@
 
 #pragma mark - Private
 
-- (NSArray<NSDictionary *> *)dictionaryValues
+- (NSDictionary *)dictionaryValues
 {
-    NSMutableArray *dictionaryValues = [NSMutableArray array];
+    NSMutableArray *records = [NSMutableArray array];
     for (VCRURLSessionRecord *record in self.data) {
-        [dictionaryValues addObject:record.dictionaryValue];
+        [records addObject:record.dictionaryValue];
     }
-    return dictionaryValues.copy;
+    return @{VCRURLSessionCassetteRecordsKey: records.copy};
 }
 
 #pragma mark - VCRURLSessionRecorderDelegate
