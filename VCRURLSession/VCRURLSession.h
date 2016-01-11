@@ -24,6 +24,7 @@ NS_ASSUME_NONNULL_BEGIN
 + (void)stopReplaying;
 
 + (NSURLSession *)prepareURLSession:(NSURLSession *)session;
++ (void)setStaticResponseHandler:(VCRURLSessionResponse *_Nullable (^)(NSURLRequest *request))handler;
 
 @end
 

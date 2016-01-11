@@ -13,31 +13,21 @@
 #import "VCRURLSessionRecord.h"
 #import "VCRURLSessionRecorder.h"
 #import "VCRURLSessionRecorderDelegate.h"
-
-@interface VCRURLSession ()
-
-@property (nonatomic) VCRURLSessionCassette *cassette;
-
-@end
+#import "VCRURLSessionSampler.h"
 
 @implementation VCRURLSession
-
-+ (instancetype)sharedSession
-{
-    static VCRURLSession *sharedSession;
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        sharedSession = [[self alloc] init];
-    });
-    return sharedSession;
-}
 
 + (NSURLSession *)prepareURLSession:(NSURLSession *)session
 {
     NSURLSessionConfiguration *configuration = session.configuration.copy;
-    configuration.protocolClasses =
-        [@[ [VCRURLSessionPlayer class], [VCRURLSessionRecorder class] ] arrayByAddingObjectsFromArray:configuration.protocolClasses];
+    NSArray *classes = @[ [VCRURLSessionSampler class], [VCRURLSessionPlayer class], [VCRURLSessionRecorder class] ];
+    configuration.protocolClasses = [classes arrayByAddingObjectsFromArray:configuration.protocolClasses];
     return [NSURLSession sessionWithConfiguration:configuration];
+}
+
++ (void)setStaticResponseHandler:(VCRURLSessionResponse *_Nullable (^)(NSURLRequest *request))handler
+{
+    [VCRURLSessionSampler setStaticResponseHandler:handler];
 }
 
 #pragma mark - Public recording methods

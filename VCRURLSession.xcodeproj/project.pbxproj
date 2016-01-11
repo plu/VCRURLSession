@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		36B89BA1F3385FF19A3AE8D2 /* Pods_VCRURLSessionTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03A4060C349BAFB7FE8114ED /* Pods_VCRURLSessionTests.framework */; };
 		3E8DFA381C4213D200634C5E /* VCRURLSessionResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8DFA371C4213D200634C5E /* VCRURLSessionResponse.m */; };
+		6707185A1C43CC990085372F /* VCRURLSessionSampler.m in Sources */ = {isa = PBXBuildFile; fileRef = 670718591C43CC990085372F /* VCRURLSessionSampler.m */; };
 		670A40FA1C3CD85200613511 /* VCRURLSession.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 670A40F91C3CD85200613511 /* VCRURLSession.h */; };
 		670A40FC1C3CD85200613511 /* VCRURLSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 670A40FB1C3CD85200613511 /* VCRURLSession.m */; };
 		670A410B1C3CD9AB00613511 /* libVCRURLSession.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 670A40F61C3CD85200613511 /* libVCRURLSession.a */; };
@@ -58,6 +59,8 @@
 		3E8DFA361C4213D200634C5E /* VCRURLSessionResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VCRURLSessionResponse.h; sourceTree = "<group>"; };
 		3E8DFA371C4213D200634C5E /* VCRURLSessionResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VCRURLSessionResponse.m; sourceTree = "<group>"; };
 		4E072C8473D6D5A899002B72 /* Pods-VCRURLSessionTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VCRURLSessionTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-VCRURLSessionTests/Pods-VCRURLSessionTests.release.xcconfig"; sourceTree = "<group>"; };
+		670718581C43CC990085372F /* VCRURLSessionSampler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VCRURLSessionSampler.h; sourceTree = "<group>"; };
+		670718591C43CC990085372F /* VCRURLSessionSampler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VCRURLSessionSampler.m; sourceTree = "<group>"; };
 		670A40F61C3CD85200613511 /* libVCRURLSession.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libVCRURLSession.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		670A40F91C3CD85200613511 /* VCRURLSession.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VCRURLSession.h; sourceTree = "<group>"; };
 		670A40FB1C3CD85200613511 /* VCRURLSession.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VCRURLSession.m; sourceTree = "<group>"; };
@@ -163,6 +166,8 @@
 				6747701B1C3CF2DF004D0FCE /* VCRURLSessionRecorderDelegate.h */,
 				3E8DFA361C4213D200634C5E /* VCRURLSessionResponse.h */,
 				3E8DFA371C4213D200634C5E /* VCRURLSessionResponse.m */,
+				670718581C43CC990085372F /* VCRURLSessionSampler.h */,
+				670718591C43CC990085372F /* VCRURLSessionSampler.m */,
 			);
 			path = VCRURLSession;
 			sourceTree = "<group>";
@@ -376,6 +381,7 @@
 				674770241C3D07B4004D0FCE /* VCRURLSessionCassette.m in Sources */,
 				674770301C3D135A004D0FCE /* NSError+VCRURLSession.m in Sources */,
 				6747702D1C3D1349004D0FCE /* NSURLRequest+VCRURLSession.m in Sources */,
+				6707185A1C43CC990085372F /* VCRURLSessionSampler.m in Sources */,
 				67FF72F61C438F55006772D6 /* NSData+VCRURLSession.m in Sources */,
 				674770271C3D0AC3004D0FCE /* VCRURLSessionRecord.m in Sources */,
 				670A41191C3CDC9D00613511 /* VCRURLSessionRecorder.m in Sources */,

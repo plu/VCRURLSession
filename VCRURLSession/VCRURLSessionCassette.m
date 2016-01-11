@@ -114,13 +114,6 @@ static NSString *VCRURLSessionCassetteUserInfoKey = @"userInfo";
 
 - (VCRURLSessionRecord *_Nullable)recordForRequest:(NSURLRequest *)request
 {
-    if (self.replayFilter) {
-        VCRURLSessionResponse *response = self.replayFilter(request);
-        if (response) {
-            return [[VCRURLSessionRecord alloc] initWithRequest:request response:response.httpResponse data:response.data error:response.error];
-        }
-    }
-
     VCRURLSessionRecord *matchingRecord;
     for (VCRURLSessionRecord *record in self.data) {
         if (record.played) {
