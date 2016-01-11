@@ -72,7 +72,7 @@ static NSString *VCRURLSessionCassetteUserInfoKey = @"userInfo";
     }
     return @{
         VCRURLSessionCassetteRecordsKey : records.copy,
-        VCRURLSessionCassetteUserInfoKey : self.userInfo,
+        VCRURLSessionCassetteUserInfoKey : self.userInfo ?: @{},
     };
 }
 
