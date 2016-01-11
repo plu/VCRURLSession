@@ -8,6 +8,7 @@
 
 #import "VCRURLSessionCassette.h"
 #import "VCRURLSessionPlayerMode.h"
+#import "VCRURLSessionResponse.h"
 #import <Foundation/Foundation.h>
 
 NS_ASSUME_NONNULL_BEGIN

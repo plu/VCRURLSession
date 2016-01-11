@@ -12,4 +12,5 @@
 #import "VCRURLSessionRecord.h"
 #import "VCRURLSessionRecorder.h"
 #import "VCRURLSessionRecorderDelegate.h"
+#import "VCRURLSessionResponse.h"
 #import "VCRURLSessionTestsHelper.h"

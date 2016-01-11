@@ -8,6 +8,7 @@
 
 #import "VCRURLSessionCassette.h"
 #import "VCRURLSessionRecord.h"
+#import "VCRURLSessionResponse.h"
 
 static NSString *VCRURLSessionCassetteRecordsKey = @"records";
 
@@ -67,21 +68,35 @@ static NSString *VCRURLSessionCassetteRecordsKey = @"records";
     for (VCRURLSessionRecord *record in self.data) {
         [records addObject:record.dictionaryValue];
     }
-    return @{VCRURLSessionCassetteRecordsKey: records.copy};
+    return @{VCRURLSessionCassetteRecordsKey : records.copy};
 }
 
 #pragma mark - VCRURLSessionRecorderDelegate
 
 - (void)recordRequest:(NSURLRequest *)request response:(NSHTTPURLResponse *)response data:(NSData *)data error:(NSError *)error
 {
-    VCRURLSessionRecord *record = [[VCRURLSessionRecord alloc] initWithRequest:request response:response data:data error:error];
-    [self.data addObject:record];
+    BOOL recordRequest = YES;
+    if (self.recordFilter && !self.recordFilter(request)) {
+        recordRequest = NO;
+    }
+
+    if (recordRequest) {
+        VCRURLSessionRecord *record = [[VCRURLSessionRecord alloc] initWithRequest:request response:response data:data error:error];
+        [self.data addObject:record];
+    }
 }
 
 #pragma mark - VCRURLSessionPlayerDelegate
 
 - (VCRURLSessionRecord *_Nullable)recordForRequest:(NSURLRequest *)request
 {
+    if (self.replayFilter) {
+        VCRURLSessionResponse *response = self.replayFilter(request);
+        if (response) {
+            return [[VCRURLSessionRecord alloc] initWithRequest:request response:response.httpResponse data:response.data error:response.error];
+        }
+    }
+
     VCRURLSessionRecord *matchingRecord;
     for (VCRURLSessionRecord *record in self.data) {
         if (record.played) {

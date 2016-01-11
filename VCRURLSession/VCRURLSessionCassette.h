@@ -11,11 +11,14 @@
 #import <Foundation/Foundation.h>
 
 @class VCRURLSessionRecord;
+@class VCRURLSessionResponse;
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface VCRURLSessionCassette : NSObject <VCRURLSessionPlayerDelegate, VCRURLSessionRecorderDelegate>
 
+@property (nonatomic, copy) BOOL (^recordFilter)(NSURLRequest *request);
+@property (nonatomic, copy) VCRURLSessionResponse *_Nullable (^replayFilter)(NSURLRequest *request);
 @property (nonatomic, readonly) NSArray<VCRURLSessionRecord *> *records;
 
 - (instancetype)initWithContentsOfFile:(NSString *)path;
