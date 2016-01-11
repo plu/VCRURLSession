@@ -14,6 +14,7 @@
     "submodules": true
   },
   "requires_arc": true,
+  "libraries": "z",
   "platforms": {
     "ios": "7.0"
   },
@@ -22,7 +23,7 @@
     {
       "name": "Core",
       "source_files": "VCRURLSession/*.{h,m}",
-      "public_header_files": "VCRURLSession/VCRURLSession.h"
+      "public_header_files": "VCRURLSession/{VCRURLSession,VCRURLSessionCassette,VCRURLSessionPlayerDelegate,VCRURLSessionRecorderDelegate,VCRURLSessionPlayerMode,VCRURLSessionResponse}.h"
     },
     {
       "name": "Dependencies"

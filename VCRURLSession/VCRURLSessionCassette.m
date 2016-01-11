@@ -6,6 +6,7 @@
 //  Copyright © 2016 Johannes Plunien. All rights reserved.
 //
 
+#import "NSData+VCRURLSession.h"
 #import "VCRURLSessionCassette.h"
 #import "VCRURLSessionRecord.h"
 #import "VCRURLSessionResponse.h"
@@ -31,11 +32,10 @@ static NSString *VCRURLSessionCassetteUserInfoKey = @"userInfo";
     return self;
 }
 
-- (instancetype)initWithContentsOfFile:(NSString *)path
+- (instancetype)initWithData:(NSData *)data
 {
     self = [self init];
     if (self) {
-        NSData *data = [[NSData alloc] initWithContentsOfFile:path];
         NSDictionary *cassette = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
         NSArray *records = cassette[VCRURLSessionCassetteRecordsKey];
         for (NSDictionary *recordDictionary in records) {
@@ -46,6 +46,16 @@ static NSString *VCRURLSessionCassetteUserInfoKey = @"userInfo";
     return self;
 }
 
+- (instancetype)initWithCompressedContentsOfFile:(NSString *)path
+{
+    return [self initWithData:[[[NSData alloc] initWithContentsOfFile:path] VCRURLSession_gunzippedData]];
+}
+
+- (instancetype)initWithContentsOfFile:(NSString *)path
+{
+    return [self initWithData:[[NSData alloc] initWithContentsOfFile:path]];
+}
+
 - (NSArray<VCRURLSessionRecord *> *)records
 {
     return self.data.copy;
@@ -53,8 +63,12 @@ static NSString *VCRURLSessionCassetteUserInfoKey = @"userInfo";
 
 - (BOOL)writeToFile:(NSString *)path
 {
-    NSData *data = [NSJSONSerialization dataWithJSONObject:self.dictionaryValues options:NSJSONWritingPrettyPrinted error:nil];
-    return [data writeToFile:path atomically:YES];
+    return [[self dataValue] writeToFile:path atomically:YES];
+}
+
+- (BOOL)writeCompressedToFile:(NSString *)path
+{
+    return [[[self dataValue] VCRURLSession_gzippedData] writeToFile:path atomically:YES];
 }
 
 - (NSString *)description
@@ -63,6 +77,11 @@ static NSString *VCRURLSessionCassetteUserInfoKey = @"userInfo";
 }
 
 #pragma mark - Private
+
+- (NSData *)dataValue
+{
+    return [NSJSONSerialization dataWithJSONObject:self.dictionaryValues options:NSJSONWritingPrettyPrinted error:nil];
+}
 
 - (NSDictionary *)dictionaryValues
 {

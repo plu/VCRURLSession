@@ -23,7 +23,9 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic) NSDictionary *_Nullable userInfo;
 
 - (instancetype)initWithContentsOfFile:(NSString *)path;
+- (instancetype)initWithCompressedContentsOfFile:(NSString *)path;
 - (BOOL)writeToFile:(NSString *)path;
+- (BOOL)writeCompressedToFile:(NSString *)path;
 
 @end
 

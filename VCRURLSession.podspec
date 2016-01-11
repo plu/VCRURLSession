@@ -8,6 +8,7 @@ Pod::Spec.new do |s|
   s.social_media_url = 'https://twitter.com/plutooth'
   s.source   = { :git => 'https://github.com/plu/VCRURLSession.git', :tag => s.version.to_s, :submodules => true }
   s.requires_arc = true
+  s.library = 'z'
 
   s.ios.deployment_target = '7.0'
 

@@ -27,6 +27,7 @@
 		67693EFF1C3E4C610045F65B /* VCRURLSessionPlayerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67693EFE1C3E4C610045F65B /* VCRURLSessionPlayerSpec.swift */; };
 		67693F011C3E619A0045F65B /* errors.json in Resources */ = {isa = PBXBuildFile; fileRef = 67693F001C3E619A0045F65B /* errors.json */; };
 		67FF72E71C435E9B006772D6 /* VCRURLSessionCassetteSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FF72E61C435E9B006772D6 /* VCRURLSessionCassetteSpec.swift */; };
+		67FF72F61C438F55006772D6 /* NSData+VCRURLSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 67FF72F51C438F55006772D6 /* NSData+VCRURLSession.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +90,8 @@
 		67693EFE1C3E4C610045F65B /* VCRURLSessionPlayerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCRURLSessionPlayerSpec.swift; sourceTree = "<group>"; };
 		67693F001C3E619A0045F65B /* errors.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = errors.json; sourceTree = "<group>"; };
 		67FF72E61C435E9B006772D6 /* VCRURLSessionCassetteSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCRURLSessionCassetteSpec.swift; sourceTree = "<group>"; };
+		67FF72F41C438F55006772D6 /* NSData+VCRURLSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+VCRURLSession.h"; sourceTree = "<group>"; };
+		67FF72F51C438F55006772D6 /* NSData+VCRURLSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+VCRURLSession.m"; sourceTree = "<group>"; };
 		C7A80408B2E2BF41A26DC6CE /* Pods-VCRURLSessionTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VCRURLSessionTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VCRURLSessionTests/Pods-VCRURLSessionTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -209,6 +212,8 @@
 		674770311C3D1363004D0FCE /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				67FF72F41C438F55006772D6 /* NSData+VCRURLSession.h */,
+				67FF72F51C438F55006772D6 /* NSData+VCRURLSession.m */,
 				6747702E1C3D135A004D0FCE /* NSError+VCRURLSession.h */,
 				6747702F1C3D135A004D0FCE /* NSError+VCRURLSession.m */,
 				674770281C3D1301004D0FCE /* NSHTTPURLResponse+VCRURLSession.h */,
@@ -371,6 +376,7 @@
 				674770241C3D07B4004D0FCE /* VCRURLSessionCassette.m in Sources */,
 				674770301C3D135A004D0FCE /* NSError+VCRURLSession.m in Sources */,
 				6747702D1C3D1349004D0FCE /* NSURLRequest+VCRURLSession.m in Sources */,
+				67FF72F61C438F55006772D6 /* NSData+VCRURLSession.m in Sources */,
 				674770271C3D0AC3004D0FCE /* VCRURLSessionRecord.m in Sources */,
 				670A41191C3CDC9D00613511 /* VCRURLSessionRecorder.m in Sources */,
 				3E8DFA381C4213D200634C5E /* VCRURLSessionResponse.m in Sources */,
