@@ -82,6 +82,7 @@ static id<VCRURLSessionRecorderDelegate> VCRURLSessionRecorderSharedDelegate = n
                             }
                             [self.client URLProtocolDidFinishLoading:self];
 
+                            [[self class] removePropertyForKey:VCRURLSessionRecorderTaskKey inRequest:self.request.mutableCopy];
                             [VCRURLSessionRecorderSharedDelegate recordRequest:self.request response:(NSHTTPURLResponse *)response data:data error:error];
                         }];
 
