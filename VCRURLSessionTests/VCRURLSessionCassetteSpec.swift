@@ -91,5 +91,18 @@ class VCRURLSessionCassetteSpec: QuickSpec {
                 expect(cassette.recordForRequest(request)?.response?.URL).to(equal(url))
             }
         }
+
+        describe("userInfo") {
+            it("stores and retrieves the userInfo dictionary") {
+                let path = NSTemporaryDirectory().stringByAppendingString("cassette.json")
+
+                let writeCassette = VCRURLSessionCassette()
+                writeCassette.userInfo = ["foo": "bar"]
+                writeCassette.writeToFile(path)
+
+                let readCassette = VCRURLSessionCassette.init(contentsOfFile: path)
+                expect(readCassette.userInfo as? Dictionary).to(equal(["foo": "bar"]))
+            }
+        }
     }
 }

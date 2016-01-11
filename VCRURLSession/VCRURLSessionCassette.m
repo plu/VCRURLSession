@@ -11,6 +11,7 @@
 #import "VCRURLSessionResponse.h"
 
 static NSString *VCRURLSessionCassetteRecordsKey = @"records";
+static NSString *VCRURLSessionCassetteUserInfoKey = @"userInfo";
 
 @interface VCRURLSessionCassette ()
 
@@ -40,6 +41,7 @@ static NSString *VCRURLSessionCassetteRecordsKey = @"records";
         for (NSDictionary *recordDictionary in records) {
             [self.data addObject:[[VCRURLSessionRecord alloc] initWithDictionary:recordDictionary]];
         }
+        self.userInfo = cassette[VCRURLSessionCassetteUserInfoKey];
     }
     return self;
 }
@@ -68,7 +70,10 @@ static NSString *VCRURLSessionCassetteRecordsKey = @"records";
     for (VCRURLSessionRecord *record in self.data) {
         [records addObject:record.dictionaryValue];
     }
-    return @{VCRURLSessionCassetteRecordsKey : records.copy};
+    return @{
+        VCRURLSessionCassetteRecordsKey : records.copy,
+        VCRURLSessionCassetteUserInfoKey : self.userInfo,
+    };
 }
 
 #pragma mark - VCRURLSessionRecorderDelegate
