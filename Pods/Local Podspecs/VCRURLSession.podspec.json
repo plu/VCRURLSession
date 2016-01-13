@@ -22,8 +22,8 @@
   "subspecs": [
     {
       "name": "Core",
-      "source_files": "VCRURLSession/*.{h,m}",
-      "public_header_files": "VCRURLSession/{VCRURLSession,VCRURLSessionCassette,VCRURLSessionPlayerDelegate,VCRURLSessionRecorderDelegate,VCRURLSessionPlayerMode,VCRURLSessionResponse}.h"
+      "source_files": "VCRURLSession/**/*.{h,m}",
+      "public_header_files": "VCRURLSession/*.h"
     },
     {
       "name": "Dependencies"

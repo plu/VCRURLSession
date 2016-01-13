@@ -1,5 +1,5 @@
 //
-//  VCRURLSessionPlayerMode.h
+//  VCRURLSessionReplayMode.h
 //  VCRURLSession
 //
 //  Created by Plunien, Johannes on 07/01/16.
@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-typedef NS_ENUM(NSUInteger, VCRURLSessionPlayerMode) {
-    VCRURLSessionPlayerModeNormal,
-    VCRURLSessionPlayerModeStrict,
+typedef NS_ENUM(NSUInteger, VCRURLSessionReplayMode) {
+    VCRURLSessionReplayModeNormal,
+    VCRURLSessionReplayModeStrict,
 };

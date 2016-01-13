@@ -11,7 +11,7 @@
 #import "VCRURLSessionRecord.h"
 
 static id<VCRURLSessionPlayerDelegate> VCRURLSessionPlayerSharedDelegate = nil;
-static VCRURLSessionPlayerMode VCRURLSessionPlayerSharedMode = VCRURLSessionPlayerModeNormal;
+static VCRURLSessionReplayMode VCRURLSessionPlayerSharedMode = VCRURLSessionReplayModeNormal;
 
 @implementation VCRURLSessionPlayer
 
@@ -27,7 +27,7 @@ static VCRURLSessionPlayerMode VCRURLSessionPlayerSharedMode = VCRURLSessionPlay
     return VCRURLSessionPlayerSharedDelegate != nil;
 }
 
-+ (void)startReplayingWithDelegate:(id<VCRURLSessionPlayerDelegate>)delegate mode:(VCRURLSessionPlayerMode)mode
++ (void)startReplayingWithDelegate:(id<VCRURLSessionPlayerDelegate>)delegate mode:(VCRURLSessionReplayMode)mode
 {
     VCRURLSessionPlayerSharedDelegate = delegate;
     VCRURLSessionPlayerSharedMode = mode;
@@ -44,10 +44,10 @@ static VCRURLSessionPlayerMode VCRURLSessionPlayerSharedMode = VCRURLSessionPlay
 {
     switch (VCRURLSessionPlayerSharedMode) {
     // Handle only matching requests
-    case VCRURLSessionPlayerModeNormal:
+    case VCRURLSessionReplayModeNormal:
         return [VCRURLSessionPlayerSharedDelegate recordForRequest:request] != nil && [self isReplaying];
     // Handle all requests as long as the delegate is set
-    case VCRURLSessionPlayerModeStrict:
+    case VCRURLSessionReplayModeStrict:
         return [self isReplaying];
     }
 }
