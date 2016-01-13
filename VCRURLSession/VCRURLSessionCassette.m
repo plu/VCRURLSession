@@ -16,6 +16,7 @@ static NSString *VCRURLSessionCassetteUserInfoKey = @"userInfo";
 
 @interface VCRURLSessionCassette ()
 
+@property (nonatomic) NSUInteger requestID;
 @property (nonatomic) NSMutableArray<VCRURLSessionRecord *> *data;
 @property (nonatomic, readonly) NSArray<NSDictionary *> *dictionaryValues;
 
@@ -28,6 +29,7 @@ static NSString *VCRURLSessionCassetteUserInfoKey = @"userInfo";
     self = [super init];
     if (self) {
         _data = [NSMutableArray array];
+        _requestID = 0;
     }
     return self;
 }
@@ -105,8 +107,9 @@ static NSString *VCRURLSessionCassetteUserInfoKey = @"userInfo";
     }
 
     if (recordRequest) {
-        VCRURLSessionRecord *record = [[VCRURLSessionRecord alloc] initWithRequest:request response:response data:data error:error];
+        VCRURLSessionRecord *record = [[VCRURLSessionRecord alloc] initWithRequestID:self.requestID request:request response:response data:data error:error];
         [self.data addObject:record];
+        self.requestID += 1;
     }
 }
 

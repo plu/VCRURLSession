@@ -83,7 +83,7 @@ class VCRURLSessionPlayerSpec: QuickSpec {
 
             it("return the error only") {
                 VCRURLSessionPlayer.startReplayingWithDelegate(self.testDelegate, mode: .Normal)
-                let record = VCRURLSessionRecord(request: NSURLRequest(), response: NSHTTPURLResponse(), data: NSData(), error: NSError(domain: "foo", code: 42, userInfo: nil))
+                let record = VCRURLSessionRecord(requestID: 0, request: NSURLRequest(), response: NSHTTPURLResponse(), data: NSData(), error: NSError(domain: "foo", code: 42, userInfo: nil))
                 self.testDelegate.recordForRequestHandler = {request in
                     return record
                 }

@@ -12,6 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface VCRURLSessionRecord : NSObject
 
+@property (nonatomic, readonly) NSUInteger requestID;
 @property (nonatomic, readonly) NSURLRequest *request;
 @property (nonatomic, readonly) NSHTTPURLResponse *_Nullable response;
 @property (nonatomic, readonly) NSData *_Nullable data;
@@ -20,10 +21,11 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic) BOOL played;
 
 - (instancetype)initWithDictionary:(NSDictionary *)recordDictionary;
-- (instancetype)initWithRequest:(NSURLRequest *)request
-                       response:(NSHTTPURLResponse *_Nullable)response
-                           data:(NSData *_Nullable)data
-                          error:(NSError *_Nullable)error;
+- (instancetype)initWithRequestID:(NSUInteger)requestID
+                          request:(NSURLRequest *)request
+                         response:(NSHTTPURLResponse *_Nullable)response
+                             data:(NSData *_Nullable)data
+                            error:(NSError *_Nullable)error;
 
 @end
 

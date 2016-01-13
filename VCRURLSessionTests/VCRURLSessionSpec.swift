@@ -46,7 +46,7 @@ class VCRURLSessionSpec: QuickSpec {
                 it("plays all records in correct order") {
                     var responseError: NSError?
                     let cassette = VCRURLSessionCassette.init(contentsOfFile: VCRURLSessionTestsHelper.pathToCassetteWithName("errors.json"))
-                    VCRURLSession.startReplayingWithCassette(cassette, mode: .Normal)
+                    VCRURLSession.startReplayingWithCassette(cassette, mode: .Strict)
 
                     // 1. Invalid port
                     self.testSession.dataTaskWithRequest(NSMutableURLRequest.init(URL: NSURL.init(string: "http://localhost:70000/")!), completionHandler: { (data, response, error) -> Void in
@@ -110,7 +110,7 @@ class VCRURLSessionSpec: QuickSpec {
                 it("plays all records in correct order") {
                     var responseString: String?
                     let cassette = VCRURLSessionCassette.init(contentsOfFile: VCRURLSessionTestsHelper.pathToCassetteWithName("cassette1.json"))
-                    VCRURLSession.startReplayingWithCassette(cassette, mode: .Normal)
+                    VCRURLSession.startReplayingWithCassette(cassette, mode: .Strict)
 
                     let getRequest = NSMutableURLRequest.init(URL: NSURL.init(string: "http://localhost:4567/")!)
                     let postRequest = NSMutableURLRequest.init(URL: NSURL.init(string: "http://localhost:4567/")!)

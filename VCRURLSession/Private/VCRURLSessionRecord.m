@@ -11,12 +11,14 @@
 #import "NSURLRequest+VCRURLSession.h"
 #import "VCRURLSessionRecord.h"
 
+static NSString *VCRURLSessionRecordRequestIDKey = @"requestID";
 static NSString *VCRURLSessionRecordRequestKey = @"request";
 static NSString *VCRURLSessionRecordResponseKey = @"response";
 static NSString *VCRURLSessionRecordErrorKey = @"error";
 
 @interface VCRURLSessionRecord ()
 
+@property (nonatomic) NSUInteger requestID;
 @property (nonatomic) NSURLRequest *request;
 @property (nonatomic) NSHTTPURLResponse *response;
 @property (nonatomic) NSData *data;
@@ -30,6 +32,7 @@ static NSString *VCRURLSessionRecordErrorKey = @"error";
 {
     self = [super init];
     if (self) {
+        _requestID = [recordDictionary[VCRURLSessionRecordRequestIDKey] unsignedIntegerValue];
         _request = [[NSURLRequest alloc] VCRURLSession_initWithDictionary:recordDictionary[VCRURLSessionRecordRequestKey]];
 
         NSDictionary *responseDictionary = recordDictionary[VCRURLSessionRecordResponseKey];
@@ -46,10 +49,15 @@ static NSString *VCRURLSessionRecordErrorKey = @"error";
     return self;
 }
 
-- (instancetype)initWithRequest:(NSURLRequest *)request response:(NSHTTPURLResponse *)response data:(NSData *)data error:(NSError *)error
+- (instancetype)initWithRequestID:(NSUInteger)requestID
+                          request:(NSURLRequest *)request
+                         response:(NSHTTPURLResponse *_Nullable)response
+                             data:(NSData *_Nullable)data
+                            error:(NSError *_Nullable)error
 {
     self = [super init];
     if (self) {
+        _requestID = requestID;
         _request = request;
         _response = response;
         _data = data;
@@ -62,6 +70,7 @@ static NSString *VCRURLSessionRecordErrorKey = @"error";
 {
     return @{
         VCRURLSessionRecordErrorKey : self.error.VCRURLSession_dictionaryValue ?: @{},
+        VCRURLSessionRecordRequestIDKey : @(self.requestID),
         VCRURLSessionRecordRequestKey : self.request.VCRURLSession_dictionaryValue ?: @{},
         VCRURLSessionRecordResponseKey : [self.response VCRURLSession_dictionaryValueWithData:self.data] ?: @{},
     };
@@ -69,8 +78,8 @@ static NSString *VCRURLSessionRecordErrorKey = @"error";
 
 - (NSString *)description
 {
-    return [NSString
-        stringWithFormat:@"<%@:%p url:%@ statusCode:%zd>", NSStringFromClass([self class]), self, self.request.URL.absoluteString, self.response.statusCode];
+    return [NSString stringWithFormat:@"<%@:%p requestID:%zd method:%@ url:%@ statusCode:%zd>", NSStringFromClass([self class]), self, self.requestID,
+                                      self.request.HTTPMethod, self.request.URL.absoluteString, self.response.statusCode];
 }
 
 @end
