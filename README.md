@@ -100,14 +100,14 @@ When replaying them, it will consume them in the same order they were recorded.
 	Example:
 
 	```objc
-        [VCRURLSession setStaticResponseHandler:^VCRURLSessionResponse *_Nullable(NSURLRequest *_Nonnull request) {
-            NSString *contentType = request.allHTTPHeaderFields[@"Content-Type"];
-            if ([contentType hasPrefix:@"image/"]) {
-                NSData *imageData = UIImagePNGRepresentation([UIImage imageNamed:@"test_image"]);
-                return [VCRURLSessionResponse responseWithURL:request.URL statusCode:200 headerFields:nil data:imageData error:nil];
-            }
-            return nil;
-        }];
+   [VCRURLSession setStaticResponseHandler:^VCRURLSessionResponse *_Nullable(NSURLRequest *_Nonnull request) {
+       NSString *contentType = request.allHTTPHeaderFields[@"Content-Type"];
+       if ([contentType hasPrefix:@"image/"]) {
+           NSData *imageData = UIImagePNGRepresentation([UIImage imageNamed:@"test_image"]);
+           return [VCRURLSessionResponse responseWithURL:request.URL statusCode:200 headerFields:nil data:imageData error:nil];
+       }
+       return nil;
+   }];
 	```
 
 * **Recording filter**
