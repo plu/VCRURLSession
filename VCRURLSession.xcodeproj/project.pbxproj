@@ -18,6 +18,7 @@
 		674770241C3D07B4004D0FCE /* VCRURLSessionCassette.m in Sources */ = {isa = PBXBuildFile; fileRef = 674770231C3D07B4004D0FCE /* VCRURLSessionCassette.m */; };
 		674770361C3D1A16004D0FCE /* VCRURLSessionSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 674770351C3D1A16004D0FCE /* VCRURLSessionSpec.swift */; };
 		674770381C3E0EAC004D0FCE /* VCRURLSessionCategoriesSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 674770371C3E0EAC004D0FCE /* VCRURLSessionCategoriesSpec.swift */; };
+		674EBB151C47D9AE00F94839 /* VCRURLSessionRecordSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 674EBB141C47D9AE00F94839 /* VCRURLSessionRecordSpec.swift */; };
 		6767DB711C4627180065AF25 /* NSData+VCRURLSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 6767DB6A1C4627180065AF25 /* NSData+VCRURLSession.m */; };
 		6767DB721C4627180065AF25 /* NSError+VCRURLSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 6767DB6C1C4627180065AF25 /* NSError+VCRURLSession.m */; };
 		6767DB731C4627180065AF25 /* NSHTTPURLResponse+VCRURLSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 6767DB6E1C4627180065AF25 /* NSHTTPURLResponse+VCRURLSession.m */; };
@@ -74,6 +75,7 @@
 		674770231C3D07B4004D0FCE /* VCRURLSessionCassette.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VCRURLSessionCassette.m; sourceTree = "<group>"; };
 		674770351C3D1A16004D0FCE /* VCRURLSessionSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCRURLSessionSpec.swift; sourceTree = "<group>"; };
 		674770371C3E0EAC004D0FCE /* VCRURLSessionCategoriesSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCRURLSessionCategoriesSpec.swift; sourceTree = "<group>"; };
+		674EBB141C47D9AE00F94839 /* VCRURLSessionRecordSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCRURLSessionRecordSpec.swift; sourceTree = "<group>"; };
 		6767DB691C4627180065AF25 /* NSData+VCRURLSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+VCRURLSession.h"; sourceTree = "<group>"; };
 		6767DB6A1C4627180065AF25 /* NSData+VCRURLSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+VCRURLSession.m"; sourceTree = "<group>"; };
 		6767DB6B1C4627180065AF25 /* NSError+VCRURLSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSError+VCRURLSession.h"; sourceTree = "<group>"; };
@@ -177,6 +179,7 @@
 				674770371C3E0EAC004D0FCE /* VCRURLSessionCategoriesSpec.swift */,
 				67693EFE1C3E4C610045F65B /* VCRURLSessionPlayerSpec.swift */,
 				670A411B1C3CDD0800613511 /* VCRURLSessionRecorderSpec.swift */,
+				674EBB141C47D9AE00F94839 /* VCRURLSessionRecordSpec.swift */,
 				674770351C3D1A16004D0FCE /* VCRURLSessionSpec.swift */,
 			);
 			path = VCRURLSessionTests;
@@ -404,6 +407,7 @@
 				670A411C1C3CDD0800613511 /* VCRURLSessionRecorderSpec.swift in Sources */,
 				67FF72E71C435E9B006772D6 /* VCRURLSessionCassetteSpec.swift in Sources */,
 				67693EFF1C3E4C610045F65B /* VCRURLSessionPlayerSpec.swift in Sources */,
+				674EBB151C47D9AE00F94839 /* VCRURLSessionRecordSpec.swift in Sources */,
 				6725C10A1C3E37A6009AAE93 /* VCRURLSessionTestsHelper.m in Sources */,
 				674770361C3D1A16004D0FCE /* VCRURLSessionSpec.swift in Sources */,
 			);

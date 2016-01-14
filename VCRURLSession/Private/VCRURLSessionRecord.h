@@ -15,6 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, readonly) NSUInteger requestID;
 @property (nonatomic, readonly) NSURLRequest *request;
 @property (nonatomic, readonly) NSHTTPURLResponse *_Nullable response;
+@property (nonatomic, readonly) NSTimeInterval responseTime;
 @property (nonatomic, readonly) NSData *_Nullable data;
 @property (nonatomic, readonly) NSError *_Nullable error;
 @property (nonatomic, readonly) NSDictionary *dictionaryValue;
@@ -23,6 +24,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (instancetype)initWithDictionary:(NSDictionary *)recordDictionary;
 - (instancetype)initWithRequestID:(NSUInteger)requestID
                           request:(NSURLRequest *)request
+                     responseTime:(NSTimeInterval)responseTime
                          response:(NSHTTPURLResponse *_Nullable)response
                              data:(NSData *_Nullable)data
                             error:(NSError *_Nullable)error;

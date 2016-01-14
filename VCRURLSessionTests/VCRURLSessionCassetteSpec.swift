@@ -21,7 +21,7 @@ class VCRURLSessionCassetteSpec: QuickSpec {
                     return true
                 }
 
-                cassette.recordRequest(request, response: nil, data: nil, error: nil)
+                cassette.recordRequest(request, responseTime: 0.0, response: nil, data: nil, error: nil)
             }
 
             it("records the request") {
@@ -30,7 +30,7 @@ class VCRURLSessionCassetteSpec: QuickSpec {
 
                 cassette.recordFilter = { _ in true }
 
-                cassette.recordRequest(request, response: nil, data: nil, error: nil)
+                cassette.recordRequest(request, responseTime: 0.0, response: nil, data: nil, error: nil)
 
                 expect(cassette.records.count).to(equal(1))
             }
@@ -41,7 +41,7 @@ class VCRURLSessionCassetteSpec: QuickSpec {
 
                 cassette.recordFilter = { _ in false }
 
-                cassette.recordRequest(request, response: nil, data: nil, error: nil)
+                cassette.recordRequest(request, responseTime: 0.0, response: nil, data: nil, error: nil)
 
                 expect(cassette.records.count).to(equal(0))
             }

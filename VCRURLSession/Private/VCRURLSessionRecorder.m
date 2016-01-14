@@ -68,23 +68,31 @@ static id<VCRURLSessionRecorderDelegate> VCRURLSessionRecorderSharedDelegate = n
     configuration.requestCachePolicy = NSURLRequestReloadIgnoringCacheData;
     self.session = [NSURLSession sessionWithConfiguration:configuration];
 
-    NSURLSessionTask *task =
-        [self.session dataTaskWithRequest:self.request
-                        completionHandler:^(NSData *_Nullable data, NSURLResponse *_Nullable response, NSError *_Nullable error) {
-                            if (response) {
-                                [self.client URLProtocol:self didReceiveResponse:response cacheStoragePolicy:NSURLCacheStorageNotAllowed];
-                            }
-                            if (data) {
-                                [self.client URLProtocol:self didLoadData:data];
-                            }
-                            if (error) {
-                                [self.client URLProtocol:self didFailWithError:error];
-                            }
-                            [self.client URLProtocolDidFinishLoading:self];
+    NSTimeInterval startTime = [NSDate timeIntervalSinceReferenceDate];
 
-                            [[self class] removePropertyForKey:VCRURLSessionRecorderTaskKey inRequest:self.request.mutableCopy];
-                            [VCRURLSessionRecorderSharedDelegate recordRequest:self.request response:(NSHTTPURLResponse *)response data:data error:error];
-                        }];
+    NSURLSessionTask *task = [self.session dataTaskWithRequest:self.request
+                                             completionHandler:^(NSData *_Nullable data, NSURLResponse *_Nullable response, NSError *_Nullable error) {
+                                                 NSTimeInterval responseTime = [NSDate timeIntervalSinceReferenceDate] - startTime;
+
+                                                 if (response) {
+                                                     [self.client URLProtocol:self didReceiveResponse:response cacheStoragePolicy:NSURLCacheStorageNotAllowed];
+                                                 }
+                                                 if (data) {
+                                                     [self.client URLProtocol:self didLoadData:data];
+                                                 }
+                                                 if (error) {
+                                                     [self.client URLProtocol:self didFailWithError:error];
+                                                 }
+                                                 [self.client URLProtocolDidFinishLoading:self];
+
+                                                 [[self class] removePropertyForKey:VCRURLSessionRecorderTaskKey inRequest:self.request.mutableCopy];
+
+                                                 [VCRURLSessionRecorderSharedDelegate recordRequest:self.request
+                                                                                       responseTime:responseTime
+                                                                                           response:(NSHTTPURLResponse *)response
+                                                                                               data:data
+                                                                                              error:error];
+                                             }];
 
     [[self class] setProperty:task forKey:VCRURLSessionRecorderTaskKey inRequest:self.request.mutableCopy];
     [task resume];

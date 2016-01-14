@@ -14,12 +14,14 @@
 static NSString *VCRURLSessionRecordRequestIDKey = @"requestID";
 static NSString *VCRURLSessionRecordRequestKey = @"request";
 static NSString *VCRURLSessionRecordResponseKey = @"response";
+static NSString *VCRURLSessionRecordResponseTimeKey = @"responseTime";
 static NSString *VCRURLSessionRecordErrorKey = @"error";
 
 @interface VCRURLSessionRecord ()
 
 @property (nonatomic) NSUInteger requestID;
 @property (nonatomic) NSURLRequest *request;
+@property (nonatomic) NSTimeInterval responseTime;
 @property (nonatomic) NSHTTPURLResponse *response;
 @property (nonatomic) NSData *data;
 @property (nonatomic) NSError *error;
@@ -34,6 +36,7 @@ static NSString *VCRURLSessionRecordErrorKey = @"error";
     if (self) {
         _requestID = [recordDictionary[VCRURLSessionRecordRequestIDKey] unsignedIntegerValue];
         _request = [[NSURLRequest alloc] VCRURLSession_initWithDictionary:recordDictionary[VCRURLSessionRecordRequestKey]];
+        _responseTime = [recordDictionary[VCRURLSessionRecordResponseTimeKey] doubleValue];
 
         NSDictionary *responseDictionary = recordDictionary[VCRURLSessionRecordResponseKey];
         if (responseDictionary.count) {
@@ -51,6 +54,7 @@ static NSString *VCRURLSessionRecordErrorKey = @"error";
 
 - (instancetype)initWithRequestID:(NSUInteger)requestID
                           request:(NSURLRequest *)request
+                     responseTime:(NSTimeInterval)responseTime
                          response:(NSHTTPURLResponse *_Nullable)response
                              data:(NSData *_Nullable)data
                             error:(NSError *_Nullable)error
@@ -59,6 +63,7 @@ static NSString *VCRURLSessionRecordErrorKey = @"error";
     if (self) {
         _requestID = requestID;
         _request = request;
+        _responseTime = responseTime;
         _response = response;
         _data = data;
         _error = error;
@@ -73,6 +78,7 @@ static NSString *VCRURLSessionRecordErrorKey = @"error";
         VCRURLSessionRecordRequestIDKey : @(self.requestID),
         VCRURLSessionRecordRequestKey : self.request.VCRURLSession_dictionaryValue ?: @{},
         VCRURLSessionRecordResponseKey : [self.response VCRURLSession_dictionaryValueWithData:self.data] ?: @{},
+        VCRURLSessionRecordResponseTimeKey : @(self.responseTime),
     };
 }
 

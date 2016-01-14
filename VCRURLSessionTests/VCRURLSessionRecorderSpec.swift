@@ -12,7 +12,7 @@ import Nimble
 class VCRURLSessionRecorderTestDelegate: NSObject, VCRURLSessionRecorderDelegate {
     var recordHandler: ((request: NSURLRequest!, response: NSHTTPURLResponse!, data: NSData!, error: NSError!) -> Void)?
 
-    @objc func recordRequest(request: NSURLRequest, response: NSHTTPURLResponse?, data: NSData?, error: NSError?) {
+    @objc func recordRequest(request: NSURLRequest, responseTime: NSTimeInterval, response: NSHTTPURLResponse?, data: NSData?, error: NSError?) {
         recordHandler!(request: request, response: response, data: data, error: error)
     }
 }
