@@ -19,6 +19,8 @@ class VCRURLSessionSpec: QuickSpec {
         }
 
         describe("errors.json") {
+            let cassettePath = VCRURLSessionTestsHelper.pathToCassetteWithName("errors.json")
+
             describe("recording") {
                 pending("change `pending` to `describe` to generate the cassette") {
                     it("records all requests") {
@@ -37,7 +39,7 @@ class VCRURLSessionSpec: QuickSpec {
                         self.testSession.dataTaskWithRequest(NSMutableURLRequest.init(URL: NSURL.init(string: "http://invalid.plunien.com/")!)).resume()
                         expect(cassette.records.count).toEventually(equal(3))
 
-                        cassette.writeToFile(VCRURLSessionTestsHelper.pathToCassetteWithName("errors.json"))
+                        cassette.writeToFile(cassettePath)
                     }
                 }
             }
@@ -45,7 +47,7 @@ class VCRURLSessionSpec: QuickSpec {
             describe("playing") {
                 it("plays all records in correct order") {
                     var responseError: NSError?
-                    let cassette = VCRURLSessionCassette.init(contentsOfFile: VCRURLSessionTestsHelper.pathToCassetteWithName("errors.json"))
+                    let cassette = VCRURLSessionCassette.init(contentsOfFile: cassettePath)
                     VCRURLSession.startReplayingWithCassette(cassette, mode: .Strict)
 
                     // 1. Invalid port
@@ -73,6 +75,8 @@ class VCRURLSessionSpec: QuickSpec {
         }
 
         describe("cassette1.json") {
+            let cassettePath = VCRURLSessionTestsHelper.pathToCassetteWithName("cassette1.json")
+
             describe("recording") {
                 pending("run `ruby api.rb` and change `pending` to `describe` to generate the cassette") {
                     it("records all requests") {
@@ -101,7 +105,7 @@ class VCRURLSessionSpec: QuickSpec {
                         self.testSession.dataTaskWithRequest(getRequest).resume()
                         expect(cassette.records.count).toEventually(equal(4))
 
-                        cassette.writeToFile(VCRURLSessionTestsHelper.pathToCassetteWithName("cassette1.json"))
+                        cassette.writeToFile(cassettePath)
                     }
                 }
             }
@@ -109,7 +113,7 @@ class VCRURLSessionSpec: QuickSpec {
             describe("playing") {
                 it("plays all records in correct order") {
                     var responseString: String?
-                    let cassette = VCRURLSessionCassette.init(contentsOfFile: VCRURLSessionTestsHelper.pathToCassetteWithName("cassette1.json"))
+                    let cassette = VCRURLSessionCassette.init(contentsOfFile: cassettePath)
                     VCRURLSession.startReplayingWithCassette(cassette, mode: .Strict)
 
                     let getRequest = NSMutableURLRequest.init(URL: NSURL.init(string: "http://localhost:4567/")!)
