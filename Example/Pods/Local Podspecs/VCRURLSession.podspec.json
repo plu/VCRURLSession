@@ -24,9 +24,6 @@
       "name": "Core",
       "source_files": "VCRURLSession/**/*.{h,m}",
       "public_header_files": "VCRURLSession/*.h"
-    },
-    {
-      "name": "Dependencies"
     }
   ]
 }

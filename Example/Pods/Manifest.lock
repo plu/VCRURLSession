@@ -11,6 +11,6 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  VCRURLSession: d2a914dec598fb2a05c0ff0aeedcdb1c2ad458ce
+  VCRURLSession: fd0fe265aec2c58dff350a4ff5f0fbaa81197483
 
 COCOAPODS: 0.39.0
