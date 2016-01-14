@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/plu/VCRURLSession.svg?branch=master)](https://travis-ci.org/plu/VCRURLSession)
+
 # Description
 
 `VCRURLSession` let's you record your test suite's HTTP requests and responses.
