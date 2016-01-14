@@ -1,0 +1,6 @@
+framework module VCRURLSession {
+  umbrella header "VCRURLSession-umbrella.h"
+
+  export *
+  module * { export * }
+}

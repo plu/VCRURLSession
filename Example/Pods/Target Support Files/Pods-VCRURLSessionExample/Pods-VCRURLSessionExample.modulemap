@@ -1,0 +1,6 @@
+framework module Pods_VCRURLSessionExample {
+  umbrella header "Pods-VCRURLSessionExample-umbrella.h"
+
+  export *
+  module * { export * }
+}
