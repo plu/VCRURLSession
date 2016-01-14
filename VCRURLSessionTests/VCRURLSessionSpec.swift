@@ -146,5 +146,43 @@ class VCRURLSessionSpec: QuickSpec {
                 }
             }
         }
+
+        describe("cassette2.json") {
+            let cassettePath = VCRURLSessionTestsHelper.pathToCassetteWithName("cassette2.json")
+
+            describe("recording") {
+                pending("run `ruby api.rb` and change `pending` to `describe` to generate the cassette") {
+                    it("records all requests") {
+                        let cassette = VCRURLSessionCassette()
+                        VCRURLSession.startRecordingOnCassette(cassette)
+
+                        let getRequest = NSMutableURLRequest.init(URL: NSURL.init(string: "http://localhost:4567/sleep")!)
+
+                        // 1. GET /
+                        self.testSession.dataTaskWithRequest(getRequest).resume()
+                        expect(cassette.records.count).toEventually(equal(1))
+
+                        cassette.writeToFile(cassettePath)
+                    }
+                }
+            }
+
+            describe("playing") {
+                fit("plays all records with correct responseTime delay") {
+                    let cassette = VCRURLSessionCassette.init(contentsOfFile: cassettePath)
+                    VCRURLSession.startReplayingWithCassette(cassette, mode: .Strict)
+
+                    let getRequest = NSMutableURLRequest.init(URL: NSURL.init(string: "http://localhost:4567/sleep")!)
+                    let startTime = NSDate.timeIntervalSinceReferenceDate()
+                    var responseTime = 0.0
+
+                    // 1. GET /
+                    self.testSession.dataTaskWithRequest(getRequest, completionHandler: { (data, response, error) -> Void in
+                        responseTime = NSDate.timeIntervalSinceReferenceDate() - startTime
+                    }).resume()
+                    expect(responseTime).toEventually(beGreaterThan(0.5))
+                }
+            }
+        }
     }
 }

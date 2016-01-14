@@ -1,0 +1,35 @@
+{
+  "userInfo" : {
+
+  },
+  "records" : [
+    {
+      "responseTime" : 0.528652012348175,
+      "error" : {
+
+      },
+      "requestID" : 0,
+      "request" : {
+        "method" : "GET",
+        "url" : "http:\/\/localhost:4567\/sleep",
+        "headers" : {
+
+        }
+      },
+      "response" : {
+        "body" : "awake",
+        "headers" : {
+          "X-XSS-Protection" : "1; mode=block",
+          "X-Frame-Options" : "SAMEORIGIN",
+          "Content-Type" : "text\/html;charset=utf-8",
+          "Server" : "thin 1.5.1 codename Straight Razor",
+          "Content-Length" : "5",
+          "Connection" : "keep-alive",
+          "X-Content-Type-Options" : "nosniff"
+        },
+        "statusCode" : 200,
+        "url" : "http:\/\/localhost:4567\/sleep"
+      }
+    }
+  ]
+}

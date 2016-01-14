@@ -72,20 +72,23 @@ static VCRURLSessionReplayMode VCRURLSessionPlayerSharedMode = VCRURLSessionRepl
     }
 
     record.played = YES;
-    if (record.error) {
-        [self.client URLProtocol:self didFailWithError:record.error];
-        return;
-    }
 
-    if (record.response) {
-        [self.client URLProtocol:self didReceiveResponse:record.response cacheStoragePolicy:NSURLCacheStorageNotAllowed];
-    }
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(record.responseTime * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        if (record.error) {
+            [self.client URLProtocol:self didFailWithError:record.error];
+            return;
+        }
 
-    if (record.data) {
-        [self.client URLProtocol:self didLoadData:record.data];
-    }
+        if (record.response) {
+            [self.client URLProtocol:self didReceiveResponse:record.response cacheStoragePolicy:NSURLCacheStorageNotAllowed];
+        }
 
-    [self.client URLProtocolDidFinishLoading:self];
+        if (record.data) {
+            [self.client URLProtocol:self didLoadData:record.data];
+        }
+
+        [self.client URLProtocolDidFinishLoading:self];
+    });
 }
 
 - (void)stopLoading
