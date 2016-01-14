@@ -15,15 +15,60 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+/**
+ *  Stores/retrieves recorded HTTP requests and responses.
+ */
 @interface VCRURLSessionCassette : NSObject <VCRURLSessionPlayerDelegate, VCRURLSessionRecorderDelegate>
 
+/**
+ *  Decide which requests to record.
+ */
 @property (nonatomic, copy) BOOL (^recordFilter)(NSURLRequest *request);
+
+/**
+ *  Array of `VCRURLSessionRecord` instances.
+ */
 @property (nonatomic, readonly) NSArray<VCRURLSessionRecord *> *records;
+
+/**
+ *  Some `NSDictionary` instance, will also be serialized/deserialized when writing/loading the cassette.
+ */
 @property (nonatomic) NSDictionary *_Nullable userInfo;
 
+/**
+ *  Load cassette with JSON content from given path.
+ *
+ *  @param path full path to the cassette file.
+ *
+ *  @return `VCRURLSessionCassette` instance.
+ */
 - (instancetype)initWithContentsOfFile:(NSString *)path;
+
+/**
+ *  Load cassette with gzipped JSON content from given path.
+ *
+ *  @param path full path to the cassette file.
+ *
+ *  @return `VCRURLSessionCassette` instance.
+ */
 - (instancetype)initWithCompressedContentsOfFile:(NSString *)path;
+
+/**
+ *  Store cassette in JSON format to given path.
+ *
+ *  @param path full path to the cassette file.
+ *
+ *  @return true/false
+ */
 - (BOOL)writeToFile:(NSString *)path;
+
+/**
+ *  Store cassette in gzipped JSON format to given path.
+ *
+ *  @param path full path to the cassette file.
+ *
+ *  @return true/false
+ */
 - (BOOL)writeCompressedToFile:(NSString *)path;
 
 @end

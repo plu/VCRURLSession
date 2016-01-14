@@ -95,6 +95,34 @@ When replaying them, it will consume them in the same order they were recorded.
     [cassette writeCompressedToFile:@"/tmp/cassette.json.gz"];
 	```
 
+* **Return static responses**
+
+	Example:
+
+	```objc
+        [VCRURLSession setStaticResponseHandler:^VCRURLSessionResponse *_Nullable(NSURLRequest *_Nonnull request) {
+            NSString *contentType = request.allHTTPHeaderFields[@"Content-Type"];
+            if ([contentType hasPrefix:@"image/"]) {
+                NSData *imageData = UIImagePNGRepresentation([UIImage imageNamed:@"test_image"]);
+                return [VCRURLSessionResponse responseWithURL:request.URL statusCode:200 headerFields:nil data:imageData error:nil];
+            }
+            return nil;
+        }];
+	```
+
+* **Recording filter**
+
+	Example:
+
+	```objc
+   	VCRURLSessionCassette *cassette = [[VCRURLSessionCassette alloc] init];
+   self.cassette.recordFilter = ^BOOL(NSURLRequest *request) {
+       NSString *contentType = request.allHTTPHeaderFields[@"Content-Type"];
+       // Do not record images
+       return [contentType hasPrefix:@"image/"];
+   };
+	```
+
 # License (MIT)
 
 Copyright (C) 2016 Johannes Plunien

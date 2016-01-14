@@ -8,7 +8,16 @@
 
 #import <Foundation/Foundation.h>
 
+/**
+ *  VCRURLSessionReplayMode
+ */
 typedef NS_ENUM(NSUInteger, VCRURLSessionReplayMode) {
+    /**
+     *  Returns recorded response, if possible, otherwise makes network request.
+     */
     VCRURLSessionReplayModeNormal,
+    /**
+     *  Returns recorded response, if possible, otherwise returns error.
+     */
     VCRURLSessionReplayModeStrict,
 };
