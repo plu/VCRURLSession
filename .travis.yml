@@ -3,8 +3,9 @@ language: objective-c
 before_install:
   - gem install xcpretty
 before_script:
+  - xcrun simctl list
   - export LANG=en_US.UTF-8
 install: echo
 script:
   - set -o pipefail
-  - xcodebuild -workspace VCRURLSession.xcworkspace -scheme VCRURLSession -sdk iphonesimulator -configuration Debug -destination 'name=iPhone 5' test
+  - xcodebuild -workspace VCRURLSession.xcworkspace -scheme VCRURLSession -sdk iphonesimulator -configuration Debug -destination 'platform=iOS Simulator,OS=9.2,name=iPhone 5' test
