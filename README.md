@@ -116,7 +116,7 @@ When replaying them, it will consume them in the same order they were recorded.
 
 	```objc
    	VCRURLSessionCassette *cassette = [[VCRURLSessionCassette alloc] init];
-   self.cassette.recordFilter = ^BOOL(NSURLRequest *request) {
+   cassette.recordFilter = ^BOOL(NSURLRequest *request) {
        NSString *contentType = request.allHTTPHeaderFields[@"Content-Type"];
        // Do not record images
        return [contentType hasPrefix:@"image/"];
