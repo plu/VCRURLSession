@@ -228,14 +228,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		03D7F493A24D08F0BC8024E15068D384 /* VCRURLSession */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = VCRURLSession;
-			path = ..;
-			sourceTree = "<group>";
-		};
 		0C6B012983F9FEF8CC65C1318F5F090C /* iOS */ = {
 			isa = PBXGroup;
 			children = (
@@ -334,7 +326,6 @@
 			isa = PBXGroup;
 			children = (
 				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
-				9C86E9118EF79ADA1FCDB8D615047D11 /* Development Pods */,
 				433CD3331B6C3787F473C941B61FC68F /* Frameworks */,
 				8F29E9621F2E4347FEA6F6D7F0748038 /* Pods */,
 				A648FB6A9125B0BC27ADF22A2831114D /* Products */,
@@ -349,14 +340,6 @@
 				64E98FF7B6454214F8290BB0AC208D8F /* Quick */,
 			);
 			name = Pods;
-			sourceTree = "<group>";
-		};
-		9C86E9118EF79ADA1FCDB8D615047D11 /* Development Pods */ = {
-			isa = PBXGroup;
-			children = (
-				03D7F493A24D08F0BC8024E15068D384 /* VCRURLSession */,
-			);
-			name = "Development Pods";
 			sourceTree = "<group>";
 		};
 		A648FB6A9125B0BC27ADF22A2831114D /* Products */ = {

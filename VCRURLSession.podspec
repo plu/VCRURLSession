@@ -17,7 +17,4 @@ Pod::Spec.new do |s|
     cs.source_files = 'VCRURLSession/**/*.{h,m}'
     cs.public_header_files = 'VCRURLSession/*.h'
   end
-
-  s.subspec 'Dependencies' do |cs|
-  end
 end
