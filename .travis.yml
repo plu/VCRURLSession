@@ -8,4 +8,4 @@ before_script:
 install: echo
 script:
   - set -o pipefail
-  - xcodebuild -workspace VCRURLSession.xcworkspace -scheme VCRURLSession -sdk iphonesimulator -configuration Debug -destination 'platform=iOS Simulator,OS=9.2,name=iPhone 5' test
+  - xcodebuild -workspace VCRURLSession.xcworkspace -scheme VCRURLSession -sdk iphonesimulator -configuration Debug -destination 'platform=iOS Simulator,OS=9.2,name=iPhone 5' test | xcpretty -c
