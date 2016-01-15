@@ -168,7 +168,7 @@ class VCRURLSessionSpec: QuickSpec {
             }
 
             describe("playing") {
-                fit("plays all records with correct responseTime delay") {
+                it("plays all records with correct responseTime delay") {
                     let cassette = VCRURLSessionCassette.init(contentsOfFile: cassettePath)
                     VCRURLSession.startReplayingWithCassette(cassette, mode: .Strict)
 
