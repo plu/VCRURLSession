@@ -125,6 +125,19 @@ When replaying them, it will consume them in the same order they were recorded.
    };
 	```
 
+* **Replaying speed**
+
+    During recording phase the response time of each request is saved. Later the responses are returned in the same time. This can be changed by setting the `replaySpeed` property on the cassette.
+
+    Example:
+
+    ```objc
+    VCRURLSessionCassette *cassette = [[VCRURLSessionCassette alloc] initWithContentsOfFile:self.path];
+    // If a request took 500ms, now it will only take 50ms
+    cassette.replaySpeed = 10.0f;
+    [VCRURLSession startReplayingWithCassette:cassette mode:VCRURLSessionReplayModeStrict];
+    ```
+
 # License (MIT)
 
 Copyright (C) 2016 Johannes Plunien
