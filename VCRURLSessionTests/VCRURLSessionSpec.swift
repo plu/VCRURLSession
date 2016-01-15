@@ -182,6 +182,23 @@ class VCRURLSessionSpec: QuickSpec {
                     }).resume()
                     expect(responseTime).toEventually(beGreaterThan(0.5))
                 }
+
+                it("plays all records with correct speed") {
+                    let cassette = VCRURLSessionCassette.init(contentsOfFile: cassettePath)
+                    cassette.replaySpeed = 2.0
+                    VCRURLSession.startReplayingWithCassette(cassette, mode: .Strict)
+
+                    let getRequest = NSMutableURLRequest.init(URL: NSURL.init(string: "http://localhost:4567/sleep")!)
+                    let startTime = NSDate.timeIntervalSinceReferenceDate()
+                    var responseTime = 0.0
+
+                    // 1. GET /
+                    self.testSession.dataTaskWithRequest(getRequest, completionHandler: { (data, response, error) -> Void in
+                        responseTime = NSDate.timeIntervalSinceReferenceDate() - startTime
+                    }).resume()
+                    expect(responseTime).toEventually(beGreaterThan(0.25))
+                    expect(responseTime).toEventually(beLessThan(0.5))
+                }
             }
         }
     }

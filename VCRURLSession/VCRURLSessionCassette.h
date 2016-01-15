@@ -36,6 +36,13 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic) NSDictionary *_Nullable userInfo;
 
 /**
+ *  Speed in which the records should be replayed with. Defaults to 1.0
+ *  Example: If `responseTime` of a record was 500ms and `replaySpeed` is set to 2.0, the response will
+ *  be returned after 250ms when replaying.
+ */
+@property (nonatomic) double replaySpeed;
+
+/**
  *  Load cassette with JSON content from given path.
  *
  *  @param path full path to the cassette file.

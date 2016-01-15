@@ -21,7 +21,6 @@ static NSString *VCRURLSessionRecordErrorKey = @"error";
 
 @property (nonatomic) NSUInteger requestID;
 @property (nonatomic) NSURLRequest *request;
-@property (nonatomic) NSTimeInterval responseTime;
 @property (nonatomic) NSHTTPURLResponse *response;
 @property (nonatomic) NSData *data;
 @property (nonatomic) NSError *error;

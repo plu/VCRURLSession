@@ -30,6 +30,7 @@ static NSString *VCRURLSessionCassetteUserInfoKey = @"userInfo";
     if (self) {
         _data = [NSMutableArray array];
         _requestID = 0;
+        _replaySpeed = 1.0f;
     }
     return self;
 }
@@ -135,6 +136,7 @@ static NSString *VCRURLSessionCassetteUserInfoKey = @"userInfo";
             break;
         }
     }
+    matchingRecord.responseTime = (1.0f / self.replaySpeed) * matchingRecord.responseTime;
     return matchingRecord;
 }
 
