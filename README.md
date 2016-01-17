@@ -7,6 +7,11 @@
 	* [Recording](#recording)
 	* [Replaying](#replaying)
 * [Features](#features)
+	* [Replaying consumes responses](#replaying-consumes-responses)
+	* [Store in gzip format](#store-in-gzip-format)
+	* [Return static responses](#return-static-responses)
+	* [Recording filter](#recording-filter)
+	* [Replaying speed](#replaying-speed)
 * [Changelog](CHANGELOG.md)
 
 ## Description
@@ -96,7 +101,7 @@ GET /users
 []
 ```
 
-### Responses can be stored in gzipped format
+### Store in gzip format
 
 ```objc
 VCRURLSessionCassette *cassette = [[VCRURLSessionCassette alloc] init];
