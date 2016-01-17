@@ -69,6 +69,19 @@ NS_ASSUME_NONNULL_BEGIN
 + (NSURLSession *)prepareURLSession:(NSURLSession *)session;
 
 /**
+ *  Prepare a `NSURLSession` for recording/replaying HTTP requests and responses.
+ *
+ *  @param session `NSURLSession` instance
+ *  @param delegate `id<NSURLSessionDelegate>` instance
+ *  @param delegateQueue `NSOperationQueue` instance
+ *
+ *  @return `NSURLSession` instance
+ */
++ (NSURLSession *)prepareURLSession:(NSURLSession *)session
+                           delegate:(id<NSURLSessionDelegate> _Nullable)delegate
+                      delegateQueue:(NSOperationQueue *_Nullable)queue;
+
+/**
  *  Set a block that returns static responses.
  *
  *  @param handler a block that returns `VCRURLSessionResponse` instances.

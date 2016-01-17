@@ -18,11 +18,18 @@
 @implementation VCRURLSession
 
 + (NSURLSession *)prepareURLSession:(NSURLSession *)session
+                           delegate:(id<NSURLSessionDelegate> _Nullable)delegate
+                      delegateQueue:(NSOperationQueue *_Nullable)queue;
 {
     NSURLSessionConfiguration *configuration = session.configuration.copy;
     NSArray *classes = @[ [VCRURLSessionSampler class], [VCRURLSessionPlayer class], [VCRURLSessionRecorder class] ];
     configuration.protocolClasses = [classes arrayByAddingObjectsFromArray:configuration.protocolClasses];
-    return [NSURLSession sessionWithConfiguration:configuration];
+    return [NSURLSession sessionWithConfiguration:configuration delegate:delegate delegateQueue:queue];
+}
+
++ (NSURLSession *)prepareURLSession:(NSURLSession *)session
+{
+    return [self prepareURLSession:session delegate:nil delegateQueue:nil];
 }
 
 + (void)setStaticResponseHandler:(VCRURLSessionResponse *_Nullable (^)(NSURLRequest *request))handler
