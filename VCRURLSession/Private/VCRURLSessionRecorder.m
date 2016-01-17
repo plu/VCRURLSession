@@ -13,7 +13,7 @@
 static NSString *VCRURLSessionRecorderTaskKey = @"VCRURLSessionRecorderTaskKey";
 static id<VCRURLSessionRecorderDelegate> VCRURLSessionRecorderSharedDelegate = nil;
 
-@interface VCRURLSessionRecorder ()
+@interface VCRURLSessionRecorder () <NSURLSessionDelegate>
 
 @property (nonatomic) NSURLSession *session;
 
@@ -66,7 +66,7 @@ static id<VCRURLSessionRecorderDelegate> VCRURLSessionRecorderSharedDelegate = n
 {
     NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
     configuration.requestCachePolicy = NSURLRequestReloadIgnoringCacheData;
-    self.session = [NSURLSession sessionWithConfiguration:configuration];
+    self.session = [NSURLSession sessionWithConfiguration:configuration delegate:self delegateQueue:nil];
 
     NSTimeInterval startTime = [NSDate timeIntervalSinceReferenceDate];
 
@@ -102,6 +102,24 @@ static id<VCRURLSessionRecorderDelegate> VCRURLSessionRecorderSharedDelegate = n
 {
     NSURLSessionTask *task = [[self class] propertyForKey:VCRURLSessionRecorderTaskKey inRequest:self.request];
     [task cancel];
+}
+
+#pragma mark - NSURLSessionDelegate
+
+- (void)URLSession:(NSURLSession *)session
+                   task:(NSURLSessionTask *)task
+    didReceiveChallenge:(NSURLAuthenticationChallenge *)challenge
+      completionHandler:(void (^)(NSURLSessionAuthChallengeDisposition disposition, NSURLCredential *credential))completionHandler
+{
+    if (completionHandler) {
+        if (challenge.previousFailureCount > 0) {
+            completionHandler(NSURLSessionAuthChallengeCancelAuthenticationChallenge,
+                              [NSURLCredential credentialForTrust:challenge.protectionSpace.serverTrust]);
+        }
+        else {
+            completionHandler(NSURLSessionAuthChallengeUseCredential, [NSURLCredential credentialForTrust:challenge.protectionSpace.serverTrust]);
+        }
+    }
 }
 
 @end
