@@ -1,6 +1,15 @@
+# VCRURLSession
+
 [![Build Status](https://travis-ci.org/plu/VCRURLSession.svg?branch=master)](https://travis-ci.org/plu/VCRURLSession)
 
-# Description
+* [Description](#description)
+* [Usage](#usage)
+	* [Recording](#recording)
+	* [Replaying](#replaying)
+* [Features](#features)
+* [Changelog](CHANGELOG.md)
+
+## Description
 
 `VCRURLSession` let's you record your test suite's HTTP requests and responses.
 You can replay them during future test runs for fast, deterministic, accurate tests.
@@ -13,9 +22,9 @@ NSURLSession *session = [VCRURLSession prepareURLSession:[NSURLSession sharedSes
 
 There is no swizzling involved!
 
-# Usage
+## Usage
 
-## Recording
+### Recording
 
 ```objc
 - (void)record
@@ -38,7 +47,7 @@ There is no swizzling involved!
 }
 ```
 
-## Replaying
+### Replaying
 
 ```objc
 - (void)replay
@@ -59,86 +68,77 @@ There is no swizzling involved!
 }
 ```
 
-# Features
+## Features
 
-* **Replaying consumes responses**
+### Replaying consumes responses
 
-	Let's assume during recording there are several requests made to the same resource (`GET /users`).
+Let's assume during recording there are several requests made to the same resource (`GET /users`).
 When replaying them, it will consume them in the same order they were recorded.
 
-	Example:
+```
+GET /users
+200 OK
+[]
 
-	```
-	GET /users
-	200 OK
-	[]
+POST /users?name=John
+201 Created
+{"id": 1, "name": "John"}
 
-	POST /users?name=John
-	201 Created
-	{"id": 1, "name": "John"}
+GET /users
+200 OK
+[{"id": 1, "name": "John"}]
 
-	GET /users
-	200 OK
-	[{"id": 1, "name": "John"}]
+DELETE /users/1
+204 No Content
 
-	DELETE /users/1
-	204 No Content
+GET /users
+200 OK
+[]
+```
 
-	GET /users
-	200 OK
-	[]
-	```
-* **Responses can be stored in gzipped format**
+### Responses can be stored in gzipped format
 
-	Example:
-	
-	```objc
-    VCRURLSessionCassette *cassette = [[VCRURLSessionCassette alloc] init];
-    [cassette writeCompressedToFile:@"/tmp/cassette.json.gz"];
-	```
+```objc
+VCRURLSessionCassette *cassette = [[VCRURLSessionCassette alloc] init];
+[cassette writeCompressedToFile:@"/tmp/cassette.json.gz"];
+```
 
-* **Return static responses**
+### Return static responses
 
-	Example:
+```objc
+[VCRURLSession setStaticResponseHandler:^VCRURLSessionResponse *_Nullable(NSURLRequest *_Nonnull request) {
+  NSString *contentType = request.allHTTPHeaderFields[@"Content-Type"];
+  if ([contentType hasPrefix:@"image/"]) {
+      NSData *imageData = UIImagePNGRepresentation([UIImage imageNamed:@"test_image"]);
+      return [VCRURLSessionResponse responseWithURL:request.URL statusCode:200 headerFields:nil data:imageData error:nil];
+  }
+  return nil;
+}];
+```
 
-	```objc
-   [VCRURLSession setStaticResponseHandler:^VCRURLSessionResponse *_Nullable(NSURLRequest *_Nonnull request) {
-       NSString *contentType = request.allHTTPHeaderFields[@"Content-Type"];
-       if ([contentType hasPrefix:@"image/"]) {
-           NSData *imageData = UIImagePNGRepresentation([UIImage imageNamed:@"test_image"]);
-           return [VCRURLSessionResponse responseWithURL:request.URL statusCode:200 headerFields:nil data:imageData error:nil];
-       }
-       return nil;
-   }];
-	```
+### Recording filter
 
-* **Recording filter**
+```objc
+VCRURLSessionCassette *cassette = [[VCRURLSessionCassette alloc] init];
+cassette.recordFilter = ^BOOL(NSURLRequest *request) {
+  NSString *contentType = request.allHTTPHeaderFields[@"Content-Type"];
+  // Do not record images
+  return [contentType hasPrefix:@"image/"];
+};
+```
 
-	Example:
+### Replaying speed
 
-	```objc
-   	VCRURLSessionCassette *cassette = [[VCRURLSessionCassette alloc] init];
-   cassette.recordFilter = ^BOOL(NSURLRequest *request) {
-       NSString *contentType = request.allHTTPHeaderFields[@"Content-Type"];
-       // Do not record images
-       return [contentType hasPrefix:@"image/"];
-   };
-	```
+During recording phase the response time of each request is saved. Later the responses are returned in the same time. This can be changed by setting the `replaySpeed` property on the cassette.
 
-* **Replaying speed**
+```objc
+VCRURLSessionCassette *cassette = [[VCRURLSessionCassette alloc] initWithContentsOfFile:self.path];
+// If a request took 500ms, now it will only take 50ms
+cassette.replaySpeed = 10.0f;
+[VCRURLSession startReplayingWithCassette:cassette mode:VCRURLSessionReplayModeStrict];
+```
 
-    During recording phase the response time of each request is saved. Later the responses are returned in the same time. This can be changed by setting the `replaySpeed` property on the cassette.
-
-    Example:
-
-    ```objc
-    VCRURLSessionCassette *cassette = [[VCRURLSessionCassette alloc] initWithContentsOfFile:self.path];
-    // If a request took 500ms, now it will only take 50ms
-    cassette.replaySpeed = 10.0f;
-    [VCRURLSession startReplayingWithCassette:cassette mode:VCRURLSessionReplayModeStrict];
-    ```
-
-# License (MIT)
+## License (MIT)
 
 Copyright (C) 2016 Johannes Plunien
 
