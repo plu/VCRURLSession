@@ -50,7 +50,7 @@ NS_ASSUME_NONNULL_BEGIN
  *  Start replaying HTTP responses from a cassette.
  *
  *  @param cassette `VCRURLSessionCassette` instance.
- *  @param mode     VCRURLSessionReplayMode replaying mode.
+ *  @param mode     `VCRURLSessionReplayMode` replaying mode.
  */
 + (void)startReplayingWithCassette:(VCRURLSessionCassette *)cassette mode:(VCRURLSessionReplayMode)mode;
 

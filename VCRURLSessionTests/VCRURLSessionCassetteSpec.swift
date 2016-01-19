@@ -59,5 +59,17 @@ class VCRURLSessionCassetteSpec: QuickSpec {
                 expect(readCassette.userInfo as? Dictionary).to(equal(["foo": "bar"]))
             }
         }
+
+        describe("recordingDate") {
+            it("stores and retrieves the recordingDate") {
+                let path = NSTemporaryDirectory().stringByAppendingString("cassette.json")
+
+                let writeCassette = VCRURLSessionCassette()
+                writeCassette.writeToFile(path)
+
+                let readCassette = VCRURLSessionCassette.init(contentsOfFile: path)
+                expect(readCassette.recordingDate).to(beAKindOf(NSDate))
+            }
+        }
     }
 }

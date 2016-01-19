@@ -11,6 +11,7 @@
 #import "VCRURLSessionRecord.h"
 #import "VCRURLSessionResponse.h"
 
+static NSString *VCRURLSessionCassetteRecordingTimeKey = @"recordingTime";
 static NSString *VCRURLSessionCassetteRecordsKey = @"records";
 static NSString *VCRURLSessionCassetteUserInfoKey = @"userInfo";
 
@@ -29,8 +30,9 @@ static NSString *VCRURLSessionCassetteUserInfoKey = @"userInfo";
     self = [super init];
     if (self) {
         _data = [NSMutableArray array];
-        _requestID = 0;
+        _recordingDate = [NSDate date];
         _replaySpeed = 1.0f;
+        _requestID = 0;
     }
     return self;
 }
@@ -45,6 +47,11 @@ static NSString *VCRURLSessionCassetteUserInfoKey = @"userInfo";
             [self.data addObject:[[VCRURLSessionRecord alloc] initWithDictionary:recordDictionary]];
         }
         self.userInfo = cassette[VCRURLSessionCassetteUserInfoKey];
+
+        NSTimeInterval recordingTime = [cassette[VCRURLSessionCassetteRecordingTimeKey] doubleValue];
+        if (recordingTime > 0.0f) {
+            self.recordingDate = [NSDate dateWithTimeIntervalSince1970:recordingTime];
+        }
     }
     return self;
 }
@@ -93,6 +100,7 @@ static NSString *VCRURLSessionCassetteUserInfoKey = @"userInfo";
         [records addObject:record.dictionaryValue];
     }
     return @{
+        VCRURLSessionCassetteRecordingTimeKey : @(self.recordingDate.timeIntervalSince1970),
         VCRURLSessionCassetteRecordsKey : records.copy,
         VCRURLSessionCassetteUserInfoKey : self.userInfo ?: @{},
     };

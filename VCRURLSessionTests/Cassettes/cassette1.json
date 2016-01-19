@@ -2,9 +2,10 @@
   "userInfo" : {
 
   },
+  "recordingTime" : 1453175804,
   "records" : [
     {
-      "responseTime" : 0.03510099649429321,
+      "responseTime" : 0.03143399953842163,
       "error" : {
 
       },
@@ -32,7 +33,7 @@
       }
     },
     {
-      "responseTime" : 0.005860984325408936,
+      "responseTime" : 0.006843984127044678,
       "error" : {
 
       },
@@ -60,7 +61,7 @@
       }
     },
     {
-      "responseTime" : 0.00434499979019165,
+      "responseTime" : 0.005290985107421875,
       "error" : {
 
       },
@@ -88,7 +89,7 @@
       }
     },
     {
-      "responseTime" : 0.006199002265930176,
+      "responseTime" : 0.006673038005828857,
       "error" : {
 
       },

@@ -31,6 +31,12 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, readonly) NSArray<VCRURLSessionRecord *> *records;
 
 /**
+ *  `NSDate` instance representing the date when the recording of this cassette started. It will also
+ *  be serialized/deserialized when writing/loading the cassette.
+ */
+@property (nonatomic, copy) NSDate *recordingDate;
+
+/**
  *  Some `NSDictionary` instance, will also be serialized/deserialized when writing/loading the cassette.
  */
 @property (nonatomic) NSDictionary *_Nullable userInfo;
