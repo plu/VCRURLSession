@@ -89,13 +89,15 @@ static id<VCRURLSessionRecorderDelegate> VCRURLSessionRecorderSharedDelegate = n
 
               [[self class] removePropertyForKey:VCRURLSessionRecorderTaskKey inRequest:self.request.mutableCopy];
 
-              [VCRURLSessionLogger log:VCRURLSessionLogLevelInfo
-                               message:@"[R] %zd %@ (%.2fms)", ((NSHTTPURLResponse *)response).statusCode, self.request.URL, (responseTime * 1000)];
-              [VCRURLSessionRecorderSharedDelegate recordRequest:self.request
-                                                    responseTime:responseTime
-                                                        response:(NSHTTPURLResponse *)response
-                                                            data:data
-                                                           error:error];
+              BOOL recorded = [VCRURLSessionRecorderSharedDelegate recordRequest:self.request
+                                                                    responseTime:responseTime
+                                                                        response:(NSHTTPURLResponse *)response
+                                                                            data:data
+                                                                           error:error];
+              if (recorded) {
+                  [VCRURLSessionLogger log:VCRURLSessionLogLevelInfo
+                                   message:@"[R] %zd %@ (%.2fms)", ((NSHTTPURLResponse *)response).statusCode, self.request.URL, (responseTime * 1000)];
+              }
           }];
 
     [[self class] setProperty:task forKey:VCRURLSessionRecorderTaskKey inRequest:self.request.mutableCopy];

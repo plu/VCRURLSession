@@ -13,7 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 @protocol VCRURLSessionRecorderDelegate <NSObject>
 
 @required
-- (void)recordRequest:(NSURLRequest *)request
+- (BOOL)recordRequest:(NSURLRequest *)request
          responseTime:(NSTimeInterval)responseTime
              response:(NSHTTPURLResponse *_Nullable)response
                  data:(NSData *_Nullable)data

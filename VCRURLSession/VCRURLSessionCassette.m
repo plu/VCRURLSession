@@ -108,7 +108,7 @@ static NSString *VCRURLSessionCassetteUserInfoKey = @"userInfo";
 
 #pragma mark - VCRURLSessionRecorderDelegate
 
-- (void)recordRequest:(NSURLRequest *)request
+- (BOOL)recordRequest:(NSURLRequest *)request
          responseTime:(NSTimeInterval)responseTime
              response:(NSHTTPURLResponse *)response
                  data:(NSData *)data
@@ -125,6 +125,8 @@ static NSString *VCRURLSessionCassetteUserInfoKey = @"userInfo";
         [self.data addObject:record];
         self.requestID += 1;
     }
+
+    return recordRequest;
 }
 
 #pragma mark - VCRURLSessionPlayerDelegate
