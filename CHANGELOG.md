@@ -2,6 +2,10 @@
 
 ## Changelog
 
+### TBD
+
+* Add logger
+
 ### 1.1.0 (2016-01-19)
 
 * Accept all SSL certificates

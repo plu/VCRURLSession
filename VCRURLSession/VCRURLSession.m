@@ -37,6 +37,11 @@
     [VCRURLSessionSampler setStaticResponseHandler:handler];
 }
 
++ (void)setLogLevel:(VCRURLSessionLogLevel)logLevel
+{
+    [VCRURLSessionLogger setLogLevel:logLevel];
+}
+
 #pragma mark - Public recording methods
 
 + (BOOL)isRecording

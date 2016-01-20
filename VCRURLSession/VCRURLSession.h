@@ -7,6 +7,7 @@
 //
 
 #import "VCRURLSessionCassette.h"
+#import "VCRURLSessionLogger.h"
 #import "VCRURLSessionReplayMode.h"
 #import "VCRURLSessionResponse.h"
 #import <Foundation/Foundation.h>
@@ -87,6 +88,14 @@ NS_ASSUME_NONNULL_BEGIN
  *  @param handler a block that returns `VCRURLSessionResponse` instances.
  */
 + (void)setStaticResponseHandler:(VCRURLSessionResponse *_Nullable (^)(NSURLRequest *request))handler;
+
+/**
+ *  Change the `logLevel`, defaults to: VCRURLSessionLogLevelNone
+ *  Logging is only enabled in `DEBUG` builds, no matter what `logLevel` is set.
+ *
+ *  @param logLevel `VCRURLSessionLogLevel`
+ */
++ (void)setLogLevel:(VCRURLSessionLogLevel)logLevel;
 
 @end
 

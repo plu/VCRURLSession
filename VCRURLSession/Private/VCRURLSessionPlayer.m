@@ -6,6 +6,7 @@
 //  Copyright © 2016 Johannes Plunien. All rights reserved.
 //
 
+#import "VCRURLSessionLogger.h"
 #import "VCRURLSessionPlayer.h"
 #import "VCRURLSessionPlayerDelegate.h"
 #import "VCRURLSessionRecord.h"
@@ -66,7 +67,9 @@ static VCRURLSessionReplayMode VCRURLSessionPlayerSharedMode = VCRURLSessionRepl
 {
     VCRURLSessionRecord *record = [VCRURLSessionPlayerSharedDelegate recordForRequest:self.request];
     if (!record) {
-        NSError *error = [NSError errorWithDomain:NSURLErrorDomain code:NSURLErrorNotConnectedToInternet userInfo:@{NSURLErrorKey: self.request.URL}];
+        [VCRURLSessionLogger log:VCRURLSessionLogLevelError message:@"[E] RecordNotFound: %@ %@", self.request.HTTPMethod, self.request.URL];
+
+        NSError *error = [NSError errorWithDomain:NSURLErrorDomain code:NSURLErrorNotConnectedToInternet userInfo:@{NSURLErrorKey : self.request.URL}];
         [self.client URLProtocol:self didFailWithError:error];
         return;
     }
@@ -74,6 +77,8 @@ static VCRURLSessionReplayMode VCRURLSessionPlayerSharedMode = VCRURLSessionRepl
     record.played = YES;
 
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(record.responseTime * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [VCRURLSessionLogger log:VCRURLSessionLogLevelInfo message:@"[P] %zd %@ (%.2fms)", record.response.statusCode, self.request.URL, record.responseTime];
+
         if (record.error) {
             [self.client URLProtocol:self didFailWithError:record.error];
             return;
