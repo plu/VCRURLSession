@@ -2,6 +2,7 @@
 
 #import "VCRURLSession.h"
 #import "VCRURLSessionCassette.h"
+#import "VCRURLSessionLogger.h"
 #import "VCRURLSessionPlayerDelegate.h"
 #import "VCRURLSessionRecorderDelegate.h"
 #import "VCRURLSessionReplayMode.h"

@@ -7,37 +7,39 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0294EE5A44DF3C682D534BAAE007FD56 /* NSError+VCRURLSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 224DFBC57594744EB098CE0534C2E893 /* NSError+VCRURLSession.m */; };
-		03B111BA8B0A7A3571FE2BB925A0226C /* VCRURLSessionPlayerDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = F6A3B2D0DB10451AC10B03F547A68712 /* VCRURLSessionPlayerDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0AAF9C45331C7D9D5FB102E8A04CF23B /* VCRURLSessionRecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = E0952B62A8C73B8266DA958F071CAB93 /* VCRURLSessionRecorder.m */; };
-		19A803F93DF2D4296D7DA951876700CD /* VCRURLSession-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 07EF316CBCF597255F119495D974C23B /* VCRURLSession-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		02436AFA340F0DF447DE15406A0A132B /* VCRURLSessionRecorderDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = B5F6FB2D73DC09D36B2CA92F6100FE16 /* VCRURLSessionRecorderDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0CFBB9F35E1192B92D0AF8C6F70255FC /* VCRURLSession.h in Headers */ = {isa = PBXBuildFile; fileRef = E3C33723AE8790779D44C805BC75A18E /* VCRURLSession.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0EB6BDC3DC354F6EE5F13660C2B47399 /* VCRURLSessionCassette.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C99B0134F25C030B13DD501E0BF7175 /* VCRURLSessionCassette.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1CDE5E7C6F75EB9268532F409C3FBF91 /* NSError+VCRURLSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 95E27D4C6814DBDE7636E5898B7B8A51 /* NSError+VCRURLSession.m */; };
 		216B0232B2E16C978E72973DA4975CB0 /* Pods-VCRURLSessionExample-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 74B85D6C6531720DE937037A8E982BF0 /* Pods-VCRURLSessionExample-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		21A5FAC2CCB4E33E0C649A17A397F6DD /* VCRURLSessionResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = EB1A9B7F59E8CCB331BC8E6D8AC83F00 /* VCRURLSessionResponse.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		246F6C203BFC689E99D293DE0ABE4C7C /* NSData+VCRURLSession.m in Sources */ = {isa = PBXBuildFile; fileRef = E81317D6157ADC243E1F4E1FCA0FC0F9 /* NSData+VCRURLSession.m */; };
 		2C5564545ED2792E0E8441A33A4537E2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
-		39AF7A6E1AB5A57691F245386695A9B0 /* VCRURLSessionRecord.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A401106B26321F3CC434548385DA3AF /* VCRURLSessionRecord.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		3DB8005CF8EAD1A42F07E72E3B6DF89F /* VCRURLSession-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FAD84BE01F448D384620A26BD5B9629 /* VCRURLSession-dummy.m */; };
 		412126B0369E1AE947E24063A1ED9BA2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
-		49941185D238944849AE7B85754F48E3 /* VCRURLSessionRecorder.h in Headers */ = {isa = PBXBuildFile; fileRef = 7E38EF7133BE2979A6426D2DBF43E97E /* VCRURLSessionRecorder.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		532A205715BB795600B2D5801D795C9B /* NSData+VCRURLSession.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A8E4BCE7F13B870D68F7F4436CD2658 /* NSData+VCRURLSession.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		6A7B5EC36FBCEF7F5818FDCC3F188F8C /* VCRURLSessionSampler.m in Sources */ = {isa = PBXBuildFile; fileRef = 02A34098E6E52175A0CCB9B7FE8E0F82 /* VCRURLSessionSampler.m */; };
-		70CF125DD3D61085778168F518EC0838 /* NSHTTPURLResponse+VCRURLSession.m in Sources */ = {isa = PBXBuildFile; fileRef = E45EEA9CD6802B25A5726A133FCB708E /* NSHTTPURLResponse+VCRURLSession.m */; };
-		7A157FA30E7C9DD10C0560EE9F3E2D7B /* NSData+VCRURLSession.m in Sources */ = {isa = PBXBuildFile; fileRef = E2ACC41E5DBE15A190AC1FE65A38AFE1 /* NSData+VCRURLSession.m */; };
-		85B2074FC64171C57D1E699DC93CE806 /* VCRURLSessionCassette.h in Headers */ = {isa = PBXBuildFile; fileRef = BFA08368BD4E5553FD3E96B133A009A1 /* VCRURLSessionCassette.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8F56615E6BE7684DFCCED16508525D0C /* NSError+VCRURLSession.h in Headers */ = {isa = PBXBuildFile; fileRef = 25DEB8C27EB2C6D2A1E6166B56801BAE /* NSError+VCRURLSession.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		91916693AEC787DD149D45247A54021F /* VCRURLSessionReplayMode.h in Headers */ = {isa = PBXBuildFile; fileRef = 6D22C10CD93F4BFBEA03EEFADC24C047 /* VCRURLSessionReplayMode.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9D3E3C240AFB1623B89171920FC7E8FA /* VCRURLSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 42F9F12665BA140C96319F75423611AA /* VCRURLSession.m */; };
-		9D945468EA6F284AE39B53220F5AB74E /* VCRURLSessionSampler.h in Headers */ = {isa = PBXBuildFile; fileRef = D30139BCC307AFB3D8D34C5C6C49B7E0 /* VCRURLSessionSampler.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		A7154A17519C69FEE96365AB79C62E4A /* VCRURLSessionResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 521B4077606C2BC777F6C9C3362FC084 /* VCRURLSessionResponse.m */; };
-		AB7D245C412AC0A70157C400C6CC527B /* VCRURLSessionRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A54CE2001E77793A68213C43C073E00 /* VCRURLSessionRecord.m */; };
-		ABEB4A90E0ECDC0BDB20BBFD181B314E /* VCRURLSessionPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 5014B997265E943EB77635E264BBD319 /* VCRURLSessionPlayer.m */; };
-		B60830434B343F5E4EC282F33EF32F53 /* NSURLRequest+VCRURLSession.h in Headers */ = {isa = PBXBuildFile; fileRef = 3367825FF66CB368B064B61CD59A0072 /* NSURLRequest+VCRURLSession.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		4383FDA83D97B186117DFF42AC739463 /* VCRURLSession-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 07EF316CBCF597255F119495D974C23B /* VCRURLSession-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4A0325408548BB30CB0E89669EA225CD /* VCRURLSessionSampler.m in Sources */ = {isa = PBXBuildFile; fileRef = D267FE0FC91A46BF551FB9DEA1691F57 /* VCRURLSessionSampler.m */; };
+		4B24DD22266D4F309012F667F046D9D2 /* VCRURLSessionPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = F338AD0D49AEBA310BADFDC9EDE91341 /* VCRURLSessionPlayer.m */; };
+		4EA6DD457CF119FF859A1A3B89C59760 /* VCRURLSession-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FAD84BE01F448D384620A26BD5B9629 /* VCRURLSession-dummy.m */; };
+		51ED0472B35862520E4289C91177745B /* VCRURLSessionSampler.h in Headers */ = {isa = PBXBuildFile; fileRef = 5FBACB45190DD802B35BDB7D4A13026A /* VCRURLSessionSampler.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		58929DF444D51B7DCC0E384602F59794 /* VCRURLSessionRecorder.h in Headers */ = {isa = PBXBuildFile; fileRef = E24FA82493BC096E864BBE9D32068754 /* VCRURLSessionRecorder.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		6C1254027609B88706FD37D3DFBF8780 /* VCRURLSessionLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = 99DD8FA1B15C77C1A291E62CF8E7FFF9 /* VCRURLSessionLogger.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		71935E1194942DF1BA770A6A26CFB8C9 /* VCRURLSessionResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = 68C6CF92CCDBC2079E684AF62EDC30BA /* VCRURLSessionResponse.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		749325AF84C6C890D51549DCC4E2B2E3 /* VCRURLSessionResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 488B1849500324E65DBCD9D6785047AF /* VCRURLSessionResponse.m */; };
+		749A5DFCC42CE99B809FB7FF8D0C9E45 /* NSError+VCRURLSession.h in Headers */ = {isa = PBXBuildFile; fileRef = A8543BC8E4D5D2B41777B56A23C78588 /* NSError+VCRURLSession.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		7ABB6DE9ADE59602D585DE9C1C4B6CB6 /* VCRURLSessionLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = B816F1AC79A51955A561D9AF416BC7B3 /* VCRURLSessionLogger.m */; };
+		7F5C0FE48CC34C0B5F7A3B15B6DA04BB /* NSData+VCRURLSession.h in Headers */ = {isa = PBXBuildFile; fileRef = DD995AE10DF59911F93D472411EDA804 /* NSData+VCRURLSession.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		862700A47CB626B163E3148BBDEF48E2 /* NSURLRequest+VCRURLSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD0BBFE0BD1E98FA0A5BD56A8F65221 /* NSURLRequest+VCRURLSession.m */; };
+		94DC7CF5C62A59D1C42EA203459CC021 /* NSHTTPURLResponse+VCRURLSession.h in Headers */ = {isa = PBXBuildFile; fileRef = 0790C1BCDCCA924E1762F36B4FDF2E76 /* NSHTTPURLResponse+VCRURLSession.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		A41AF629C0B257818591C5BE4D5B6486 /* VCRURLSessionRecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A3665C83C8B2AB4D79EC49F24C4B0F6 /* VCRURLSessionRecorder.m */; };
+		B20F71ADEEBFE406A9421925D84A7179 /* VCRURLSessionRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 15DE7C09B7DC351D505B4237C2356CC9 /* VCRURLSessionRecord.m */; };
 		B95B3A0E01293F0F651645AC4BCC1DB6 /* Pods-VCRURLSessionExample-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6221A85DFBDA15511ECDBDCED1DC948C /* Pods-VCRURLSessionExample-dummy.m */; };
-		D3880488B90C6EA03CB010B774471344 /* VCRURLSessionRecorderDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = E245CC34F524AD0141A147723282C6BD /* VCRURLSessionRecorderDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D7495D36EE1727FCD3894B8BB053E044 /* VCRURLSession.h in Headers */ = {isa = PBXBuildFile; fileRef = 89EAAE20409655AF716570C8AD0A86C0 /* VCRURLSession.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EC37736A9A4D889B475A1BF181391EB0 /* NSURLRequest+VCRURLSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 5425E406F01E46D171E3D96D2B54849E /* NSURLRequest+VCRURLSession.m */; };
-		F05AF6A7EEF5E6009F0E9F22CF2D7FE5 /* NSHTTPURLResponse+VCRURLSession.h in Headers */ = {isa = PBXBuildFile; fileRef = 55BC7E576AA1B6DB777E4D97CC659B79 /* NSHTTPURLResponse+VCRURLSession.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		F56AB6531AC4C328822DD0E834ED5A1B /* VCRURLSessionPlayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 49543B9383483B707AFAAF504F2B9AA7 /* VCRURLSessionPlayer.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		FCC2CCC889247DBEB54FC0785E375366 /* VCRURLSessionCassette.m in Sources */ = {isa = PBXBuildFile; fileRef = D00ACEE72C4EB95CBA13AE5B63874916 /* VCRURLSessionCassette.m */; };
+		BD45E1B00C97CA57F4F0E47B9616E0B0 /* VCRURLSessionPlayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 30D913DBA548DC9E07E4A064BA0CB349 /* VCRURLSessionPlayer.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		C5D16E88AC0DC7D848EA44EA4A31BE29 /* VCRURLSessionPlayerDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A4C5C711D572DF0F09BD2E10ED7828C /* VCRURLSessionPlayerDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E1647895752C0CC93835315A1E43DFD6 /* VCRURLSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B75E4A5830F2686EDB0642005B27DA4 /* VCRURLSession.m */; };
+		E1FD75DA1167EAE2654BFF2B5C587412 /* NSHTTPURLResponse+VCRURLSession.m in Sources */ = {isa = PBXBuildFile; fileRef = DBE810C2EE46D4B66FFB0B9528DF1D05 /* NSHTTPURLResponse+VCRURLSession.m */; };
+		EA800EAB47C3804B5996C64D19283CCE /* VCRURLSessionCassette.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D3882EECE03B4A6EA6E6AE6F12BA384 /* VCRURLSessionCassette.m */; };
+		F885A5C44A5081327952B25B26BB583D /* VCRURLSessionRecord.h in Headers */ = {isa = PBXBuildFile; fileRef = F0E08F268E113AA7BC2B4C6EF12AF335 /* VCRURLSessionRecord.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		FBF21C415496CAC4BDEE8EA7B1678B6D /* NSURLRequest+VCRURLSession.h in Headers */ = {isa = PBXBuildFile; fileRef = 7F07B5B9E7F4B3B59E5043D00EB2BF62 /* NSURLRequest+VCRURLSession.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		FC4A2F8D6018CABA092045D8EACCC068 /* VCRURLSessionReplayMode.h in Headers */ = {isa = PBXBuildFile; fileRef = A3C839EA23CB0B1E2F626D6E39CAC256 /* VCRURLSessionReplayMode.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,51 +53,53 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		02A34098E6E52175A0CCB9B7FE8E0F82 /* VCRURLSessionSampler.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = VCRURLSessionSampler.m; sourceTree = "<group>"; };
 		0302BC157203915CFBE3EFF010F686F0 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0790C1BCDCCA924E1762F36B4FDF2E76 /* NSHTTPURLResponse+VCRURLSession.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSHTTPURLResponse+VCRURLSession.h"; sourceTree = "<group>"; };
 		07EF316CBCF597255F119495D974C23B /* VCRURLSession-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "VCRURLSession-umbrella.h"; sourceTree = "<group>"; };
 		0891EAED928B56BE369A5709DF730B50 /* VCRURLSession.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = VCRURLSession.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		0A401106B26321F3CC434548385DA3AF /* VCRURLSessionRecord.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = VCRURLSessionRecord.h; sourceTree = "<group>"; };
-		1A8E4BCE7F13B870D68F7F4436CD2658 /* NSData+VCRURLSession.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSData+VCRURLSession.h"; sourceTree = "<group>"; };
+		15DE7C09B7DC351D505B4237C2356CC9 /* VCRURLSessionRecord.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = VCRURLSessionRecord.m; sourceTree = "<group>"; };
 		1F895AE3B7CEE2B4750CA89C5D31EA8D /* Pods-VCRURLSessionExample-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-VCRURLSessionExample-acknowledgements.plist"; sourceTree = "<group>"; };
-		224DFBC57594744EB098CE0534C2E893 /* NSError+VCRURLSession.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSError+VCRURLSession.m"; sourceTree = "<group>"; };
-		25DEB8C27EB2C6D2A1E6166B56801BAE /* NSError+VCRURLSession.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSError+VCRURLSession.h"; sourceTree = "<group>"; };
+		2B75E4A5830F2686EDB0642005B27DA4 /* VCRURLSession.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = VCRURLSession.m; sourceTree = "<group>"; };
 		2BAB798D40B86F245E32A1F9E124ADB7 /* Pods-VCRURLSessionExample.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-VCRURLSessionExample.modulemap"; sourceTree = "<group>"; };
 		2FAD84BE01F448D384620A26BD5B9629 /* VCRURLSession-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "VCRURLSession-dummy.m"; sourceTree = "<group>"; };
-		3367825FF66CB368B064B61CD59A0072 /* NSURLRequest+VCRURLSession.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSURLRequest+VCRURLSession.h"; sourceTree = "<group>"; };
+		30D913DBA548DC9E07E4A064BA0CB349 /* VCRURLSessionPlayer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = VCRURLSessionPlayer.h; sourceTree = "<group>"; };
+		3A4C5C711D572DF0F09BD2E10ED7828C /* VCRURLSessionPlayerDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = VCRURLSessionPlayerDelegate.h; sourceTree = "<group>"; };
 		3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		42F9F12665BA140C96319F75423611AA /* VCRURLSession.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = VCRURLSession.m; sourceTree = "<group>"; };
-		49543B9383483B707AFAAF504F2B9AA7 /* VCRURLSessionPlayer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = VCRURLSessionPlayer.h; sourceTree = "<group>"; };
-		5014B997265E943EB77635E264BBD319 /* VCRURLSessionPlayer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = VCRURLSessionPlayer.m; sourceTree = "<group>"; };
-		521B4077606C2BC777F6C9C3362FC084 /* VCRURLSessionResponse.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = VCRURLSessionResponse.m; sourceTree = "<group>"; };
-		5425E406F01E46D171E3D96D2B54849E /* NSURLRequest+VCRURLSession.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSURLRequest+VCRURLSession.m"; sourceTree = "<group>"; };
+		488B1849500324E65DBCD9D6785047AF /* VCRURLSessionResponse.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = VCRURLSessionResponse.m; sourceTree = "<group>"; };
 		5451C1CB6BB54A086DAC32C08BCF36A2 /* Pods-VCRURLSessionExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-VCRURLSessionExample.release.xcconfig"; sourceTree = "<group>"; };
-		55BC7E576AA1B6DB777E4D97CC659B79 /* NSHTTPURLResponse+VCRURLSession.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSHTTPURLResponse+VCRURLSession.h"; sourceTree = "<group>"; };
+		5FBACB45190DD802B35BDB7D4A13026A /* VCRURLSessionSampler.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = VCRURLSessionSampler.h; sourceTree = "<group>"; };
 		60339EF7BE1F8C5AD61D45016793E6CB /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6221A85DFBDA15511ECDBDCED1DC948C /* Pods-VCRURLSessionExample-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-VCRURLSessionExample-dummy.m"; sourceTree = "<group>"; };
 		6345F8E379241D6EA4232C3907FEDD1A /* VCRURLSession.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = VCRURLSession.xcconfig; sourceTree = "<group>"; };
-		6A54CE2001E77793A68213C43C073E00 /* VCRURLSessionRecord.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = VCRURLSessionRecord.m; sourceTree = "<group>"; };
-		6D22C10CD93F4BFBEA03EEFADC24C047 /* VCRURLSessionReplayMode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = VCRURLSessionReplayMode.h; sourceTree = "<group>"; };
+		68C6CF92CCDBC2079E684AF62EDC30BA /* VCRURLSessionResponse.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = VCRURLSessionResponse.h; sourceTree = "<group>"; };
+		6BD0BBFE0BD1E98FA0A5BD56A8F65221 /* NSURLRequest+VCRURLSession.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSURLRequest+VCRURLSession.m"; sourceTree = "<group>"; };
 		74B85D6C6531720DE937037A8E982BF0 /* Pods-VCRURLSessionExample-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-VCRURLSessionExample-umbrella.h"; sourceTree = "<group>"; };
-		7E38EF7133BE2979A6426D2DBF43E97E /* VCRURLSessionRecorder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = VCRURLSessionRecorder.h; sourceTree = "<group>"; };
+		7A3665C83C8B2AB4D79EC49F24C4B0F6 /* VCRURLSessionRecorder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = VCRURLSessionRecorder.m; sourceTree = "<group>"; };
+		7D3882EECE03B4A6EA6E6AE6F12BA384 /* VCRURLSessionCassette.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = VCRURLSessionCassette.m; sourceTree = "<group>"; };
+		7F07B5B9E7F4B3B59E5043D00EB2BF62 /* NSURLRequest+VCRURLSession.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSURLRequest+VCRURLSession.h"; sourceTree = "<group>"; };
 		883A58E940D565FC4FB7B8785DB47E6F /* VCRURLSession-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "VCRURLSession-prefix.pch"; sourceTree = "<group>"; };
-		89EAAE20409655AF716570C8AD0A86C0 /* VCRURLSession.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = VCRURLSession.h; sourceTree = "<group>"; };
 		8A25DC446736D01AD0EA7E319DA1AAA1 /* Pods-VCRURLSessionExample-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-VCRURLSessionExample-frameworks.sh"; sourceTree = "<group>"; };
+		8C99B0134F25C030B13DD501E0BF7175 /* VCRURLSessionCassette.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = VCRURLSessionCassette.h; sourceTree = "<group>"; };
+		95E27D4C6814DBDE7636E5898B7B8A51 /* NSError+VCRURLSession.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSError+VCRURLSession.m"; sourceTree = "<group>"; };
 		9772242A6605320F3A4F7DBA7DD71C63 /* Pods_VCRURLSessionExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VCRURLSessionExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		99DD8FA1B15C77C1A291E62CF8E7FFF9 /* VCRURLSessionLogger.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = VCRURLSessionLogger.h; sourceTree = "<group>"; };
+		A3C839EA23CB0B1E2F626D6E39CAC256 /* VCRURLSessionReplayMode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = VCRURLSessionReplayMode.h; sourceTree = "<group>"; };
+		A8543BC8E4D5D2B41777B56A23C78588 /* NSError+VCRURLSession.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSError+VCRURLSession.h"; sourceTree = "<group>"; };
 		AEEB652872944704D1D34A1D17C9071D /* Pods-VCRURLSessionExample-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-VCRURLSessionExample-acknowledgements.markdown"; sourceTree = "<group>"; };
+		B5F6FB2D73DC09D36B2CA92F6100FE16 /* VCRURLSessionRecorderDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = VCRURLSessionRecorderDelegate.h; sourceTree = "<group>"; };
+		B816F1AC79A51955A561D9AF416BC7B3 /* VCRURLSessionLogger.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = VCRURLSessionLogger.m; sourceTree = "<group>"; };
 		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		BFA08368BD4E5553FD3E96B133A009A1 /* VCRURLSessionCassette.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = VCRURLSessionCassette.h; sourceTree = "<group>"; };
 		C815DE4B2890902A960EDF6F7D174D1F /* VCRURLSession.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = VCRURLSession.modulemap; sourceTree = "<group>"; };
 		C8D9DB914D10444815AC9C820E0EB2EE /* Pods-VCRURLSessionExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-VCRURLSessionExample.debug.xcconfig"; sourceTree = "<group>"; };
-		D00ACEE72C4EB95CBA13AE5B63874916 /* VCRURLSessionCassette.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = VCRURLSessionCassette.m; sourceTree = "<group>"; };
-		D30139BCC307AFB3D8D34C5C6C49B7E0 /* VCRURLSessionSampler.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = VCRURLSessionSampler.h; sourceTree = "<group>"; };
-		E0952B62A8C73B8266DA958F071CAB93 /* VCRURLSessionRecorder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = VCRURLSessionRecorder.m; sourceTree = "<group>"; };
-		E245CC34F524AD0141A147723282C6BD /* VCRURLSessionRecorderDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = VCRURLSessionRecorderDelegate.h; sourceTree = "<group>"; };
-		E2ACC41E5DBE15A190AC1FE65A38AFE1 /* NSData+VCRURLSession.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSData+VCRURLSession.m"; sourceTree = "<group>"; };
-		E45EEA9CD6802B25A5726A133FCB708E /* NSHTTPURLResponse+VCRURLSession.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSHTTPURLResponse+VCRURLSession.m"; sourceTree = "<group>"; };
+		D267FE0FC91A46BF551FB9DEA1691F57 /* VCRURLSessionSampler.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = VCRURLSessionSampler.m; sourceTree = "<group>"; };
+		DBE810C2EE46D4B66FFB0B9528DF1D05 /* NSHTTPURLResponse+VCRURLSession.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSHTTPURLResponse+VCRURLSession.m"; sourceTree = "<group>"; };
+		DD995AE10DF59911F93D472411EDA804 /* NSData+VCRURLSession.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSData+VCRURLSession.h"; sourceTree = "<group>"; };
+		E24FA82493BC096E864BBE9D32068754 /* VCRURLSessionRecorder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = VCRURLSessionRecorder.h; sourceTree = "<group>"; };
+		E3C33723AE8790779D44C805BC75A18E /* VCRURLSession.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = VCRURLSession.h; sourceTree = "<group>"; };
 		E7E664FB6F064B65008EC9D78922D4DC /* Pods-VCRURLSessionExample-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-VCRURLSessionExample-resources.sh"; sourceTree = "<group>"; };
-		EB1A9B7F59E8CCB331BC8E6D8AC83F00 /* VCRURLSessionResponse.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = VCRURLSessionResponse.h; sourceTree = "<group>"; };
-		F6A3B2D0DB10451AC10B03F547A68712 /* VCRURLSessionPlayerDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = VCRURLSessionPlayerDelegate.h; sourceTree = "<group>"; };
+		E81317D6157ADC243E1F4E1FCA0FC0F9 /* NSData+VCRURLSession.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSData+VCRURLSession.m"; sourceTree = "<group>"; };
+		F0E08F268E113AA7BC2B4C6EF12AF335 /* VCRURLSessionRecord.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = VCRURLSessionRecord.h; sourceTree = "<group>"; };
+		F338AD0D49AEBA310BADFDC9EDE91341 /* VCRURLSessionPlayer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = VCRURLSessionPlayer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,23 +122,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		172F6B112FD9400D28AB51B67F44313B /* VCRURLSession */ = {
-			isa = PBXGroup;
-			children = (
-				89EAAE20409655AF716570C8AD0A86C0 /* VCRURLSession.h */,
-				42F9F12665BA140C96319F75423611AA /* VCRURLSession.m */,
-				BFA08368BD4E5553FD3E96B133A009A1 /* VCRURLSessionCassette.h */,
-				D00ACEE72C4EB95CBA13AE5B63874916 /* VCRURLSessionCassette.m */,
-				F6A3B2D0DB10451AC10B03F547A68712 /* VCRURLSessionPlayerDelegate.h */,
-				E245CC34F524AD0141A147723282C6BD /* VCRURLSessionRecorderDelegate.h */,
-				6D22C10CD93F4BFBEA03EEFADC24C047 /* VCRURLSessionReplayMode.h */,
-				EB1A9B7F59E8CCB331BC8E6D8AC83F00 /* VCRURLSessionResponse.h */,
-				521B4077606C2BC777F6C9C3362FC084 /* VCRURLSessionResponse.m */,
-				ABBD516EFD2DB6787AE711306D164B47 /* Private */,
-			);
-			path = VCRURLSession;
-			sourceTree = "<group>";
-		};
 		1897143A3F329C6312E9BBF412260860 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -166,10 +153,52 @@
 			path = "Example/Pods/Target Support Files/VCRURLSession";
 			sourceTree = "<group>";
 		};
+		4F0BD27F77352B40F7F204727D0E2527 /* Private */ = {
+			isa = PBXGroup;
+			children = (
+				DD995AE10DF59911F93D472411EDA804 /* NSData+VCRURLSession.h */,
+				E81317D6157ADC243E1F4E1FCA0FC0F9 /* NSData+VCRURLSession.m */,
+				A8543BC8E4D5D2B41777B56A23C78588 /* NSError+VCRURLSession.h */,
+				95E27D4C6814DBDE7636E5898B7B8A51 /* NSError+VCRURLSession.m */,
+				0790C1BCDCCA924E1762F36B4FDF2E76 /* NSHTTPURLResponse+VCRURLSession.h */,
+				DBE810C2EE46D4B66FFB0B9528DF1D05 /* NSHTTPURLResponse+VCRURLSession.m */,
+				7F07B5B9E7F4B3B59E5043D00EB2BF62 /* NSURLRequest+VCRURLSession.h */,
+				6BD0BBFE0BD1E98FA0A5BD56A8F65221 /* NSURLRequest+VCRURLSession.m */,
+				30D913DBA548DC9E07E4A064BA0CB349 /* VCRURLSessionPlayer.h */,
+				F338AD0D49AEBA310BADFDC9EDE91341 /* VCRURLSessionPlayer.m */,
+				F0E08F268E113AA7BC2B4C6EF12AF335 /* VCRURLSessionRecord.h */,
+				15DE7C09B7DC351D505B4237C2356CC9 /* VCRURLSessionRecord.m */,
+				E24FA82493BC096E864BBE9D32068754 /* VCRURLSessionRecorder.h */,
+				7A3665C83C8B2AB4D79EC49F24C4B0F6 /* VCRURLSessionRecorder.m */,
+				5FBACB45190DD802B35BDB7D4A13026A /* VCRURLSessionSampler.h */,
+				D267FE0FC91A46BF551FB9DEA1691F57 /* VCRURLSessionSampler.m */,
+			);
+			path = Private;
+			sourceTree = "<group>";
+		};
+		5E42BD10C5D3FD470811CA1FC0A54B41 /* VCRURLSession */ = {
+			isa = PBXGroup;
+			children = (
+				E3C33723AE8790779D44C805BC75A18E /* VCRURLSession.h */,
+				2B75E4A5830F2686EDB0642005B27DA4 /* VCRURLSession.m */,
+				8C99B0134F25C030B13DD501E0BF7175 /* VCRURLSessionCassette.h */,
+				7D3882EECE03B4A6EA6E6AE6F12BA384 /* VCRURLSessionCassette.m */,
+				99DD8FA1B15C77C1A291E62CF8E7FFF9 /* VCRURLSessionLogger.h */,
+				B816F1AC79A51955A561D9AF416BC7B3 /* VCRURLSessionLogger.m */,
+				3A4C5C711D572DF0F09BD2E10ED7828C /* VCRURLSessionPlayerDelegate.h */,
+				B5F6FB2D73DC09D36B2CA92F6100FE16 /* VCRURLSessionRecorderDelegate.h */,
+				A3C839EA23CB0B1E2F626D6E39CAC256 /* VCRURLSessionReplayMode.h */,
+				68C6CF92CCDBC2079E684AF62EDC30BA /* VCRURLSessionResponse.h */,
+				488B1849500324E65DBCD9D6785047AF /* VCRURLSessionResponse.m */,
+				4F0BD27F77352B40F7F204727D0E2527 /* Private */,
+			);
+			path = VCRURLSession;
+			sourceTree = "<group>";
+		};
 		7D0829C4344818F2575342E3CFB8BB72 /* VCRURLSession */ = {
 			isa = PBXGroup;
 			children = (
-				BD1E354441FAB9DA9799DC189A43FDD4 /* Core */,
+				C40AEF63E4F8432CC0FB808DED7C31FD /* Core */,
 				3D142E7DD48CF3A8F41FFEE274C1A355 /* Support Files */,
 			);
 			name = VCRURLSession;
@@ -205,29 +234,6 @@
 			path = "Target Support Files/Pods-VCRURLSessionExample";
 			sourceTree = "<group>";
 		};
-		ABBD516EFD2DB6787AE711306D164B47 /* Private */ = {
-			isa = PBXGroup;
-			children = (
-				1A8E4BCE7F13B870D68F7F4436CD2658 /* NSData+VCRURLSession.h */,
-				E2ACC41E5DBE15A190AC1FE65A38AFE1 /* NSData+VCRURLSession.m */,
-				25DEB8C27EB2C6D2A1E6166B56801BAE /* NSError+VCRURLSession.h */,
-				224DFBC57594744EB098CE0534C2E893 /* NSError+VCRURLSession.m */,
-				55BC7E576AA1B6DB777E4D97CC659B79 /* NSHTTPURLResponse+VCRURLSession.h */,
-				E45EEA9CD6802B25A5726A133FCB708E /* NSHTTPURLResponse+VCRURLSession.m */,
-				3367825FF66CB368B064B61CD59A0072 /* NSURLRequest+VCRURLSession.h */,
-				5425E406F01E46D171E3D96D2B54849E /* NSURLRequest+VCRURLSession.m */,
-				49543B9383483B707AFAAF504F2B9AA7 /* VCRURLSessionPlayer.h */,
-				5014B997265E943EB77635E264BBD319 /* VCRURLSessionPlayer.m */,
-				0A401106B26321F3CC434548385DA3AF /* VCRURLSessionRecord.h */,
-				6A54CE2001E77793A68213C43C073E00 /* VCRURLSessionRecord.m */,
-				7E38EF7133BE2979A6426D2DBF43E97E /* VCRURLSessionRecorder.h */,
-				E0952B62A8C73B8266DA958F071CAB93 /* VCRURLSessionRecorder.m */,
-				D30139BCC307AFB3D8D34C5C6C49B7E0 /* VCRURLSessionSampler.h */,
-				02A34098E6E52175A0CCB9B7FE8E0F82 /* VCRURLSessionSampler.m */,
-			);
-			path = Private;
-			sourceTree = "<group>";
-		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -236,20 +242,20 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		BD1E354441FAB9DA9799DC189A43FDD4 /* Core */ = {
-			isa = PBXGroup;
-			children = (
-				172F6B112FD9400D28AB51B67F44313B /* VCRURLSession */,
-			);
-			name = Core;
-			sourceTree = "<group>";
-		};
 		BF6342C8B29F4CEEA088EFF7AB4DE362 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
 				3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */,
 			);
 			name = iOS;
+			sourceTree = "<group>";
+		};
+		C40AEF63E4F8432CC0FB808DED7C31FD /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				5E42BD10C5D3FD470811CA1FC0A54B41 /* VCRURLSession */,
+			);
+			name = Core;
 			sourceTree = "<group>";
 		};
 		EE9744B0938CEDD864D37732B3766816 /* Development Pods */ = {
@@ -271,25 +277,26 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D44D23B4D810A54C604E641CF33BEFBB /* Headers */ = {
+		BA8ADEF3793FBFC55968D13E093B043A /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				532A205715BB795600B2D5801D795C9B /* NSData+VCRURLSession.h in Headers */,
-				8F56615E6BE7684DFCCED16508525D0C /* NSError+VCRURLSession.h in Headers */,
-				F05AF6A7EEF5E6009F0E9F22CF2D7FE5 /* NSHTTPURLResponse+VCRURLSession.h in Headers */,
-				B60830434B343F5E4EC282F33EF32F53 /* NSURLRequest+VCRURLSession.h in Headers */,
-				19A803F93DF2D4296D7DA951876700CD /* VCRURLSession-umbrella.h in Headers */,
-				D7495D36EE1727FCD3894B8BB053E044 /* VCRURLSession.h in Headers */,
-				85B2074FC64171C57D1E699DC93CE806 /* VCRURLSessionCassette.h in Headers */,
-				F56AB6531AC4C328822DD0E834ED5A1B /* VCRURLSessionPlayer.h in Headers */,
-				03B111BA8B0A7A3571FE2BB925A0226C /* VCRURLSessionPlayerDelegate.h in Headers */,
-				39AF7A6E1AB5A57691F245386695A9B0 /* VCRURLSessionRecord.h in Headers */,
-				49941185D238944849AE7B85754F48E3 /* VCRURLSessionRecorder.h in Headers */,
-				D3880488B90C6EA03CB010B774471344 /* VCRURLSessionRecorderDelegate.h in Headers */,
-				91916693AEC787DD149D45247A54021F /* VCRURLSessionReplayMode.h in Headers */,
-				21A5FAC2CCB4E33E0C649A17A397F6DD /* VCRURLSessionResponse.h in Headers */,
-				9D945468EA6F284AE39B53220F5AB74E /* VCRURLSessionSampler.h in Headers */,
+				7F5C0FE48CC34C0B5F7A3B15B6DA04BB /* NSData+VCRURLSession.h in Headers */,
+				749A5DFCC42CE99B809FB7FF8D0C9E45 /* NSError+VCRURLSession.h in Headers */,
+				94DC7CF5C62A59D1C42EA203459CC021 /* NSHTTPURLResponse+VCRURLSession.h in Headers */,
+				FBF21C415496CAC4BDEE8EA7B1678B6D /* NSURLRequest+VCRURLSession.h in Headers */,
+				4383FDA83D97B186117DFF42AC739463 /* VCRURLSession-umbrella.h in Headers */,
+				0CFBB9F35E1192B92D0AF8C6F70255FC /* VCRURLSession.h in Headers */,
+				0EB6BDC3DC354F6EE5F13660C2B47399 /* VCRURLSessionCassette.h in Headers */,
+				6C1254027609B88706FD37D3DFBF8780 /* VCRURLSessionLogger.h in Headers */,
+				BD45E1B00C97CA57F4F0E47B9616E0B0 /* VCRURLSessionPlayer.h in Headers */,
+				C5D16E88AC0DC7D848EA44EA4A31BE29 /* VCRURLSessionPlayerDelegate.h in Headers */,
+				F885A5C44A5081327952B25B26BB583D /* VCRURLSessionRecord.h in Headers */,
+				58929DF444D51B7DCC0E384602F59794 /* VCRURLSessionRecorder.h in Headers */,
+				02436AFA340F0DF447DE15406A0A132B /* VCRURLSessionRecorderDelegate.h in Headers */,
+				FC4A2F8D6018CABA092045D8EACCC068 /* VCRURLSessionReplayMode.h in Headers */,
+				71935E1194942DF1BA770A6A26CFB8C9 /* VCRURLSessionResponse.h in Headers */,
+				51ED0472B35862520E4289C91177745B /* VCRURLSessionSampler.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -318,9 +325,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5BBFD0DD1EDEA2FFD53894C3D54D6A0E /* Build configuration list for PBXNativeTarget "VCRURLSession" */;
 			buildPhases = (
-				E62792C72BB2413BE59516E7CD22BE10 /* Sources */,
+				DC682451521155234A6CCBE31C4AAB35 /* Sources */,
 				29B080AE742EB0E799E7AC9D15FAE2D2 /* Frameworks */,
-				D44D23B4D810A54C604E641CF33BEFBB /* Headers */,
+				BA8ADEF3793FBFC55968D13E093B043A /* Headers */,
 			);
 			buildRules = (
 			);
@@ -367,22 +374,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E62792C72BB2413BE59516E7CD22BE10 /* Sources */ = {
+		DC682451521155234A6CCBE31C4AAB35 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7A157FA30E7C9DD10C0560EE9F3E2D7B /* NSData+VCRURLSession.m in Sources */,
-				0294EE5A44DF3C682D534BAAE007FD56 /* NSError+VCRURLSession.m in Sources */,
-				70CF125DD3D61085778168F518EC0838 /* NSHTTPURLResponse+VCRURLSession.m in Sources */,
-				EC37736A9A4D889B475A1BF181391EB0 /* NSURLRequest+VCRURLSession.m in Sources */,
-				3DB8005CF8EAD1A42F07E72E3B6DF89F /* VCRURLSession-dummy.m in Sources */,
-				9D3E3C240AFB1623B89171920FC7E8FA /* VCRURLSession.m in Sources */,
-				FCC2CCC889247DBEB54FC0785E375366 /* VCRURLSessionCassette.m in Sources */,
-				ABEB4A90E0ECDC0BDB20BBFD181B314E /* VCRURLSessionPlayer.m in Sources */,
-				AB7D245C412AC0A70157C400C6CC527B /* VCRURLSessionRecord.m in Sources */,
-				0AAF9C45331C7D9D5FB102E8A04CF23B /* VCRURLSessionRecorder.m in Sources */,
-				A7154A17519C69FEE96365AB79C62E4A /* VCRURLSessionResponse.m in Sources */,
-				6A7B5EC36FBCEF7F5818FDCC3F188F8C /* VCRURLSessionSampler.m in Sources */,
+				246F6C203BFC689E99D293DE0ABE4C7C /* NSData+VCRURLSession.m in Sources */,
+				1CDE5E7C6F75EB9268532F409C3FBF91 /* NSError+VCRURLSession.m in Sources */,
+				E1FD75DA1167EAE2654BFF2B5C587412 /* NSHTTPURLResponse+VCRURLSession.m in Sources */,
+				862700A47CB626B163E3148BBDEF48E2 /* NSURLRequest+VCRURLSession.m in Sources */,
+				4EA6DD457CF119FF859A1A3B89C59760 /* VCRURLSession-dummy.m in Sources */,
+				E1647895752C0CC93835315A1E43DFD6 /* VCRURLSession.m in Sources */,
+				EA800EAB47C3804B5996C64D19283CCE /* VCRURLSessionCassette.m in Sources */,
+				7ABB6DE9ADE59602D585DE9C1C4B6CB6 /* VCRURLSessionLogger.m in Sources */,
+				4B24DD22266D4F309012F667F046D9D2 /* VCRURLSessionPlayer.m in Sources */,
+				B20F71ADEEBFE406A9421925D84A7179 /* VCRURLSessionRecord.m in Sources */,
+				A41AF629C0B257818591C5BE4D5B6486 /* VCRURLSessionRecorder.m in Sources */,
+				749325AF84C6C890D51549DCC4E2B2E3 /* VCRURLSessionResponse.m in Sources */,
+				4A0325408548BB30CB0E89669EA225CD /* VCRURLSessionSampler.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

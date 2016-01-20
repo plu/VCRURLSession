@@ -12,6 +12,7 @@
 	* [Return static responses](#return-static-responses)
 	* [Recording filter](#recording-filter)
 	* [Replaying speed](#replaying-speed)
+	* [Logging](#logging)
 * [Changelog](CHANGELOG.md)
 
 ## Description
@@ -141,6 +142,14 @@ VCRURLSessionCassette *cassette = [[VCRURLSessionCassette alloc] initWithContent
 // If a request took 500ms, now it will only take 50ms
 cassette.replaySpeed = 10.0f;
 [VCRURLSession startReplayingWithCassette:cassette mode:VCRURLSessionReplayModeStrict];
+```
+
+### Logging
+
+This will enable logging recorded and replayed requests/responses. This only works for `DEBUG` builds.
+
+```objc
+[VCRURLSession setLogLevel:VCRURLSessionLogLevelInfo];
 ```
 
 ## License (MIT)

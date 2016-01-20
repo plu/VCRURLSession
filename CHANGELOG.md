@@ -2,7 +2,7 @@
 
 ## Changelog
 
-### TBD
+### 1.1.1 (2016-01-20)
 
 * Add logger
 
