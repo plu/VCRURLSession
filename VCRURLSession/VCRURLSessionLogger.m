@@ -26,6 +26,7 @@ static VCRURLSessionLogLevel VCRURLSessionLoggerLogLevel = VCRURLSessionLogLevel
 #ifdef DEBUG
     va_list args;
     va_start(args, message);
+    message = [@"[VCR] " stringByAppendingString:message];
     NSLogv(message, args);
     va_end(args);
 #endif
