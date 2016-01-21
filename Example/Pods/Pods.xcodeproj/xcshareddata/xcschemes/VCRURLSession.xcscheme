@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'DD8E6DA8D7882E8E36E9FB51'
+               BlueprintIdentifier = '9C43C8F948FFA96FA15AC3B9'
                BlueprintName = 'VCRURLSession'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'VCRURLSession.framework'>

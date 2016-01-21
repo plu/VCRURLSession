@@ -2,7 +2,7 @@
 
 ## Changelog
 
-### TBD
+### 1.2.0 (2016-01-21)
 
 * Do not register `NSURLProtocol` classes for `NSURLConnection` anymore
 * Try to avoid caching
