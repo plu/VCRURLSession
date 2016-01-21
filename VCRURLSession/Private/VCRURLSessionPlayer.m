@@ -36,6 +36,11 @@ static VCRURLSessionReplayMode VCRURLSessionPlayerSharedMode = VCRURLSessionRepl
 
 #pragma mark - Overridden methods
 
++ (BOOL)requestIsCacheEquivalent:(NSURLRequest *_Nonnull)aRequest toRequest:(NSURLRequest *_Nonnull)bRequest
+{
+    return NO;
+}
+
 + (BOOL)canInitWithRequest:(NSURLRequest *)request
 {
     switch (VCRURLSessionPlayerSharedMode) {
@@ -56,6 +61,11 @@ static VCRURLSessionReplayMode VCRURLSessionPlayerSharedMode = VCRURLSessionRepl
 - (instancetype)initWithRequest:(NSURLRequest *)request cachedResponse:(NSCachedURLResponse *)cachedResponse client:(id<NSURLProtocolClient>)client
 {
     return [super initWithRequest:request cachedResponse:nil client:client];
+}
+
+- (NSCachedURLResponse *)cachedResponse
+{
+    return nil;
 }
 
 - (void)startLoading

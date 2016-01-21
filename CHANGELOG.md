@@ -5,6 +5,7 @@
 ### TBD
 
 * Do not register `NSURLProtocol` classes for `NSURLConnection` anymore
+* Try to avoid caching
 
 ### 1.1.1 (2016-01-20)
 
