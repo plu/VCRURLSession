@@ -2,6 +2,10 @@
 
 ## Changelog
 
+### TBD
+
+* Do not register `NSURLProtocol` classes for `NSURLConnection` anymore
+
 ### 1.1.1 (2016-01-20)
 
 * Add logger

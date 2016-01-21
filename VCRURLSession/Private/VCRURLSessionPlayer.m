@@ -16,11 +16,6 @@ static VCRURLSessionReplayMode VCRURLSessionPlayerSharedMode = VCRURLSessionRepl
 
 @implementation VCRURLSessionPlayer
 
-+ (void)load
-{
-    [self registerClass:self];
-}
-
 #pragma mark - Public methods
 
 + (BOOL)isReplaying

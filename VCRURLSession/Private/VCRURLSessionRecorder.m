@@ -22,11 +22,6 @@ static id<VCRURLSessionRecorderDelegate> VCRURLSessionRecorderSharedDelegate = n
 
 @implementation VCRURLSessionRecorder
 
-+ (void)load
-{
-    [self registerClass:self];
-}
-
 #pragma mark - Public methods
 
 + (BOOL)isRecording
