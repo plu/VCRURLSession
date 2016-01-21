@@ -71,34 +71,34 @@ static id<VCRURLSessionRecorderDelegate> VCRURLSessionRecorderSharedDelegate = n
 
     NSTimeInterval startTime = [NSDate timeIntervalSinceReferenceDate];
 
-    NSURLSessionTask *task = [self.session
-        dataTaskWithRequest:self.request
-          completionHandler:^(NSData *_Nullable data, NSURLResponse *_Nullable response, NSError *_Nullable error) {
-              NSTimeInterval responseTime = [NSDate timeIntervalSinceReferenceDate] - startTime;
+    NSURLSessionTask *task = [self.session dataTaskWithRequest:self.request
+                                             completionHandler:^(NSData *_Nullable data, NSURLResponse *_Nullable response, NSError *_Nullable error) {
+                                                 NSTimeInterval responseTime = [NSDate timeIntervalSinceReferenceDate] - startTime;
 
-              if (response) {
-                  [self.client URLProtocol:self didReceiveResponse:response cacheStoragePolicy:NSURLCacheStorageNotAllowed];
-              }
-              if (data) {
-                  [self.client URLProtocol:self didLoadData:data];
-              }
-              if (error) {
-                  [self.client URLProtocol:self didFailWithError:error];
-              }
-              [self.client URLProtocolDidFinishLoading:self];
+                                                 if (response) {
+                                                     [self.client URLProtocol:self didReceiveResponse:response cacheStoragePolicy:NSURLCacheStorageNotAllowed];
+                                                 }
+                                                 if (data) {
+                                                     [self.client URLProtocol:self didLoadData:data];
+                                                 }
+                                                 if (error) {
+                                                     [self.client URLProtocol:self didFailWithError:error];
+                                                 }
+                                                 [self.client URLProtocolDidFinishLoading:self];
 
-              [[self class] removePropertyForKey:VCRURLSessionRecorderTaskKey inRequest:self.request.mutableCopy];
+                                                 [[self class] removePropertyForKey:VCRURLSessionRecorderTaskKey inRequest:self.request.mutableCopy];
 
-              BOOL recorded = [VCRURLSessionRecorderSharedDelegate recordRequest:self.request
-                                                                    responseTime:responseTime
-                                                                        response:(NSHTTPURLResponse *)response
-                                                                            data:data
-                                                                           error:error];
-              if (recorded) {
-                  [VCRURLSessionLogger log:VCRURLSessionLogLevelInfo
-                                   message:@"[R] %zd %@ (%.2fms)", ((NSHTTPURLResponse *)response).statusCode, self.request.URL, (responseTime * 1000)];
-              }
-          }];
+                                                 BOOL recorded = [VCRURLSessionRecorderSharedDelegate recordRequest:self.request
+                                                                                                       responseTime:responseTime
+                                                                                                           response:(NSHTTPURLResponse *)response
+                                                                                                               data:data
+                                                                                                              error:error];
+                                                 if (recorded) {
+                                                     [VCRURLSessionLogger log:VCRURLSessionLogLevelInfo
+                                                                      message:@"[R] %zd %@ %@ (%.2fms)", ((NSHTTPURLResponse *)response).statusCode,
+                                                                              self.request.HTTPMethod, self.request.URL, (responseTime * 1000)];
+                                                 }
+                                             }];
 
     [[self class] setProperty:task forKey:VCRURLSessionRecorderTaskKey inRequest:self.request.mutableCopy];
     [task resume];
