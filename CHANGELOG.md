@@ -2,7 +2,7 @@
 
 ## Changelog
 
-### TBD
+### 1.3.0 (TBD)
 
 * Add `registerProtocolClasses` and `unregisterProtocolClasses`
 * Do not expose `records` on `VCRURLSessionCassette`, expose `numberOfRecords` instead
