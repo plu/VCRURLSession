@@ -71,6 +71,17 @@ static NSString *VCRURLSessionCassetteUserInfoKey = @"userInfo";
     return self.data.count;
 }
 
+- (NSUInteger)numberOfPlayedRecords
+{
+    NSUInteger playedRecords = 0;
+    for (VCRURLSessionRecord *record in self.data) {
+        if (record.played) {
+            playedRecords++;
+        }
+    }
+    return playedRecords;
+}
+
 - (BOOL)writeToFile:(NSString *)path
 {
     return [[self dataValue] writeToFile:path atomically:YES];

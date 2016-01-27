@@ -31,6 +31,11 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, readonly) NSUInteger numberOfRecords;
 
 /**
+ *  Number of played records.
+ */
+@property (nonatomic, readonly) NSUInteger numberOfPlayedRecords;
+
+/**
  *  `NSDate` instance representing the date when the recording of this cassette started. It will also
  *  be serialized/deserialized when writing/loading the cassette.
  */

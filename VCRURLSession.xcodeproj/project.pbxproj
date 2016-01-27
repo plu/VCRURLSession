@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0524DAF21C4F3B6D00B2DC61 /* VCRURLSessionLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 0524DAF11C4F3B6D00B2DC61 /* VCRURLSessionLogger.m */; };
+		05DAD9E01C58779800899535 /* cassette3.json in Resources */ = {isa = PBXBuildFile; fileRef = 05DAD9DF1C58779800899535 /* cassette3.json */; };
 		36B89BA1F3385FF19A3AE8D2 /* Pods_VCRURLSessionTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03A4060C349BAFB7FE8114ED /* Pods_VCRURLSessionTests.framework */; };
 		3E8DFA381C4213D200634C5E /* VCRURLSessionResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8DFA371C4213D200634C5E /* VCRURLSessionResponse.m */; };
 		670A40FA1C3CD85200613511 /* VCRURLSession.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 670A40F91C3CD85200613511 /* VCRURLSession.h */; };
@@ -62,6 +63,7 @@
 		03A4060C349BAFB7FE8114ED /* Pods_VCRURLSessionTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VCRURLSessionTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0524DAF01C4F3B6D00B2DC61 /* VCRURLSessionLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VCRURLSessionLogger.h; sourceTree = "<group>"; };
 		0524DAF11C4F3B6D00B2DC61 /* VCRURLSessionLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VCRURLSessionLogger.m; sourceTree = "<group>"; };
+		05DAD9DF1C58779800899535 /* cassette3.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = cassette3.json; sourceTree = "<group>"; };
 		3E8DFA361C4213D200634C5E /* VCRURLSessionResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VCRURLSessionResponse.h; sourceTree = "<group>"; };
 		3E8DFA371C4213D200634C5E /* VCRURLSessionResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VCRURLSessionResponse.m; sourceTree = "<group>"; };
 		4E072C8473D6D5A899002B72 /* Pods-VCRURLSessionTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VCRURLSessionTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-VCRURLSessionTests/Pods-VCRURLSessionTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -206,6 +208,7 @@
 			children = (
 				6725C10B1C3E38BF009AAE93 /* cassette1.json */,
 				674EBB161C47E04300F94839 /* cassette2.json */,
+				05DAD9DF1C58779800899535 /* cassette3.json */,
 				67693F001C3E619A0045F65B /* errors.json */,
 			);
 			path = Cassettes;
@@ -334,6 +337,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				67693F011C3E619A0045F65B /* errors.json in Resources */,
+				05DAD9E01C58779800899535 /* cassette3.json in Resources */,
 				674EBB171C47E04300F94839 /* cassette2.json in Resources */,
 				6725C10C1C3E38BF009AAE93 /* cassette1.json in Resources */,
 			);

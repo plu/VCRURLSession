@@ -1,0 +1,64 @@
+{
+  "userInfo" : {
+
+  },
+  "recordingTime" : 1453867019.993439,
+  "records" : [
+    {
+      "responseTime" : 0.03280603885650635,
+      "error" : {
+
+      },
+      "requestID" : 0,
+      "request" : {
+        "method" : "GET",
+        "url" : "http:\/\/localhost:4567\/",
+        "headers" : {
+
+        }
+      },
+      "response" : {
+        "body" : "[]",
+        "headers" : {
+          "X-XSS-Protection" : "1; mode=block",
+          "X-Frame-Options" : "SAMEORIGIN",
+          "Content-Type" : "text\/html;charset=utf-8",
+          "Server" : "thin 1.5.1 codename Straight Razor",
+          "Content-Length" : "2",
+          "Connection" : "keep-alive",
+          "X-Content-Type-Options" : "nosniff"
+        },
+        "statusCode" : 200,
+        "url" : "http:\/\/localhost:4567\/"
+      }
+    },
+    {
+      "responseTime" : 0.005559980869293213,
+      "error" : {
+
+      },
+      "requestID" : 1,
+      "request" : {
+        "method" : "GET",
+        "url" : "http:\/\/localhost:4567\/",
+        "headers" : {
+
+        }
+      },
+      "response" : {
+        "body" : "[]",
+        "headers" : {
+          "X-XSS-Protection" : "1; mode=block",
+          "X-Frame-Options" : "SAMEORIGIN",
+          "Content-Type" : "text\/html;charset=utf-8",
+          "Server" : "thin 1.5.1 codename Straight Razor",
+          "Content-Length" : "2",
+          "Connection" : "keep-alive",
+          "X-Content-Type-Options" : "nosniff"
+        },
+        "statusCode" : 200,
+        "url" : "http:\/\/localhost:4567\/"
+      }
+    }
+  ]
+}

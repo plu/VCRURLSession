@@ -201,5 +201,50 @@ class VCRURLSessionSpec: QuickSpec {
                 }
             }
         }
+
+        describe("cassette3.json") {
+            let cassettePath = VCRURLSessionTestsHelper.pathToCassetteWithName("cassette3.json")
+
+            describe("recording") {
+                pending("run `ruby api.rb` and change `pending` to `describe` to generate the cassette") {
+                    it("records two requests") {
+                        let cassette = VCRURLSessionCassette()
+                        VCRURLSession.startRecordingOnCassette(cassette)
+
+                        let getRequest = NSMutableURLRequest.init(URL: NSURL.init(string: "http://localhost:4567/")!)
+
+                        // 1. GET /
+                        self.testSession.dataTaskWithRequest(getRequest).resume()
+                        expect(cassette.numberOfRecords).toEventually(equal(1))
+
+                        // 2. GET /
+                        self.testSession.dataTaskWithRequest(getRequest).resume()
+                        expect(cassette.numberOfRecords).toEventually(equal(2))
+
+                        cassette.writeToFile(cassettePath)
+                    }
+                }
+            }
+
+            describe("playing") {
+                it("plays one record") {
+                    var responseString: String?
+                    let cassette = VCRURLSessionCassette.init(contentsOfFile: cassettePath)
+                    VCRURLSession.startReplayingWithCassette(cassette, mode: .Strict)
+
+                    let getRequest = NSMutableURLRequest.init(URL: NSURL.init(string: "http://localhost:4567/")!)
+
+                    // 1. GET /
+                    self.testSession.dataTaskWithRequest(getRequest, completionHandler: { (data, response, error) -> Void in
+                        responseString = String.init(data: data!, encoding: NSUTF8StringEncoding)
+                    }).resume()
+                    expect(responseString).toEventually(equal("[]"))
+
+                    expect(cassette.numberOfRecords).to(equal(2))
+                    expect(cassette.numberOfPlayedRecords).to(equal(1))
+                }
+            }
+        }
+        
     }
 }
