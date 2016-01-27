@@ -14,7 +14,6 @@ class VCRURLSessionCategoriesSpec: QuickSpec {
         describe("NSError+VCRURLSession") {
             let code = 42
             let domain = "foo"
-            let encodedUserInfo = "YnBsaXN0MDDUAQIDBAUIHB1UJHRvcFgkb2JqZWN0c1gkdmVyc2lvblkkYXJjaGl2ZXLRBgdUcm9vdIABpQkKExQVVSRudWxs0wsMDQ4QEVpOUy5vYmplY3RzViRjbGFzc1dOUy5rZXlzoQ+AA4AEoRKAAlNmb29TYmFy0hYXGBtYJGNsYXNzZXNaJGNsYXNzbmFtZaIZGlxOU0RpY3Rpb25hcnlYTlNPYmplY3RcTlNEaWN0aW9uYXJ5EgABhqBfEA9OU0tleWVkQXJjaGl2ZXIIERYfKDI1OjxCSE9aYWlrbW9xc3d7gImUl6Stur8AAAAAAAABAQAAAAAAAAAeAAAAAAAAAAAAAAAAAAAA0Q=="
             let userInfo = ["foo": "bar"]
 
             describe("VCRURLSession_dictionaryValue") {
@@ -30,7 +29,9 @@ class VCRURLSessionCategoriesSpec: QuickSpec {
                 }
 
                 it("stores userInfo") {
-                    expect(result["userInfo"] as? String).to(equal(encodedUserInfo))
+                    let userInfoData = NSData.init(base64EncodedString: result["userInfo"] as! String, options: NSDataBase64DecodingOptions.init(rawValue: 0))!
+                    let decodedUserInfo = NSKeyedUnarchiver.unarchiveObjectWithData(userInfoData)
+                    expect(decodedUserInfo as? Dictionary).to(equal(userInfo))
                 }
             }
         }
