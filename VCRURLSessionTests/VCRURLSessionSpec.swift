@@ -29,15 +29,15 @@ class VCRURLSessionSpec: QuickSpec {
 
                         // 1. Invalid port
                         self.testSession.dataTaskWithRequest(NSMutableURLRequest.init(URL: NSURL.init(string: "http://localhost:70000/")!)).resume()
-                        expect(cassette.records.count).toEventually(equal(1))
+                        expect(cassette.numberOfRecords).toEventually(equal(1))
 
                         // 2. Invalid scheme
                         self.testSession.dataTaskWithRequest(NSMutableURLRequest.init(URL: NSURL.init(string: "asdf://localhost/")!)).resume()
-                        expect(cassette.records.count).toEventually(equal(2))
+                        expect(cassette.numberOfRecords).toEventually(equal(2))
 
                         // 3. Invalid domain
                         self.testSession.dataTaskWithRequest(NSMutableURLRequest.init(URL: NSURL.init(string: "http://invalid.plunien.com/")!)).resume()
-                        expect(cassette.records.count).toEventually(equal(3))
+                        expect(cassette.numberOfRecords).toEventually(equal(3))
 
                         cassette.writeToFile(cassettePath)
                     }
@@ -89,21 +89,21 @@ class VCRURLSessionSpec: QuickSpec {
 
                         // 1. GET /
                         self.testSession.dataTaskWithRequest(getRequest).resume()
-                        expect(cassette.records.count).toEventually(equal(1))
+                        expect(cassette.numberOfRecords).toEventually(equal(1))
 
                         // 2. POST /
                         postRequest.HTTPBody = "one".dataUsingEncoding(NSUTF8StringEncoding)
                         self.testSession.dataTaskWithRequest(postRequest).resume()
-                        expect(cassette.records.count).toEventually(equal(2))
+                        expect(cassette.numberOfRecords).toEventually(equal(2))
 
                         // 3. POST /
                         postRequest.HTTPBody = "two".dataUsingEncoding(NSUTF8StringEncoding)
                         self.testSession.dataTaskWithRequest(postRequest).resume()
-                        expect(cassette.records.count).toEventually(equal(3))
+                        expect(cassette.numberOfRecords).toEventually(equal(3))
 
                         // 4. GET /
                         self.testSession.dataTaskWithRequest(getRequest).resume()
-                        expect(cassette.records.count).toEventually(equal(4))
+                        expect(cassette.numberOfRecords).toEventually(equal(4))
 
                         cassette.writeToFile(cassettePath)
                     }
@@ -160,7 +160,7 @@ class VCRURLSessionSpec: QuickSpec {
 
                         // 1. GET /
                         self.testSession.dataTaskWithRequest(getRequest).resume()
-                        expect(cassette.records.count).toEventually(equal(1))
+                        expect(cassette.numberOfRecords).toEventually(equal(1))
 
                         cassette.writeToFile(cassettePath)
                     }

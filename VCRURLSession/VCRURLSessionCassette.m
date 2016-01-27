@@ -66,9 +66,9 @@ static NSString *VCRURLSessionCassetteUserInfoKey = @"userInfo";
     return [self initWithData:[[NSData alloc] initWithContentsOfFile:path]];
 }
 
-- (NSArray<VCRURLSessionRecord *> *)records
+- (NSUInteger)numberOfRecords
 {
-    return self.data.copy;
+    return self.data.count;
 }
 
 - (BOOL)writeToFile:(NSString *)path
@@ -83,7 +83,7 @@ static NSString *VCRURLSessionCassetteUserInfoKey = @"userInfo";
 
 - (NSString *)description
 {
-    return [NSString stringWithFormat:@"<%@:%p records:%zd>", NSStringFromClass([self class]), self, self.records.count];
+    return [NSString stringWithFormat:@"<%@:%p records:%zd>", NSStringFromClass([self class]), self, self.numberOfRecords];
 }
 
 #pragma mark - Private

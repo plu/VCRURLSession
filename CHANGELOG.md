@@ -5,6 +5,7 @@
 ### TBD
 
 * Add `registerProtocolClasses` and `unregisterProtocolClasses`
+* Do not expose `records` on `VCRURLSessionCassette`, expose `numberOfRecords` instead
 
 ### 1.2.0 (2016-01-21)
 

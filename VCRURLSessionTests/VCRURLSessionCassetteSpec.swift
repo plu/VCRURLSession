@@ -32,7 +32,7 @@ class VCRURLSessionCassetteSpec: QuickSpec {
 
                 cassette.recordRequest(request, responseTime: 0.0, response: nil, data: nil, error: nil)
 
-                expect(cassette.records.count).to(equal(1))
+                expect(cassette.numberOfRecords).to(equal(1))
             }
 
             it("does not record the request") {
@@ -43,7 +43,7 @@ class VCRURLSessionCassetteSpec: QuickSpec {
 
                 cassette.recordRequest(request, responseTime: 0.0, response: nil, data: nil, error: nil)
 
-                expect(cassette.records.count).to(equal(0))
+                expect(cassette.numberOfRecords).to(equal(0))
             }
         }
 

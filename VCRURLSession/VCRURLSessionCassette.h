@@ -26,9 +26,9 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy) BOOL (^recordFilter)(NSURLRequest *request);
 
 /**
- *  Array of `VCRURLSessionRecord` instances.
+ *  Number of records.
  */
-@property (nonatomic, readonly) NSArray<VCRURLSessionRecord *> *records;
+@property (nonatomic, readonly) NSUInteger numberOfRecords;
 
 /**
  *  `NSDate` instance representing the date when the recording of this cassette started. It will also
