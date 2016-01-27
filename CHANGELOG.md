@@ -2,6 +2,10 @@
 
 ## Changelog
 
+### TBD
+
+* Add `registerProtocolClasses` and `unregisterProtocolClasses`
+
 ### 1.2.0 (2016-01-21)
 
 * Do not register `NSURLProtocol` classes for `NSURLConnection` anymore

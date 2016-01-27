@@ -17,19 +17,42 @@
 
 @implementation VCRURLSession
 
++ (NSArray *)protocolClasses
+{
+    static NSArray *classes;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        classes = @[ [VCRURLSessionSampler class], [VCRURLSessionPlayer class], [VCRURLSessionRecorder class] ];
+    });
+    return classes;
+}
+
 + (NSURLSession *)prepareURLSession:(NSURLSession *)session
                            delegate:(id<NSURLSessionDelegate> _Nullable)delegate
                       delegateQueue:(NSOperationQueue *_Nullable)queue;
 {
     NSURLSessionConfiguration *configuration = session.configuration.copy;
-    NSArray *classes = @[ [VCRURLSessionSampler class], [VCRURLSessionPlayer class], [VCRURLSessionRecorder class] ];
-    configuration.protocolClasses = [classes arrayByAddingObjectsFromArray:configuration.protocolClasses];
+    configuration.protocolClasses = [[self protocolClasses] arrayByAddingObjectsFromArray:configuration.protocolClasses];
     return [NSURLSession sessionWithConfiguration:configuration delegate:delegate delegateQueue:queue];
 }
 
 + (NSURLSession *)prepareURLSession:(NSURLSession *)session
 {
     return [self prepareURLSession:session delegate:nil delegateQueue:nil];
+}
+
++ (void)registerProtocolClasses
+{
+    for (Class protocolClass in [self protocolClasses]) {
+        [NSURLProtocol registerClass:protocolClass];
+    }
+}
+
++ (void)unregisterProtocolClasses
+{
+    for (Class protocolClass in [self protocolClasses]) {
+        [NSURLProtocol unregisterClass:protocolClass];
+    }
 }
 
 + (void)setStaticResponseHandler:(VCRURLSessionResponse *_Nullable (^)(NSURLRequest *request))handler

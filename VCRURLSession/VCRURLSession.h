@@ -83,6 +83,18 @@ NS_ASSUME_NONNULL_BEGIN
                       delegateQueue:(NSOperationQueue *_Nullable)queue;
 
 /**
+ *  This will enable recording/replaying HTTP requests and responses for the old
+ *  `NSURLConnection` APIs.
+ */
++ (void)registerProtocolClasses;
+
+/**
+ *  This will disable recording/replaying HTTP requests and responses for the old
+ *  `NSURLConnection` APIs.
+ */
++ (void)unregisterProtocolClasses;
+
+/**
  *  Set a block that returns static responses.
  *
  *  @param handler a block that returns `VCRURLSessionResponse` instances.
