@@ -1,7 +1,7 @@
 PODS:
-  - VCRURLSession (1.2.0):
-    - VCRURLSession/Core (= 1.2.0)
-  - VCRURLSession/Core (1.2.0)
+  - VCRURLSession (1.2.1):
+    - VCRURLSession/Core (= 1.2.1)
+  - VCRURLSession/Core (1.2.1)
 
 DEPENDENCIES:
   - VCRURLSession (from `../`)
@@ -11,6 +11,6 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  VCRURLSession: 4863b7133429eb62b8f3e589dace8bfc5d2e3aa9
+  VCRURLSession: 1d8ef44f0001b0038b089659b9a532b7ed18b25c
 
 COCOAPODS: 0.39.0
