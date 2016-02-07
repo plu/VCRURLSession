@@ -81,7 +81,8 @@ static VCRURLSessionReplayMode VCRURLSessionPlayerSharedMode = VCRURLSessionRepl
 
     record.played = YES;
 
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(record.responseTime * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+    dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(record.responseTime * NSEC_PER_SEC)), queue, ^{
         [VCRURLSessionLogger
                 log:VCRURLSessionLogLevelInfo
             message:@"[P] %zd %@ %@ (%.2fms)", record.response.statusCode, self.request.HTTPMethod, self.request.URL, (record.responseTime * 1000)];
