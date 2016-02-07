@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name     = 'VCRURLSession'
-  s.version  = '1.2.1'
+  s.version  = '1.3.0'
   s.license  = 'MIT'
   s.summary  = 'VCRURLSession'
   s.homepage = 'https://github.com/plu/VCRURLSession'
