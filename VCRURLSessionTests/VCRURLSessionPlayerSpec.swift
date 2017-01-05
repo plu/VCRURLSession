@@ -10,16 +10,16 @@ import Quick
 import Nimble
 
 class VCRURLSessionPlayerTestDelegate: NSObject, VCRURLSessionPlayerDelegate {
-    var recordForRequestHandler: ((request: NSURLRequest!) -> VCRURLSessionRecord?)?
+    var recordForRequestHandler: ((_ request: URLRequest?) -> VCRURLSessionRecord?)?
 
-    @objc func recordForRequest(request: NSURLRequest) -> VCRURLSessionRecord? {
-        return recordForRequestHandler?(request: request)
+    @objc func record(for request: URLRequest) -> VCRURLSessionRecord? {
+        return recordForRequestHandler?(request)
     }
 }
 
 class VCRURLSessionPlayerSpec: QuickSpec {
-    let testSession = VCRURLSession.prepareURLSession(NSURLSession.sharedSession())
-    let testURL = NSURL.init(string: "http://www.google.com")!
+    let testSession = VCRURLSession.prepare(URLSession.shared)
+    let testURL = URL(string: "http://www.google.com")!
     let testDelegate = VCRURLSessionPlayerTestDelegate()
 
     override func spec() {
@@ -38,18 +38,18 @@ class VCRURLSessionPlayerSpec: QuickSpec {
 
         describe("startRecordingWithDelegate") {
             it("sets isReplaying to true") {
-                VCRURLSessionPlayer.startReplayingWithDelegate(self.testDelegate, mode: .Normal)
+                VCRURLSessionPlayer.startReplaying(with: self.testDelegate, mode: .normal)
 
                 expect(VCRURLSessionPlayer.isReplaying()).to(beTrue())
             }
 
             it("returns offline error in strict mode") {
-                VCRURLSessionPlayer.startReplayingWithDelegate(self.testDelegate, mode: .Strict)
+                VCRURLSessionPlayer.startReplaying(with: self.testDelegate, mode: .strict)
 
                 waitUntil { done in
-                    self.testSession.dataTaskWithURL(self.testURL, completionHandler: { (data, response, error) in
-                        expect(error?.domain).to(equal(NSURLErrorDomain))
-                        expect(error?.code).to(equal(NSURLErrorNotConnectedToInternet))
+                    self.testSession.dataTask(with: self.testURL, completionHandler: { (data, response, error) in
+                        expect((error as! NSError).domain).to(equal(NSURLErrorDomain))
+                        expect((error as! NSError).code).to(equal(NSURLErrorNotConnectedToInternet))
                         expect(error).notTo(beNil())
                         done()
                     }).resume()
@@ -57,10 +57,10 @@ class VCRURLSessionPlayerSpec: QuickSpec {
             }
 
             it("returns response in normal mode") {
-                VCRURLSessionPlayer.startReplayingWithDelegate(self.testDelegate, mode: .Normal)
+                VCRURLSessionPlayer.startReplaying(with: self.testDelegate, mode: .normal)
 
                 waitUntil(timeout: 5) { done in
-                    self.testSession.dataTaskWithURL(self.testURL, completionHandler: { (data, response, error) in
+                    self.testSession.dataTask(with: self.testURL, completionHandler: { (data, response, error) in
                         expect(data).notTo(beNil())
                         expect(response).notTo(beNil())
                         expect(error).to(beNil())
@@ -70,30 +70,30 @@ class VCRURLSessionPlayerSpec: QuickSpec {
             }
 
             it("sets played to true") {
-                VCRURLSessionPlayer.startReplayingWithDelegate(self.testDelegate, mode: .Normal)
+                VCRURLSessionPlayer.startReplaying(with: self.testDelegate, mode: .normal)
                 let record = VCRURLSessionRecord()
                 self.testDelegate.recordForRequestHandler = {request in
                     return record
                 }
 
                 expect(record.played).to(beFalse())
-                self.testSession.dataTaskWithURL(self.testURL).resume()
+                self.testSession.dataTask(with: self.testURL).resume()
                 expect(record.played).toEventually(beTrue())
             }
 
             it("return the error only") {
-                VCRURLSessionPlayer.startReplayingWithDelegate(self.testDelegate, mode: .Normal)
-                let record = VCRURLSessionRecord(requestID: 0, request: NSURLRequest(), responseTime: 0.0, response: NSHTTPURLResponse(), data: NSData(), error: NSError(domain: "foo", code: 42, userInfo: nil))
+                VCRURLSessionPlayer.startReplaying(with: self.testDelegate, mode: .normal)
+                let record = VCRURLSessionRecord(requestID: 0, request: NSURLRequest() as URLRequest, responseTime: 0.0, response: HTTPURLResponse(), data: NSData() as Data, error: NSError(domain: "foo", code: 42, userInfo: nil))
                 self.testDelegate.recordForRequestHandler = {request in
                     return record
                 }
 
                 waitUntil { done in
-                    self.testSession.dataTaskWithURL(self.testURL, completionHandler: { (data, response, error) in
+                    self.testSession.dataTask(with: self.testURL, completionHandler: { (data, response, error) in
                         expect(data).to(beNil())
                         expect(response).to(beNil())
-                        expect(error?.domain).to(equal("foo"))
-                        expect(error?.code).to(equal(42))
+                        expect((error as! NSError).domain).to(equal("foo"))
+                        expect((error as! NSError).code).to(equal(42))
                         done()
                     }).resume()
                 }

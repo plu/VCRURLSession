@@ -10,7 +10,7 @@ import Quick
 import Nimble
 
 class VCRURLSessionSpec: QuickSpec {
-    let testSession = VCRURLSession.prepareURLSession(NSURLSession.sharedSession())
+    let testSession = VCRURLSession.prepare(URLSession.shared)
 
     override func spec() {
         beforeEach {
@@ -19,27 +19,27 @@ class VCRURLSessionSpec: QuickSpec {
         }
 
         describe("errors.json") {
-            let cassettePath = VCRURLSessionTestsHelper.pathToCassetteWithName("errors.json")
+            let cassettePath = VCRURLSessionTestsHelper.pathToCassette(withName: "errors.json")
 
             describe("recording") {
                 pending("change `pending` to `describe` to generate the cassette") {
                     it("records all requests") {
                         let cassette = VCRURLSessionCassette()
-                        VCRURLSession.startRecordingOnCassette(cassette)
+                        VCRURLSession.startRecording(on: cassette)
 
                         // 1. Invalid port
-                        self.testSession.dataTaskWithRequest(NSMutableURLRequest.init(URL: NSURL.init(string: "http://localhost:70000/")!)).resume()
+                        self.testSession.dataTask(with: NSMutableURLRequest(url: NSURL(string: "http://localhost:70000/")! as URL) as URLRequest).resume()
                         expect(cassette.numberOfRecords).toEventually(equal(1))
 
                         // 2. Invalid scheme
-                        self.testSession.dataTaskWithRequest(NSMutableURLRequest.init(URL: NSURL.init(string: "asdf://localhost/")!)).resume()
+                        self.testSession.dataTask(with: NSMutableURLRequest(url: NSURL(string: "asdf://localhost/")! as URL) as URLRequest).resume()
                         expect(cassette.numberOfRecords).toEventually(equal(2))
 
                         // 3. Invalid domain
-                        self.testSession.dataTaskWithRequest(NSMutableURLRequest.init(URL: NSURL.init(string: "http://invalid.plunien.com/")!)).resume()
+                        self.testSession.dataTask(with: NSMutableURLRequest(url: NSURL(string: "http://invalid.plunien.com/")! as URL) as URLRequest).resume()
                         expect(cassette.numberOfRecords).toEventually(equal(3))
 
-                        cassette.writeToFile(cassettePath)
+                        cassette.write(toFile: cassettePath!)
                     }
                 }
             }
@@ -47,26 +47,26 @@ class VCRURLSessionSpec: QuickSpec {
             describe("playing") {
                 it("plays all records in correct order") {
                     var responseError: NSError?
-                    let cassette = VCRURLSessionCassette.init(contentsOfFile: cassettePath)
-                    VCRURLSession.startReplayingWithCassette(cassette, mode: .Strict)
+                    let cassette = VCRURLSessionCassette(contentsOfFile: cassettePath!)
+                    VCRURLSession.startReplaying(with: cassette, mode: .strict)
 
                     // 1. Invalid port
-                    self.testSession.dataTaskWithRequest(NSMutableURLRequest.init(URL: NSURL.init(string: "http://localhost:70000/")!), completionHandler: { (data, response, error) -> Void in
-                        responseError = error
+                    self.testSession.dataTask(with: NSMutableURLRequest(url: NSURL(string: "http://localhost:70000/")! as URL) as URLRequest, completionHandler: { (data, response, error) -> Void in
+                        responseError = error as NSError?
                     }).resume()
                     expect(responseError?.code).toEventually(equal(-1004))
                     expect(responseError?.localizedDescription).to(equal("Could not connect to the server."))
 
                     // 2. Invalid scheme
-                    self.testSession.dataTaskWithRequest(NSMutableURLRequest.init(URL: NSURL.init(string: "asdf://localhost/")!), completionHandler: { (data, response, error) -> Void in
-                        responseError = error
+                    self.testSession.dataTask(with: NSMutableURLRequest(url: NSURL(string: "asdf://localhost/")! as URL) as URLRequest, completionHandler: { (data, response, error) -> Void in
+                        responseError = error as NSError?
                     }).resume()
                     expect(responseError?.code).toEventually(equal(-1002))
                     expect(responseError?.localizedDescription).to(equal("unsupported URL"))
 
                     // 3. Invalid domain
-                    self.testSession.dataTaskWithRequest(NSMutableURLRequest.init(URL: NSURL.init(string: "http://invalid.plunien.com/")!), completionHandler: { (data, response, error) -> Void in
-                        responseError = error
+                    self.testSession.dataTask(with: NSMutableURLRequest(url: NSURL(string: "http://invalid.plunien.com/")! as URL) as URLRequest, completionHandler: { (data, response, error) -> Void in
+                        responseError = error as NSError?
                     }).resume()
                     expect(responseError?.code).toEventually(equal(-1003))
                     expect(responseError?.localizedDescription).to(equal("A server with the specified hostname could not be found."))
@@ -75,37 +75,37 @@ class VCRURLSessionSpec: QuickSpec {
         }
 
         describe("cassette1.json") {
-            let cassettePath = VCRURLSessionTestsHelper.pathToCassetteWithName("cassette1.json")
+            let cassettePath = VCRURLSessionTestsHelper.pathToCassette(withName: "cassette1.json")
 
             describe("recording") {
                 pending("run `ruby api.rb` and change `pending` to `describe` to generate the cassette") {
                     it("records all requests") {
                         let cassette = VCRURLSessionCassette()
-                        VCRURLSession.startRecordingOnCassette(cassette)
+                        VCRURLSession.startRecording(on: cassette)
 
-                        let getRequest = NSMutableURLRequest.init(URL: NSURL.init(string: "http://localhost:4567/")!)
-                        let postRequest = NSMutableURLRequest.init(URL: NSURL.init(string: "http://localhost:4567/")!)
-                        postRequest.HTTPMethod = "POST"
+                        let getRequest = NSMutableURLRequest(url: NSURL(string: "http://localhost:4567/")! as URL)
+                        let postRequest = NSMutableURLRequest(url: NSURL(string: "http://localhost:4567/")! as URL)
+                        postRequest.httpMethod = "POST"
 
                         // 1. GET /
-                        self.testSession.dataTaskWithRequest(getRequest).resume()
+                        self.testSession.dataTask(with: getRequest as URLRequest).resume()
                         expect(cassette.numberOfRecords).toEventually(equal(1))
 
                         // 2. POST /
-                        postRequest.HTTPBody = "one".dataUsingEncoding(NSUTF8StringEncoding)
-                        self.testSession.dataTaskWithRequest(postRequest).resume()
+                        postRequest.httpBody = "one".data(using: String.Encoding.utf8)
+                        self.testSession.dataTask(with: postRequest as URLRequest).resume()
                         expect(cassette.numberOfRecords).toEventually(equal(2))
 
                         // 3. POST /
-                        postRequest.HTTPBody = "two".dataUsingEncoding(NSUTF8StringEncoding)
-                        self.testSession.dataTaskWithRequest(postRequest).resume()
+                        postRequest.httpBody = "two".data(using: String.Encoding.utf8)
+                        self.testSession.dataTask(with: postRequest as URLRequest).resume()
                         expect(cassette.numberOfRecords).toEventually(equal(3))
 
                         // 4. GET /
-                        self.testSession.dataTaskWithRequest(getRequest).resume()
+                        self.testSession.dataTask(with: getRequest as URLRequest).resume()
                         expect(cassette.numberOfRecords).toEventually(equal(4))
 
-                        cassette.writeToFile(cassettePath)
+                        cassette.write(toFile: cassettePath!)
                     }
                 }
             }
@@ -113,34 +113,34 @@ class VCRURLSessionSpec: QuickSpec {
             describe("playing") {
                 it("plays all records in correct order") {
                     var responseString: String?
-                    let cassette = VCRURLSessionCassette.init(contentsOfFile: cassettePath)
-                    VCRURLSession.startReplayingWithCassette(cassette, mode: .Strict)
+                    let cassette = VCRURLSessionCassette(contentsOfFile: cassettePath!)
+                    VCRURLSession.startReplaying(with: cassette, mode: .strict)
 
-                    let getRequest = NSMutableURLRequest.init(URL: NSURL.init(string: "http://localhost:4567/")!)
-                    let postRequest = NSMutableURLRequest.init(URL: NSURL.init(string: "http://localhost:4567/")!)
-                    postRequest.HTTPMethod = "POST"
+                    let getRequest = NSMutableURLRequest(url: NSURL(string: "http://localhost:4567/")! as URL)
+                    let postRequest = NSMutableURLRequest(url: NSURL(string: "http://localhost:4567/")! as URL)
+                    postRequest.httpMethod = "POST"
 
                     // 1. GET /
-                    self.testSession.dataTaskWithRequest(getRequest, completionHandler: { (data, response, error) -> Void in
-                        responseString = String.init(data: data!, encoding: NSUTF8StringEncoding)
+                    self.testSession.dataTask(with: getRequest as URLRequest, completionHandler: { (data, response, error) -> Void in
+                        responseString = String(data: data!, encoding: String.Encoding.utf8)
                     }).resume()
                     expect(responseString).toEventually(equal("[]"))
 
                     // 2. POST /
-                    self.testSession.dataTaskWithRequest(postRequest, completionHandler: { (data, response, error) -> Void in
-                        responseString = String.init(data: data!, encoding: NSUTF8StringEncoding)
+                    self.testSession.dataTask(with: postRequest as URLRequest, completionHandler: { (data, response, error) -> Void in
+                        responseString = String(data: data!, encoding: String.Encoding.utf8)
                     }).resume()
                     expect(responseString).toEventually(equal("Added new record: one"))
 
                     // 3. POST /
-                    self.testSession.dataTaskWithRequest(postRequest, completionHandler: { (data, response, error) -> Void in
-                        responseString = String.init(data: data!, encoding: NSUTF8StringEncoding)
+                    self.testSession.dataTask(with: postRequest as URLRequest, completionHandler: { (data, response, error) -> Void in
+                        responseString = String(data: data!, encoding: String.Encoding.utf8)
                     }).resume()
                     expect(responseString).toEventually(equal("Added new record: two"))
 
                     // 4. GET /
-                    self.testSession.dataTaskWithRequest(getRequest, completionHandler: { (data, response, error) -> Void in
-                        responseString = String.init(data: data!, encoding: NSUTF8StringEncoding)
+                    self.testSession.dataTask(with: getRequest as URLRequest, completionHandler: { (data, response, error) -> Void in
+                        responseString = String(data: data!, encoding: String.Encoding.utf8)
                     }).resume()
                     expect(responseString).toEventually(equal("[\"one\",\"two\"]"))
                 }
@@ -148,53 +148,53 @@ class VCRURLSessionSpec: QuickSpec {
         }
 
         describe("cassette2.json") {
-            let cassettePath = VCRURLSessionTestsHelper.pathToCassetteWithName("cassette2.json")
+            let cassettePath = VCRURLSessionTestsHelper.pathToCassette(withName: "cassette2.json")
 
             describe("recording") {
                 pending("run `ruby api.rb` and change `pending` to `describe` to generate the cassette") {
                     it("records all requests") {
                         let cassette = VCRURLSessionCassette()
-                        VCRURLSession.startRecordingOnCassette(cassette)
+                        VCRURLSession.startRecording(on: cassette)
 
-                        let getRequest = NSMutableURLRequest.init(URL: NSURL.init(string: "http://localhost:4567/sleep")!)
+                        let getRequest = NSMutableURLRequest(url: NSURL(string: "http://localhost:4567/sleep")! as URL)
 
                         // 1. GET /
-                        self.testSession.dataTaskWithRequest(getRequest).resume()
+                        self.testSession.dataTask(with: getRequest as URLRequest).resume()
                         expect(cassette.numberOfRecords).toEventually(equal(1))
 
-                        cassette.writeToFile(cassettePath)
+                        cassette.write(toFile: cassettePath!)
                     }
                 }
             }
 
             describe("playing") {
                 it("plays all records with correct responseTime delay") {
-                    let cassette = VCRURLSessionCassette.init(contentsOfFile: cassettePath)
-                    VCRURLSession.startReplayingWithCassette(cassette, mode: .Strict)
+                    let cassette = VCRURLSessionCassette(contentsOfFile: cassettePath!)
+                    VCRURLSession.startReplaying(with: cassette, mode: .strict)
 
-                    let getRequest = NSMutableURLRequest.init(URL: NSURL.init(string: "http://localhost:4567/sleep")!)
-                    let startTime = NSDate.timeIntervalSinceReferenceDate()
+                    let getRequest = NSMutableURLRequest(url: NSURL(string: "http://localhost:4567/sleep")! as URL)
+                    let startTime = NSDate.timeIntervalSinceReferenceDate
                     var responseTime = 0.0
 
                     // 1. GET /
-                    self.testSession.dataTaskWithRequest(getRequest, completionHandler: { (data, response, error) -> Void in
-                        responseTime = NSDate.timeIntervalSinceReferenceDate() - startTime
+                    self.testSession.dataTask(with: getRequest as URLRequest, completionHandler: { (data, response, error) -> Void in
+                        responseTime = NSDate.timeIntervalSinceReferenceDate - startTime
                     }).resume()
                     expect(responseTime).toEventually(beGreaterThan(0.5))
                 }
 
                 it("plays all records with correct speed") {
-                    let cassette = VCRURLSessionCassette.init(contentsOfFile: cassettePath)
+                    let cassette = VCRURLSessionCassette(contentsOfFile: cassettePath!)
                     cassette.replaySpeed = 2.0
-                    VCRURLSession.startReplayingWithCassette(cassette, mode: .Strict)
+                    VCRURLSession.startReplaying(with: cassette, mode: .strict)
 
-                    let getRequest = NSMutableURLRequest.init(URL: NSURL.init(string: "http://localhost:4567/sleep")!)
-                    let startTime = NSDate.timeIntervalSinceReferenceDate()
+                    let getRequest = NSMutableURLRequest(url: NSURL(string: "http://localhost:4567/sleep")! as URL)
+                    let startTime = NSDate.timeIntervalSinceReferenceDate
                     var responseTime = 0.0
 
                     // 1. GET /
-                    self.testSession.dataTaskWithRequest(getRequest, completionHandler: { (data, response, error) -> Void in
-                        responseTime = NSDate.timeIntervalSinceReferenceDate() - startTime
+                    self.testSession.dataTask(with: getRequest as URLRequest, completionHandler: { (data, response, error) -> Void in
+                        responseTime = NSDate.timeIntervalSinceReferenceDate - startTime
                     }).resume()
                     expect(responseTime).toEventually(beGreaterThan(0.25))
                     expect(responseTime).toEventually(beLessThan(0.5))
@@ -203,25 +203,25 @@ class VCRURLSessionSpec: QuickSpec {
         }
 
         describe("cassette3.json") {
-            let cassettePath = VCRURLSessionTestsHelper.pathToCassetteWithName("cassette3.json")
+            let cassettePath = VCRURLSessionTestsHelper.pathToCassette(withName: "cassette3.json")
 
             describe("recording") {
                 pending("run `ruby api.rb` and change `pending` to `describe` to generate the cassette") {
                     it("records two requests") {
                         let cassette = VCRURLSessionCassette()
-                        VCRURLSession.startRecordingOnCassette(cassette)
+                        VCRURLSession.startRecording(on: cassette)
 
-                        let getRequest = NSMutableURLRequest.init(URL: NSURL.init(string: "http://localhost:4567/")!)
+                        let getRequest = NSMutableURLRequest(url: NSURL(string: "http://localhost:4567/")! as URL)
 
                         // 1. GET /
-                        self.testSession.dataTaskWithRequest(getRequest).resume()
+                        self.testSession.dataTask(with: getRequest as URLRequest).resume()
                         expect(cassette.numberOfRecords).toEventually(equal(1))
 
                         // 2. GET /
-                        self.testSession.dataTaskWithRequest(getRequest).resume()
+                        self.testSession.dataTask(with: getRequest as URLRequest).resume()
                         expect(cassette.numberOfRecords).toEventually(equal(2))
 
-                        cassette.writeToFile(cassettePath)
+                        cassette.write(toFile: cassettePath!)
                     }
                 }
             }
@@ -229,14 +229,14 @@ class VCRURLSessionSpec: QuickSpec {
             describe("playing") {
                 it("plays one record") {
                     var responseString: String?
-                    let cassette = VCRURLSessionCassette.init(contentsOfFile: cassettePath)
-                    VCRURLSession.startReplayingWithCassette(cassette, mode: .Strict)
+                    let cassette = VCRURLSessionCassette(contentsOfFile: cassettePath!)
+                    VCRURLSession.startReplaying(with: cassette, mode: .strict)
 
-                    let getRequest = NSMutableURLRequest.init(URL: NSURL.init(string: "http://localhost:4567/")!)
+                    let getRequest = NSMutableURLRequest(url: NSURL(string: "http://localhost:4567/")! as URL)
 
                     // 1. GET /
-                    self.testSession.dataTaskWithRequest(getRequest, completionHandler: { (data, response, error) -> Void in
-                        responseString = String.init(data: data!, encoding: NSUTF8StringEncoding)
+                    self.testSession.dataTask(with: getRequest as URLRequest, completionHandler: { (data, response, error) -> Void in
+                        responseString = String(data: data!, encoding: String.Encoding.utf8)
                     }).resume()
                     expect(responseString).toEventually(equal("[]"))
 

@@ -17,8 +17,8 @@ class VCRURLSessionCategoriesSpec: QuickSpec {
             let userInfo = ["foo": "bar"]
 
             describe("VCRURLSession_dictionaryValue") {
-                let error = NSError.init(domain: domain, code: code, userInfo: userInfo)
-                let result: NSDictionary = error.VCRURLSession_dictionaryValue
+                let error = NSError(domain: domain, code: code, userInfo: userInfo)
+                let result: Dictionary = error.vcrurlSession_dictionaryValue
 
                 it("stores domain") {
                     expect(result["domain"] as? String).to(equal(domain))
@@ -29,8 +29,8 @@ class VCRURLSessionCategoriesSpec: QuickSpec {
                 }
 
                 it("stores userInfo") {
-                    let userInfoData = NSData.init(base64EncodedString: result["userInfo"] as! String, options: NSDataBase64DecodingOptions.init(rawValue: 0))!
-                    let decodedUserInfo = NSKeyedUnarchiver.unarchiveObjectWithData(userInfoData)
+                    let userInfoData = NSData(base64Encoded: result["userInfo"] as! String, options: NSData.Base64DecodingOptions(rawValue: 0))!
+                    let decodedUserInfo = NSKeyedUnarchiver.unarchiveObject(with: userInfoData as Data)
                     expect(decodedUserInfo as? Dictionary).to(equal(userInfo))
                 }
             }
@@ -38,67 +38,67 @@ class VCRURLSessionCategoriesSpec: QuickSpec {
 
         describe("NSHTTPURLResponse+VCRURLSession") {
             describe("VCRURLSession_dictionaryValue") {
-                let url = NSURL.init(string: "http://www.google.com")!
+                let url = NSURL(string: "http://www.google.com")!
                 let statusCode = 200
                 var headers = ["Content-Type": "application/json"]
 
                 it("stores statusCode") {
-                    let response = NSHTTPURLResponse.init(URL: url, statusCode: statusCode, HTTPVersion: nil, headerFields: headers)
-                    let result: NSDictionary = response!.VCRURLSession_dictionaryValueWithData(nil)
+                    let response = HTTPURLResponse(url: url as URL, statusCode: statusCode, httpVersion: nil, headerFields: headers)
+                    let result: NSDictionary = response!.vcrurlSession_dictionaryValue(with: nil) as NSDictionary
 
                     expect(result["statusCode"] as? Int).to(equal(statusCode))
                 }
 
                 it("stores url") {
-                    let response = NSHTTPURLResponse.init(URL: url, statusCode: statusCode, HTTPVersion: nil, headerFields: headers)
-                    let result: NSDictionary = response!.VCRURLSession_dictionaryValueWithData(nil)
+                    let response = HTTPURLResponse(url: url as URL, statusCode: statusCode, httpVersion: nil, headerFields: headers)
+                    let result: NSDictionary = response!.vcrurlSession_dictionaryValue(with: nil) as NSDictionary
 
                     expect(result["url"] as? String).to(equal(url.absoluteString))
                 }
 
                 it("stores headers") {
-                    let response = NSHTTPURLResponse.init(URL: url, statusCode: statusCode, HTTPVersion: nil, headerFields: headers)
-                    let result: NSDictionary = response!.VCRURLSession_dictionaryValueWithData(nil)
+                    let response = HTTPURLResponse(url: url as URL, statusCode: statusCode, httpVersion: nil, headerFields: headers)
+                    let result: NSDictionary = response!.vcrurlSession_dictionaryValue(with: nil) as NSDictionary
 
                     expect(result["headers"] as? Dictionary).to(equal(headers))
                 }
 
                 it("stores text body") {
                     headers["Content-Type"] = "text/plain"
-                    let response = NSHTTPURLResponse.init(URL: url, statusCode: statusCode, HTTPVersion: nil, headerFields: headers)
-                    let result: NSDictionary = response!.VCRURLSession_dictionaryValueWithData("foo".dataUsingEncoding(NSUTF8StringEncoding))
+                    let response = HTTPURLResponse(url: url as URL, statusCode: statusCode, httpVersion: nil, headerFields: headers)
+                    let result: NSDictionary = response!.vcrurlSession_dictionaryValue(with: "foo".data(using: String.Encoding.utf8)) as NSDictionary
 
                     expect(result["body"] as? String).to(equal("foo"))
                 }
 
                 it("stores form encoded body") {
                     headers["Content-Type"] = "application/x-www-form-urlencoded"
-                    let response = NSHTTPURLResponse.init(URL: url, statusCode: statusCode, HTTPVersion: nil, headerFields: headers)
-                    let result: NSDictionary = response!.VCRURLSession_dictionaryValueWithData("foo".dataUsingEncoding(NSUTF8StringEncoding))
+                    let response = HTTPURLResponse(url: url as URL, statusCode: statusCode, httpVersion: nil, headerFields: headers)
+                    let result: NSDictionary = response!.vcrurlSession_dictionaryValue(with: "foo".data(using: String.Encoding.utf8)) as NSDictionary
 
                     expect(result["body"] as? String).to(equal("foo"))
                 }
 
                 it("stores json encoded body") {
                     headers["Content-Type"] = "application/json"
-                    let response = NSHTTPURLResponse.init(URL: url, statusCode: statusCode, HTTPVersion: nil, headerFields: headers)
-                    let result: NSDictionary = response!.VCRURLSession_dictionaryValueWithData("{\"foo\":1,\"bar\":2}".dataUsingEncoding(NSUTF8StringEncoding))
+                    let response = HTTPURLResponse(url: url as URL, statusCode: statusCode, httpVersion: nil, headerFields: headers)
+                    let result: NSDictionary = response!.vcrurlSession_dictionaryValue(with: "{\"foo\":1,\"bar\":2}".data(using: String.Encoding.utf8)) as NSDictionary
 
                     expect(result["body"] as? Dictionary).to(equal(["foo": 1, "bar": 2]))
                 }
 
                 it("stores invalid json encoded body") {
                     headers["Content-Type"] = "application/json"
-                    let response = NSHTTPURLResponse.init(URL: url, statusCode: statusCode, HTTPVersion: nil, headerFields: headers)
-                    let result: NSDictionary = response!.VCRURLSession_dictionaryValueWithData("{\"foo\":1,\"bar\":".dataUsingEncoding(NSUTF8StringEncoding))
+                    let response = HTTPURLResponse(url: url as URL, statusCode: statusCode, httpVersion: nil, headerFields: headers)
+                    let result: NSDictionary = response!.vcrurlSession_dictionaryValue(with: "{\"foo\":1,\"bar\":".data(using: String.Encoding.utf8)) as NSDictionary
 
                     expect(result["body"] as? String).to(equal("{\"foo\":1,\"bar\":"))
                 }
 
                 it("stores binary encoded body") {
                     headers["Content-Type"] = "application/binary"
-                    let response = NSHTTPURLResponse.init(URL: url, statusCode: statusCode, HTTPVersion: nil, headerFields: headers)
-                    let result: NSDictionary = response!.VCRURLSession_dictionaryValueWithData("foo".dataUsingEncoding(NSUTF8StringEncoding))
+                    let response = HTTPURLResponse(url: url as URL, statusCode: statusCode, httpVersion: nil, headerFields: headers)
+                    let result: NSDictionary = response!.vcrurlSession_dictionaryValue(with: "foo".data(using: String.Encoding.utf8)) as NSDictionary
 
                     expect(result["body"] as? String).to(equal("Zm9v"))
                 }
@@ -107,27 +107,27 @@ class VCRURLSessionCategoriesSpec: QuickSpec {
 
         describe("NSURLRequest+VCRURLSession") {
             describe("VCRURLSession_dictionaryValue") {
-                let url = NSURL.init(string: "http://www.google.com")!
-                let request = NSMutableURLRequest.init(URL: url, cachePolicy: .ReloadIgnoringCacheData, timeoutInterval: 5)
+                let url = NSURL(string: "http://www.google.com")!
+                let request = NSMutableURLRequest(url: url as URL, cachePolicy: .reloadIgnoringCacheData, timeoutInterval: 5)
 
                 it("stores url") {
-                    let result: NSDictionary = request.VCRURLSession_dictionaryValue
+                    let result = request.vcrurlSession_dictionaryValue
 
                     expect(result["url"] as? String).to(equal(url.absoluteString))
                 }
 
                 it("stores headers") {
                     request.allHTTPHeaderFields = ["Content-Type": "application/json"]
-                    let result: NSDictionary = request.VCRURLSession_dictionaryValue
+                    let result = request.vcrurlSession_dictionaryValue
 
                     expect(result["headers"] as? Dictionary).to(equal(request.allHTTPHeaderFields))
                 }
 
                 it("stores method") {
-                    request.HTTPMethod = "POST"
-                    let result: NSDictionary = request.VCRURLSession_dictionaryValue
+                    request.httpMethod = "POST"
+                    let result = request.vcrurlSession_dictionaryValue
 
-                    expect(result["method"] as? String).to(equal(request.HTTPMethod))
+                    expect(result["method"] as? String).to(equal(request.httpMethod))
                 }
             }
         }

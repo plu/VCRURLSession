@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		0524DAF21C4F3B6D00B2DC61 /* VCRURLSessionLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 0524DAF11C4F3B6D00B2DC61 /* VCRURLSessionLogger.m */; };
 		05DAD9E01C58779800899535 /* cassette3.json in Resources */ = {isa = PBXBuildFile; fileRef = 05DAD9DF1C58779800899535 /* cassette3.json */; };
-		36B89BA1F3385FF19A3AE8D2 /* Pods_VCRURLSessionTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03A4060C349BAFB7FE8114ED /* Pods_VCRURLSessionTests.framework */; };
 		3E8DFA381C4213D200634C5E /* VCRURLSessionResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8DFA371C4213D200634C5E /* VCRURLSessionResponse.m */; };
 		670A40FA1C3CD85200613511 /* VCRURLSession.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 670A40F91C3CD85200613511 /* VCRURLSession.h */; };
 		670A40FC1C3CD85200613511 /* VCRURLSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 670A40FB1C3CD85200613511 /* VCRURLSession.m */; };
@@ -34,6 +33,7 @@
 		67693EFF1C3E4C610045F65B /* VCRURLSessionPlayerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67693EFE1C3E4C610045F65B /* VCRURLSessionPlayerSpec.swift */; };
 		67693F011C3E619A0045F65B /* errors.json in Resources */ = {isa = PBXBuildFile; fileRef = 67693F001C3E619A0045F65B /* errors.json */; };
 		67FF72E71C435E9B006772D6 /* VCRURLSessionCassetteSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FF72E61C435E9B006772D6 /* VCRURLSessionCassetteSpec.swift */; };
+		8DF93E994A216B1F447A00F3 /* Pods_VCRURLSessionTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B502D62C06547B070DB99F0 /* Pods_VCRURLSessionTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,13 +60,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		03A4060C349BAFB7FE8114ED /* Pods_VCRURLSessionTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VCRURLSessionTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0524DAF01C4F3B6D00B2DC61 /* VCRURLSessionLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VCRURLSessionLogger.h; sourceTree = "<group>"; };
 		0524DAF11C4F3B6D00B2DC61 /* VCRURLSessionLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VCRURLSessionLogger.m; sourceTree = "<group>"; };
 		05DAD9DF1C58779800899535 /* cassette3.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = cassette3.json; sourceTree = "<group>"; };
 		3E8DFA361C4213D200634C5E /* VCRURLSessionResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VCRURLSessionResponse.h; sourceTree = "<group>"; };
 		3E8DFA371C4213D200634C5E /* VCRURLSessionResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VCRURLSessionResponse.m; sourceTree = "<group>"; };
-		4E072C8473D6D5A899002B72 /* Pods-VCRURLSessionTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VCRURLSessionTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-VCRURLSessionTests/Pods-VCRURLSessionTests.release.xcconfig"; sourceTree = "<group>"; };
 		670A40F61C3CD85200613511 /* libVCRURLSession.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libVCRURLSession.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		670A40F91C3CD85200613511 /* VCRURLSession.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VCRURLSession.h; sourceTree = "<group>"; };
 		670A40FB1C3CD85200613511 /* VCRURLSession.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VCRURLSession.m; sourceTree = "<group>"; };
@@ -106,7 +104,9 @@
 		67693EFE1C3E4C610045F65B /* VCRURLSessionPlayerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCRURLSessionPlayerSpec.swift; sourceTree = "<group>"; };
 		67693F001C3E619A0045F65B /* errors.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = errors.json; sourceTree = "<group>"; };
 		67FF72E61C435E9B006772D6 /* VCRURLSessionCassetteSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCRURLSessionCassetteSpec.swift; sourceTree = "<group>"; };
-		C7A80408B2E2BF41A26DC6CE /* Pods-VCRURLSessionTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VCRURLSessionTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VCRURLSessionTests/Pods-VCRURLSessionTests.debug.xcconfig"; sourceTree = "<group>"; };
+		6B502D62C06547B070DB99F0 /* Pods_VCRURLSessionTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VCRURLSessionTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C6D7EE85B2B822B6B259E42B /* Pods-VCRURLSessionTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VCRURLSessionTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VCRURLSessionTests/Pods-VCRURLSessionTests.debug.xcconfig"; sourceTree = "<group>"; };
+		D697489B0B99E51CC2DC8613 /* Pods-VCRURLSessionTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VCRURLSessionTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-VCRURLSessionTests/Pods-VCRURLSessionTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,18 +123,18 @@
 			files = (
 				6767F3041C479D9100489139 /* libz.tbd in Frameworks */,
 				670A410B1C3CD9AB00613511 /* libVCRURLSession.a in Frameworks */,
-				36B89BA1F3385FF19A3AE8D2 /* Pods_VCRURLSessionTests.framework in Frameworks */,
+				8DF93E994A216B1F447A00F3 /* Pods_VCRURLSessionTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		5D6B098A60B255F675D1FE36 /* Pods */ = {
+		5C0A20D2E449E4E09EDAD466 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				C7A80408B2E2BF41A26DC6CE /* Pods-VCRURLSessionTests.debug.xcconfig */,
-				4E072C8473D6D5A899002B72 /* Pods-VCRURLSessionTests.release.xcconfig */,
+				C6D7EE85B2B822B6B259E42B /* Pods-VCRURLSessionTests.debug.xcconfig */,
+				D697489B0B99E51CC2DC8613 /* Pods-VCRURLSessionTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -145,8 +145,8 @@
 				670A40F81C3CD85200613511 /* VCRURLSession */,
 				670A41071C3CD9AB00613511 /* VCRURLSessionTests */,
 				670A40F71C3CD85200613511 /* Products */,
-				5D6B098A60B255F675D1FE36 /* Pods */,
 				FA719F5BBD2CA406DFC0F725 /* Frameworks */,
+				5C0A20D2E449E4E09EDAD466 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -250,7 +250,7 @@
 			isa = PBXGroup;
 			children = (
 				6767F3021C479D5600489139 /* libz.tbd */,
-				03A4060C349BAFB7FE8114ED /* Pods_VCRURLSessionTests.framework */,
+				6B502D62C06547B070DB99F0 /* Pods_VCRURLSessionTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -279,12 +279,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 670A410E1C3CD9AB00613511 /* Build configuration list for PBXNativeTarget "VCRURLSessionTests" */;
 			buildPhases = (
-				0F10FFF10E111656CCD8B62F /* Check Pods Manifest.lock */,
+				B89E5DF42E5FD09FDF6CBD0E /* [CP] Check Pods Manifest.lock */,
 				670A41021C3CD9AB00613511 /* Sources */,
 				670A41031C3CD9AB00613511 /* Frameworks */,
 				670A41041C3CD9AB00613511 /* Resources */,
-				59557730B1488FBA76664BDE /* Embed Pods Frameworks */,
-				26AD95E82EFBA51EC245D330 /* Copy Pods Resources */,
+				56608A32461733D2C0591ABE /* [CP] Embed Pods Frameworks */,
+				1382D66BBDD8415919DCCDF4 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -302,7 +302,7 @@
 		670A40EE1C3CD85200613511 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0720;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = "Johannes Plunien";
 				TargetAttributes = {
 					670A40F51C3CD85200613511 = {
@@ -310,6 +310,7 @@
 					};
 					670A41051C3CD9AB00613511 = {
 						CreatedOnToolsVersion = 7.2;
+						LastSwiftMigration = 0820;
 					};
 				};
 			};
@@ -346,29 +347,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0F10FFF10E111656CCD8B62F /* Check Pods Manifest.lock */ = {
+		1382D66BBDD8415919DCCDF4 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		26AD95E82EFBA51EC245D330 /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -376,19 +362,34 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VCRURLSessionTests/Pods-VCRURLSessionTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		59557730B1488FBA76664BDE /* Embed Pods Frameworks */ = {
+		56608A32461733D2C0591ABE /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VCRURLSessionTests/Pods-VCRURLSessionTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B89E5DF42E5FD09FDF6CBD0E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -451,8 +452,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -494,8 +497,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -514,6 +519,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -538,8 +544,9 @@
 		};
 		670A410F1C3CD9AB00613511 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C7A80408B2E2BF41A26DC6CE /* Pods-VCRURLSessionTests.debug.xcconfig */;
+			baseConfigurationReference = C6D7EE85B2B822B6B259E42B /* Pods-VCRURLSessionTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_MODULES = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
@@ -560,13 +567,15 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "VCRURLSessionTests/VCRURLSessionTests-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		670A41101C3CD9AB00613511 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4E072C8473D6D5A899002B72 /* Pods-VCRURLSessionTests.release.xcconfig */;
+			baseConfigurationReference = D697489B0B99E51CC2DC8613 /* Pods-VCRURLSessionTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = VCRURLSessionTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -581,6 +590,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.plunien.VCRURLSessionTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "VCRURLSessionTests/VCRURLSessionTests-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};

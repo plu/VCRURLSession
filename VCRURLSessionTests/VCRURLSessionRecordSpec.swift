@@ -13,13 +13,13 @@ class VCRURLSessionRecordSpec: QuickSpec {
     override func spec() {
         describe("dictionaryValue") {
             let requestID: UInt = 5
-            let url = NSURL.init(string: "http://www.google.de")!
-            let request = NSURLRequest(URL: url)
+            let url = URL(string: "http://www.google.de")!
+            let request = URLRequest(url: url as URL)
             let responseTime = 0.5
-            let error = NSError.init(domain: "foo.bar", code: 42, userInfo: nil)
-            let data = "{\"foo\":1}".dataUsingEncoding(NSUTF8StringEncoding)
-            let response = NSHTTPURLResponse.init(URL: url, statusCode: 200, HTTPVersion: nil, headerFields: nil)!
-            let subject = VCRURLSessionRecord.init(requestID: requestID, request: request, responseTime: responseTime, response: response, data: data, error: error)
+            let error = NSError(domain: "foo.bar", code: 42, userInfo: nil)
+            let data = "{\"foo\":1}".data(using: String.Encoding.utf8)
+            let response = HTTPURLResponse(url: url as URL, statusCode: 200, httpVersion: nil, headerFields: nil)!
+            let subject = VCRURLSessionRecord(requestID: requestID, request: request, responseTime: responseTime, response: response, data: data, error: error)
 
             it("includes responseTime") {
                 expect(subject.dictionaryValue["responseTime"] as? Double).to(equal(0.5))
@@ -30,15 +30,18 @@ class VCRURLSessionRecordSpec: QuickSpec {
             }
 
             it("includes request") {
-                expect(subject.dictionaryValue["request"] as? NSDictionary).to(equal(request.VCRURLSession_dictionaryValue))
+                let requestDictionaryValue = (request as NSURLRequest).vcrurlSession_dictionaryValue as NSDictionary
+                expect(subject.dictionaryValue["request"] as? NSDictionary).to(equal(requestDictionaryValue))
             }
 
             it("includes response") {
-                expect(subject.dictionaryValue["response"] as? NSDictionary).to(equal(response.VCRURLSession_dictionaryValueWithData(data)))
+                let responseDictionaryValue = response.vcrurlSession_dictionaryValue(with: data) as NSDictionary
+                expect(subject.dictionaryValue["response"] as? NSDictionary).to(equal(responseDictionaryValue))
             }
 
             it("includes error") {
-                expect(subject.dictionaryValue["error"] as? NSDictionary).to(equal(error.VCRURLSession_dictionaryValue))
+                let errorDictionaryValue = error.vcrurlSession_dictionaryValue as NSDictionary
+                expect(subject.dictionaryValue["error"] as? NSDictionary).to(equal(errorDictionaryValue))
             }
         }
     }

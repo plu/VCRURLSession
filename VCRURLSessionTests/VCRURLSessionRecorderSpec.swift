@@ -10,17 +10,17 @@ import Quick
 import Nimble
 
 class VCRURLSessionRecorderTestDelegate: NSObject, VCRURLSessionRecorderDelegate {
-    var recordHandler: ((request: NSURLRequest!, response: NSHTTPURLResponse!, data: NSData!, error: NSError!) -> Void)?
+    var recordHandler: ((_ request: URLRequest?, _ response: HTTPURLResponse?, _ data: Data?, _ error: Error?) -> Void)?
 
-    @objc func recordRequest(request: NSURLRequest, responseTime: NSTimeInterval, response: NSHTTPURLResponse?, data: NSData?, error: NSError?) -> Bool {
-        recordHandler!(request: request, response: response, data: data, error: error)
+    func record(_ request: URLRequest, responseTime: TimeInterval, response: HTTPURLResponse?, data: Data?, error: Error?) -> Bool {
+        recordHandler!(request, response, data, error)
         return true
     }
 }
 
 class VCRURLSessionRecorderSpec: QuickSpec {
-    let testSession = VCRURLSession.prepareURLSession(NSURLSession.sharedSession())
-    let testURL = NSURL.init(string: "http://www.google.com")!
+    let testSession = VCRURLSession.prepare(URLSession.shared)
+    let testURL = URL(string: "http://www.google.com")!
     let testDelegate = VCRURLSessionRecorderTestDelegate()
 
     override func spec() {
@@ -39,7 +39,7 @@ class VCRURLSessionRecorderSpec: QuickSpec {
 
         describe("startRecordingWithDelegate") {
             it("sets isRecording to true") {
-                VCRURLSessionRecorder.startRecordingWithDelegate(self.testDelegate)
+                VCRURLSessionRecorder.startRecording(with: self.testDelegate)
 
                 expect(VCRURLSessionRecorder.isRecording()).to(beTrue())
             }
@@ -53,8 +53,8 @@ class VCRURLSessionRecorderSpec: QuickSpec {
                     expect(data).notTo(beNil())
                     expect(error).to(beNil())
                 }
-                VCRURLSessionRecorder.startRecordingWithDelegate(self.testDelegate)
-                self.testSession.dataTaskWithURL(self.testURL).resume()
+                VCRURLSessionRecorder.startRecording(with: self.testDelegate)
+                self.testSession.dataTask(with: self.testURL).resume()
 
                 expect(recordHandlerCalled).toEventually(beTrue(), timeout: 5)
             }
