@@ -72,6 +72,7 @@ static id<VCRURLSessionRecorderDelegate> VCRURLSessionRecorderSharedDelegate = n
 {
     NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
     configuration.requestCachePolicy = NSURLRequestReloadIgnoringCacheData;
+    configuration.URLCache = nil;
     self.session = [NSURLSession sessionWithConfiguration:configuration delegate:self delegateQueue:nil];
 
     NSTimeInterval startTime = [NSDate timeIntervalSinceReferenceDate];

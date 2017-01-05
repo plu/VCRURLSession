@@ -33,6 +33,7 @@
 {
     NSURLSessionConfiguration *configuration = session.configuration.copy;
     configuration.protocolClasses = [[self protocolClasses] arrayByAddingObjectsFromArray:configuration.protocolClasses];
+    configuration.URLCache = nil;
     return [NSURLSession sessionWithConfiguration:configuration delegate:delegate delegateQueue:queue];
 }
 
