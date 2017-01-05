@@ -2,6 +2,10 @@
 
 ## Changelog
 
+### 1.4.0 (2017-01-05)
+
+* Set `NSURLSessionConfiguration.URLCache` to `nil` when recording/replaying
+
 ### 1.3.0 (2016-02-07)
 
 * Add `registerProtocolClasses` and `unregisterProtocolClasses`
