@@ -74,7 +74,7 @@ NS_ASSUME_NONNULL_BEGIN
  *
  *  @param session `NSURLSession` instance
  *  @param delegate `id<NSURLSessionDelegate>` instance
- *  @param delegateQueue `NSOperationQueue` instance
+ *  @param queue `NSOperationQueue` instance
  *
  *  @return `NSURLSession` instance
  */
