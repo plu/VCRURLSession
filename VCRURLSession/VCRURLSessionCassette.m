@@ -107,8 +107,10 @@ static NSString *VCRURLSessionCassetteUserInfoKey = @"userInfo";
 - (NSDictionary *)dictionaryValues
 {
     NSMutableArray *records = [NSMutableArray array];
-    for (VCRURLSessionRecord *record in self.data) {
-        [records addObject:record.dictionaryValue];
+    @synchronized (self) {
+        for (VCRURLSessionRecord *record in self.data) {
+            [records addObject:record.dictionaryValue];
+        }
     }
     return @{
         VCRURLSessionCassetteRecordingTimeKey : @(self.recordingDate.timeIntervalSince1970),
@@ -131,10 +133,12 @@ static NSString *VCRURLSessionCassetteUserInfoKey = @"userInfo";
     }
 
     if (recordRequest) {
-        VCRURLSessionRecord *record =
-            [[VCRURLSessionRecord alloc] initWithRequestID:self.requestID request:request responseTime:responseTime response:response data:data error:error];
-        [self.data addObject:record];
-        self.requestID += 1;
+        @synchronized (self) {
+            VCRURLSessionRecord *record =
+                [[VCRURLSessionRecord alloc] initWithRequestID:self.requestID request:request responseTime:responseTime response:response data:data error:error];
+            [self.data addObject:record];
+            self.requestID += 1;
+        }
     }
 
     return recordRequest;

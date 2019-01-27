@@ -1,6 +1,6 @@
 //
-//  CwlCatchException.swift
-//  CwlAssertionTesting
+//  CwlPreconditionTesting.h
+//  CwlPreconditionTesting
 //
 //  Created by Matt Gallagher on 2016/01/10.
 //  Copyright © 2016 Matt Gallagher ( http://cocoawithlove.com ). All rights reserved.
@@ -18,15 +18,15 @@
 //  IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 //
 
-import Foundation
+#import <Foundation/Foundation.h>
 
-// We can't simply cast to Self? in the catchInBlock method so we need this generic function wrapper to do the conversion for us. Mildly annoying.
-private func catchReturnTypeConverter<T: NSException>(_ type: T.Type, block: () -> Void) -> T? {
-	return catchExceptionOfKind(type, block) as? T
-}
+extern bool _swift_reportFatalErrorsToDebugger;
 
-extension NSException {
-	public static func catchException(in block: () -> Void) -> Self? {
-		return catchReturnTypeConverter(self, block: block)
-	}
-}
+//! Project version number for CwlUtils.
+FOUNDATION_EXPORT double CwlPreconditionTestingVersionNumber;
+
+//! Project version string for CwlUtils.
+FOUNDATION_EXPORT const unsigned char CwlAssertingTestingVersionString[];
+
+#include "CwlMachBadInstructionHandler.h"
+#include "CwlCatchException.h"
