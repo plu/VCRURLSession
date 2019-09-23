@@ -23,7 +23,7 @@
 		674EBB171C47E04300F94839 /* cassette2.json in Resources */ = {isa = PBXBuildFile; fileRef = 674EBB161C47E04300F94839 /* cassette2.json */; };
 		6767DB711C4627180065AF25 /* NSData+VCRURLSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 6767DB6A1C4627180065AF25 /* NSData+VCRURLSession.m */; };
 		6767DB721C4627180065AF25 /* NSError+VCRURLSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 6767DB6C1C4627180065AF25 /* NSError+VCRURLSession.m */; };
-		6767DB731C4627180065AF25 /* NSHTTPURLResponse+VCRURLSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 6767DB6E1C4627180065AF25 /* NSHTTPURLResponse+VCRURLSession.m */; };
+		6767DB731C4627180065AF25 /* NSURLResponse+VCRURLSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 6767DB6E1C4627180065AF25 /* NSURLResponse+VCRURLSession.m */; };
 		6767DB741C4627180065AF25 /* NSURLRequest+VCRURLSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 6767DB701C4627180065AF25 /* NSURLRequest+VCRURLSession.m */; };
 		6767DB7D1C46274D0065AF25 /* VCRURLSessionRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 6767DB771C46274D0065AF25 /* VCRURLSessionRecord.m */; };
 		6767DB7E1C46274D0065AF25 /* VCRURLSessionRecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = 6767DB791C46274D0065AF25 /* VCRURLSessionRecorder.m */; };
@@ -98,8 +98,8 @@
 		6767DB6A1C4627180065AF25 /* NSData+VCRURLSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+VCRURLSession.m"; sourceTree = "<group>"; };
 		6767DB6B1C4627180065AF25 /* NSError+VCRURLSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSError+VCRURLSession.h"; sourceTree = "<group>"; };
 		6767DB6C1C4627180065AF25 /* NSError+VCRURLSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSError+VCRURLSession.m"; sourceTree = "<group>"; };
-		6767DB6D1C4627180065AF25 /* NSHTTPURLResponse+VCRURLSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSHTTPURLResponse+VCRURLSession.h"; sourceTree = "<group>"; };
-		6767DB6E1C4627180065AF25 /* NSHTTPURLResponse+VCRURLSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSHTTPURLResponse+VCRURLSession.m"; sourceTree = "<group>"; };
+		6767DB6D1C4627180065AF25 /* NSURLResponse+VCRURLSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURLResponse+VCRURLSession.h"; sourceTree = "<group>"; };
+		6767DB6E1C4627180065AF25 /* NSURLResponse+VCRURLSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURLResponse+VCRURLSession.m"; sourceTree = "<group>"; };
 		6767DB6F1C4627180065AF25 /* NSURLRequest+VCRURLSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURLRequest+VCRURLSession.h"; sourceTree = "<group>"; };
 		6767DB701C4627180065AF25 /* NSURLRequest+VCRURLSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURLRequest+VCRURLSession.m"; sourceTree = "<group>"; };
 		6767DB761C46274D0065AF25 /* VCRURLSessionRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VCRURLSessionRecord.h; sourceTree = "<group>"; };
@@ -245,8 +245,8 @@
 				6767DB6A1C4627180065AF25 /* NSData+VCRURLSession.m */,
 				6767DB6B1C4627180065AF25 /* NSError+VCRURLSession.h */,
 				6767DB6C1C4627180065AF25 /* NSError+VCRURLSession.m */,
-				6767DB6D1C4627180065AF25 /* NSHTTPURLResponse+VCRURLSession.h */,
-				6767DB6E1C4627180065AF25 /* NSHTTPURLResponse+VCRURLSession.m */,
+				6767DB6D1C4627180065AF25 /* NSURLResponse+VCRURLSession.h */,
+				6767DB6E1C4627180065AF25 /* NSURLResponse+VCRURLSession.m */,
 				6767DB6F1C4627180065AF25 /* NSURLRequest+VCRURLSession.h */,
 				6767DB701C4627180065AF25 /* NSURLRequest+VCRURLSession.m */,
 				6767DB801C4627740065AF25 /* VCRURLSessionPlayer.h */,
@@ -335,6 +335,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = 670A40ED1C3CD85200613511;
@@ -419,7 +420,7 @@
 				6767DB721C4627180065AF25 /* NSError+VCRURLSession.m in Sources */,
 				6767DB7E1C46274D0065AF25 /* VCRURLSessionRecorder.m in Sources */,
 				670A40FC1C3CD85200613511 /* VCRURLSession.m in Sources */,
-				6767DB731C4627180065AF25 /* NSHTTPURLResponse+VCRURLSession.m in Sources */,
+				6767DB731C4627180065AF25 /* NSURLResponse+VCRURLSession.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

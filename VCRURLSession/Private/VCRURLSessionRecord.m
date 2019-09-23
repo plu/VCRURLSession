@@ -7,7 +7,7 @@
 //
 
 #import "NSError+VCRURLSession.h"
-#import "NSHTTPURLResponse+VCRURLSession.h"
+#import "NSURLResponse+VCRURLSession.h"
 #import "NSURLRequest+VCRURLSession.h"
 #import "VCRURLSessionRecord.h"
 

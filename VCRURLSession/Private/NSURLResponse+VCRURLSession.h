@@ -1,5 +1,5 @@
 //
-//  NSHTTPURLResponse+VCRURLSession.h
+//  NSURLResponse+VCRURLSession.h
 //  VCRURLSession
 //
 //  Created by Plunien, Johannes on 06/01/16.
@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface NSHTTPURLResponse (VCRURLSession)
+@interface NSURLResponse (VCRURLSession)
 
 - (instancetype)VCRURLSession_initWithDictionary:(NSDictionary *)dictionary;
 - (NSData *)VCRURLSession_decodedDataFromDictionary:(NSDictionary *)dictionary;

@@ -1,12 +1,12 @@
 //
-//  NSHTTPURLResponse+VCRURLSession.m
+//  NSURLResponse+VCRURLSession.m
 //  VCRURLSession
 //
 //  Created by Plunien, Johannes on 06/01/16.
 //  Copyright © 2016 Johannes Plunien. All rights reserved.
 //
 
-#import "NSHTTPURLResponse+VCRURLSession.h"
+#import "NSURLResponse+VCRURLSession.h"
 #import <MobileCoreServices/MobileCoreServices.h>
 
 static NSString *VCRURLSessionResponseBodyKey = @"body";
@@ -14,7 +14,7 @@ static NSString *VCRURLSessionResponseHeadersKey = @"headers";
 static NSString *VCRURLSessionResponseStatusCodeKey = @"statusCode";
 static NSString *VCRURLSessionResponseURLKey = @"url";
 
-@implementation NSHTTPURLResponse (VCRURLSession)
+@implementation NSURLResponse (VCRURLSession)
 
 - (instancetype)VCRURLSession_initWithDictionary:(NSDictionary *)dictionary
 {
@@ -38,10 +38,19 @@ static NSString *VCRURLSessionResponseURLKey = @"url";
 
 - (NSDictionary *)VCRURLSession_dictionaryValueWithData:(NSData *)data
 {
+    NSDictionary *allHeaderFields = @{};
+    NSInteger statusCode = 200;
+
+    if ([self isKindOfClass:NSHTTPURLResponse.class]) {
+        NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *)self;
+        allHeaderFields = httpResponse.allHeaderFields ?: @{};
+        statusCode = httpResponse.statusCode;
+    }
+
     return @{
         VCRURLSessionResponseBodyKey : [self VCRURLSession_bodyValue:data],
-        VCRURLSessionResponseHeadersKey : self.allHeaderFields ?: @{},
-        VCRURLSessionResponseStatusCodeKey : @(self.statusCode),
+        VCRURLSessionResponseHeadersKey : allHeaderFields,
+        VCRURLSessionResponseStatusCodeKey : @(statusCode),
         VCRURLSessionResponseURLKey : self.URL.absoluteString,
     };
 }
