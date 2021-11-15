@@ -370,7 +370,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-VCRURLSessionTests/Pods-VCRURLSessionTests-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-VCRURLSessionTests/Pods-VCRURLSessionTests-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
 				"${BUILT_PRODUCTS_DIR}/Quick/Quick.framework",
 			);
@@ -381,7 +381,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VCRURLSessionTests/Pods-VCRURLSessionTests-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-VCRURLSessionTests/Pods-VCRURLSessionTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		B89E5DF42E5FD09FDF6CBD0E /* [CP] Check Pods Manifest.lock */ = {
