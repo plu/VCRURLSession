@@ -86,7 +86,7 @@ static NSString *VCRURLSessionResponseURLKey = @"url";
     if (uti) {
         CFRelease(uti);
     }
-    return isJSONResponse;
+    return isJSONResponse || [type containsString:@"json"];
 }
 
 - (BOOL)VCRURLSession_isTextResponse
@@ -100,7 +100,7 @@ static NSString *VCRURLSessionResponseURLKey = @"url";
     if (uti) {
         CFRelease(uti);
     }
-    return isTextResponse;
+    return isTextResponse || [type containsString:@"json"];
 }
 
 @end
