@@ -14,12 +14,12 @@
 		6723F73F1C4772EF00CE5C77 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6723F73E1C4772EF00CE5C77 /* Assets.xcassets */; };
 		6723F7421C4772EF00CE5C77 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6723F7401C4772EF00CE5C77 /* LaunchScreen.storyboard */; };
 		6723F74C1C47778600CE5C77 /* github.com.json in Resources */ = {isa = PBXBuildFile; fileRef = 6723F74B1C47778600CE5C77 /* github.com.json */; };
-		ABD1AA0E32665A7FF432A8C5 /* Pods_VCRURLSessionExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13BD4B047A208A78100F9405 /* Pods_VCRURLSessionExample.framework */; };
+		B214CAD77F710AB28429E52E /* Pods_VCRURLSessionExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1ECE8D904BDE7E62DA493EDB /* Pods_VCRURLSessionExample.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		13BD4B047A208A78100F9405 /* Pods_VCRURLSessionExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VCRURLSessionExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		4356122FF4FD27E3BA1B40A6 /* Pods-VCRURLSessionExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VCRURLSessionExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-VCRURLSessionExample/Pods-VCRURLSessionExample.release.xcconfig"; sourceTree = "<group>"; };
+		1ECE8D904BDE7E62DA493EDB /* Pods_VCRURLSessionExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VCRURLSessionExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2F7CFF70E081C5F1F4D0F374 /* Pods-VCRURLSessionExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VCRURLSessionExample.release.xcconfig"; path = "Target Support Files/Pods-VCRURLSessionExample/Pods-VCRURLSessionExample.release.xcconfig"; sourceTree = "<group>"; };
 		6723F72F1C4772EF00CE5C77 /* VCRURLSessionExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VCRURLSessionExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6723F7331C4772EF00CE5C77 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6723F7351C4772EF00CE5C77 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -31,7 +31,7 @@
 		6723F7411C4772EF00CE5C77 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6723F7431C4772F000CE5C77 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6723F74B1C47778600CE5C77 /* github.com.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = github.com.json; sourceTree = "<group>"; };
-		D551B0840E45E335E3B8B59F /* Pods-VCRURLSessionExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VCRURLSessionExample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VCRURLSessionExample/Pods-VCRURLSessionExample.debug.xcconfig"; sourceTree = "<group>"; };
+		F564DCCF1130BD3285DABC08 /* Pods-VCRURLSessionExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VCRURLSessionExample.debug.xcconfig"; path = "Target Support Files/Pods-VCRURLSessionExample/Pods-VCRURLSessionExample.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,17 +39,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ABD1AA0E32665A7FF432A8C5 /* Pods_VCRURLSessionExample.framework in Frameworks */,
+				B214CAD77F710AB28429E52E /* Pods_VCRURLSessionExample.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		608E9593FB7CF512177F52FD /* Frameworks */ = {
+		394BF8DABB37F573F82C399A /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				13BD4B047A208A78100F9405 /* Pods_VCRURLSessionExample.framework */,
+				F564DCCF1130BD3285DABC08 /* Pods-VCRURLSessionExample.debug.xcconfig */,
+				2F7CFF70E081C5F1F4D0F374 /* Pods-VCRURLSessionExample.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		4AF71D7DF41B1CC301643816 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1ECE8D904BDE7E62DA493EDB /* Pods_VCRURLSessionExample.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -60,8 +69,8 @@
 				6723F74A1C47778600CE5C77 /* Cassettes */,
 				6723F7311C4772EF00CE5C77 /* VCRURLSessionExample */,
 				6723F7301C4772EF00CE5C77 /* Products */,
-				979B4135D1DE3E6AF80A5492 /* Pods */,
-				608E9593FB7CF512177F52FD /* Frameworks */,
+				394BF8DABB37F573F82C399A /* Pods */,
+				4AF71D7DF41B1CC301643816 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -105,15 +114,6 @@
 			path = Cassettes;
 			sourceTree = "<group>";
 		};
-		979B4135D1DE3E6AF80A5492 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				D551B0840E45E335E3B8B59F /* Pods-VCRURLSessionExample.debug.xcconfig */,
-				4356122FF4FD27E3BA1B40A6 /* Pods-VCRURLSessionExample.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -121,12 +121,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6723F7461C4772F000CE5C77 /* Build configuration list for PBXNativeTarget "VCRURLSessionExample" */;
 			buildPhases = (
-				5990731DC0BC4C994CF4BCB9 /* Check Pods Manifest.lock */,
+				88B31BBDDC192AE837BAB0D7 /* [CP] Check Pods Manifest.lock */,
 				6723F72B1C4772EF00CE5C77 /* Sources */,
 				6723F72C1C4772EF00CE5C77 /* Frameworks */,
 				6723F72D1C4772EF00CE5C77 /* Resources */,
-				3C1352799E40F1543B8A0EEE /* Embed Pods Frameworks */,
-				D1AA092905C0F36BDAC07E09 /* Copy Pods Resources */,
+				48064A4759FC003FBA62E65B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -156,6 +155,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -184,49 +184,44 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		3C1352799E40F1543B8A0EEE /* Embed Pods Frameworks */ = {
+		48064A4759FC003FBA62E65B /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VCRURLSessionExample/Pods-VCRURLSessionExample-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/VCRURLSession/VCRURLSession.framework",
 			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/VCRURLSession.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VCRURLSessionExample/Pods-VCRURLSessionExample-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-VCRURLSessionExample/Pods-VCRURLSessionExample-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		5990731DC0BC4C994CF4BCB9 /* Check Pods Manifest.lock */ = {
+		88B31BBDDC192AE837BAB0D7 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputPaths = (
+			inputFileListPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-VCRURLSessionExample-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		D1AA092905C0F36BDAC07E09 /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VCRURLSessionExample/Pods-VCRURLSessionExample-resources.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -300,7 +295,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -337,7 +332,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -346,7 +341,7 @@
 		};
 		6723F7471C4772F000CE5C77 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D551B0840E45E335E3B8B59F /* Pods-VCRURLSessionExample.debug.xcconfig */;
+			baseConfigurationReference = F564DCCF1130BD3285DABC08 /* Pods-VCRURLSessionExample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = VCRURLSessionExample/Info.plist;
@@ -358,7 +353,7 @@
 		};
 		6723F7481C4772F000CE5C77 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4356122FF4FD27E3BA1B40A6 /* Pods-VCRURLSessionExample.release.xcconfig */;
+			baseConfigurationReference = 2F7CFF70E081C5F1F4D0F374 /* Pods-VCRURLSessionExample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = VCRURLSessionExample/Info.plist;

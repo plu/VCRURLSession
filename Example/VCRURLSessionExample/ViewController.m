@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-#import <VCRURLSession/VCRURLSession.h>
+#import <VCRURLSession/VCRURLSessionController.h>
 
 @interface ViewController ()
 
@@ -37,18 +37,18 @@
 - (void)record
 {
     // Set up `protocolClasses` and return new session
-    self.session = [VCRURLSession prepareURLSession:[NSURLSession sharedSession]];
+    self.session = [VCRURLSessionController prepareURLSession:[NSURLSession sharedSession]];
 
     // Create new empty cassette to record HTTP requests on
     VCRURLSessionCassette *cassette = [[VCRURLSessionCassette alloc] init];
 
     // Start recording HTTP requests
-    [VCRURLSession startRecordingOnCassette:cassette];
+    [VCRURLSessionController startRecordingOnCassette:cassette];
 
     // Make some HTTP request
     [[self.session dataTaskWithURL:[NSURL URLWithString:@"https://www.github.com"]
                  completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
-                     [VCRURLSession stopRecording];
+                     [VCRURLSessionController stopRecording];
                      [cassette writeToFile:self.path];
                  }] resume];
 }
@@ -56,11 +56,11 @@
 - (void)replay
 {
     // Set up `protocolClasses` and return new session
-    self.session = [VCRURLSession prepareURLSession:[NSURLSession sharedSession]];
+    self.session = [VCRURLSessionController prepareURLSession:[NSURLSession sharedSession]];
 
     // Load cassette
     VCRURLSessionCassette *cassette = [[VCRURLSessionCassette alloc] initWithContentsOfFile:self.path];
-    [VCRURLSession startReplayingWithCassette:cassette mode:VCRURLSessionReplayModeStrict];
+    [VCRURLSessionController startReplayingWithCassette:cassette mode:VCRURLSessionReplayModeStrict];
 
     // Make some HTTP request
     [[self.session dataTaskWithURL:[NSURL URLWithString:@"https://www.github.com"]

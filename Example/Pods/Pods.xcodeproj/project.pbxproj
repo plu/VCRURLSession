@@ -7,327 +7,327 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		02436AFA340F0DF447DE15406A0A132B /* VCRURLSessionRecorderDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = B5F6FB2D73DC09D36B2CA92F6100FE16 /* VCRURLSessionRecorderDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0CFBB9F35E1192B92D0AF8C6F70255FC /* VCRURLSession.h in Headers */ = {isa = PBXBuildFile; fileRef = E3C33723AE8790779D44C805BC75A18E /* VCRURLSession.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0EB6BDC3DC354F6EE5F13660C2B47399 /* VCRURLSessionCassette.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C99B0134F25C030B13DD501E0BF7175 /* VCRURLSessionCassette.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1CDE5E7C6F75EB9268532F409C3FBF91 /* NSError+VCRURLSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 95E27D4C6814DBDE7636E5898B7B8A51 /* NSError+VCRURLSession.m */; };
-		216B0232B2E16C978E72973DA4975CB0 /* Pods-VCRURLSessionExample-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 74B85D6C6531720DE937037A8E982BF0 /* Pods-VCRURLSessionExample-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		246F6C203BFC689E99D293DE0ABE4C7C /* NSData+VCRURLSession.m in Sources */ = {isa = PBXBuildFile; fileRef = E81317D6157ADC243E1F4E1FCA0FC0F9 /* NSData+VCRURLSession.m */; };
-		2C5564545ED2792E0E8441A33A4537E2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
-		412126B0369E1AE947E24063A1ED9BA2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
-		4383FDA83D97B186117DFF42AC739463 /* VCRURLSession-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 07EF316CBCF597255F119495D974C23B /* VCRURLSession-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4A0325408548BB30CB0E89669EA225CD /* VCRURLSessionSampler.m in Sources */ = {isa = PBXBuildFile; fileRef = D267FE0FC91A46BF551FB9DEA1691F57 /* VCRURLSessionSampler.m */; };
-		4B24DD22266D4F309012F667F046D9D2 /* VCRURLSessionPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = F338AD0D49AEBA310BADFDC9EDE91341 /* VCRURLSessionPlayer.m */; };
-		4EA6DD457CF119FF859A1A3B89C59760 /* VCRURLSession-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FAD84BE01F448D384620A26BD5B9629 /* VCRURLSession-dummy.m */; };
-		51ED0472B35862520E4289C91177745B /* VCRURLSessionSampler.h in Headers */ = {isa = PBXBuildFile; fileRef = 5FBACB45190DD802B35BDB7D4A13026A /* VCRURLSessionSampler.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		58929DF444D51B7DCC0E384602F59794 /* VCRURLSessionRecorder.h in Headers */ = {isa = PBXBuildFile; fileRef = E24FA82493BC096E864BBE9D32068754 /* VCRURLSessionRecorder.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		6C1254027609B88706FD37D3DFBF8780 /* VCRURLSessionLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = 99DD8FA1B15C77C1A291E62CF8E7FFF9 /* VCRURLSessionLogger.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		71935E1194942DF1BA770A6A26CFB8C9 /* VCRURLSessionResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = 68C6CF92CCDBC2079E684AF62EDC30BA /* VCRURLSessionResponse.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		749325AF84C6C890D51549DCC4E2B2E3 /* VCRURLSessionResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 488B1849500324E65DBCD9D6785047AF /* VCRURLSessionResponse.m */; };
-		749A5DFCC42CE99B809FB7FF8D0C9E45 /* NSError+VCRURLSession.h in Headers */ = {isa = PBXBuildFile; fileRef = A8543BC8E4D5D2B41777B56A23C78588 /* NSError+VCRURLSession.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		7ABB6DE9ADE59602D585DE9C1C4B6CB6 /* VCRURLSessionLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = B816F1AC79A51955A561D9AF416BC7B3 /* VCRURLSessionLogger.m */; };
-		7F5C0FE48CC34C0B5F7A3B15B6DA04BB /* NSData+VCRURLSession.h in Headers */ = {isa = PBXBuildFile; fileRef = DD995AE10DF59911F93D472411EDA804 /* NSData+VCRURLSession.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		862700A47CB626B163E3148BBDEF48E2 /* NSURLRequest+VCRURLSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD0BBFE0BD1E98FA0A5BD56A8F65221 /* NSURLRequest+VCRURLSession.m */; };
-		94DC7CF5C62A59D1C42EA203459CC021 /* NSHTTPURLResponse+VCRURLSession.h in Headers */ = {isa = PBXBuildFile; fileRef = 0790C1BCDCCA924E1762F36B4FDF2E76 /* NSHTTPURLResponse+VCRURLSession.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		A41AF629C0B257818591C5BE4D5B6486 /* VCRURLSessionRecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A3665C83C8B2AB4D79EC49F24C4B0F6 /* VCRURLSessionRecorder.m */; };
-		B20F71ADEEBFE406A9421925D84A7179 /* VCRURLSessionRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 15DE7C09B7DC351D505B4237C2356CC9 /* VCRURLSessionRecord.m */; };
-		B95B3A0E01293F0F651645AC4BCC1DB6 /* Pods-VCRURLSessionExample-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6221A85DFBDA15511ECDBDCED1DC948C /* Pods-VCRURLSessionExample-dummy.m */; };
-		BD45E1B00C97CA57F4F0E47B9616E0B0 /* VCRURLSessionPlayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 30D913DBA548DC9E07E4A064BA0CB349 /* VCRURLSessionPlayer.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		C5D16E88AC0DC7D848EA44EA4A31BE29 /* VCRURLSessionPlayerDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A4C5C711D572DF0F09BD2E10ED7828C /* VCRURLSessionPlayerDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E1647895752C0CC93835315A1E43DFD6 /* VCRURLSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B75E4A5830F2686EDB0642005B27DA4 /* VCRURLSession.m */; };
-		E1FD75DA1167EAE2654BFF2B5C587412 /* NSHTTPURLResponse+VCRURLSession.m in Sources */ = {isa = PBXBuildFile; fileRef = DBE810C2EE46D4B66FFB0B9528DF1D05 /* NSHTTPURLResponse+VCRURLSession.m */; };
-		EA800EAB47C3804B5996C64D19283CCE /* VCRURLSessionCassette.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D3882EECE03B4A6EA6E6AE6F12BA384 /* VCRURLSessionCassette.m */; };
-		F885A5C44A5081327952B25B26BB583D /* VCRURLSessionRecord.h in Headers */ = {isa = PBXBuildFile; fileRef = F0E08F268E113AA7BC2B4C6EF12AF335 /* VCRURLSessionRecord.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		FBF21C415496CAC4BDEE8EA7B1678B6D /* NSURLRequest+VCRURLSession.h in Headers */ = {isa = PBXBuildFile; fileRef = 7F07B5B9E7F4B3B59E5043D00EB2BF62 /* NSURLRequest+VCRURLSession.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		FC4A2F8D6018CABA092045D8EACCC068 /* VCRURLSessionReplayMode.h in Headers */ = {isa = PBXBuildFile; fileRef = A3C839EA23CB0B1E2F626D6E39CAC256 /* VCRURLSessionReplayMode.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		07F5DA2ED18B1D059D5CC34EF343DF98 /* NSData+VCRURLSession.h in Headers */ = {isa = PBXBuildFile; fileRef = BFDCBB56DBB5B31EBC2230F31BA0D495 /* NSData+VCRURLSession.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		09C4A660061444987C3656007E7369C7 /* NSURLResponse+VCRURLSession.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A6579954CF9118E7724FC9326FC3481 /* NSURLResponse+VCRURLSession.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		15497B3250D4CC287AAAB0EF24267674 /* VCRURLSessionRecorder.h in Headers */ = {isa = PBXBuildFile; fileRef = 32EC6623AB6F2396CA2EE4048BE761D6 /* VCRURLSessionRecorder.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2067C52A2A0D7A6D43969FC5EDF90364 /* VCRURLSessionLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = 174E3291D198B4955AE9A7C50FACE247 /* VCRURLSessionLogger.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3A527957B75A75CC85EAC13AF59933FB /* VCRURLSessionCassette.h in Headers */ = {isa = PBXBuildFile; fileRef = A6CB931DFD54D26BD007C893C553BF56 /* VCRURLSessionCassette.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		40F21D7F93641B0AACFB3D6AB760D6F4 /* VCRURLSessionPlayerDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 585E80524E1020F59184FB233941EDE0 /* VCRURLSessionPlayerDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		451A86D62A2C9D577BE95543ECF76A35 /* VCRURLSessionReplayMode.h in Headers */ = {isa = PBXBuildFile; fileRef = 8D47EFA3F064503BC3E194F5C3ECB131 /* VCRURLSessionReplayMode.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4D824E1BA6EEA583AB19A21D2C7B61FC /* VCRURLSessionPlayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E9A7289F939596C549E4F27C245805B /* VCRURLSessionPlayer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		62989253B4BD7F1E816FEA37993876A2 /* VCRURLSessionRecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = 21D48F366727A04C1DA21C87FCC687AC /* VCRURLSessionRecorder.m */; };
+		633E47A87C857ABC2D60F3E350CA7B3F /* VCRURLSessionResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = 1291BCFB73489483DD0C9C8A844F6D97 /* VCRURLSessionResponse.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		66799C361FF4D2B019307C8C52CAAB93 /* NSData+VCRURLSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 91616D85BF1863C748FBA2B548B8EB99 /* NSData+VCRURLSession.m */; };
+		6DF936F7CFE8C32F9D09993766CB2744 /* VCRURLSessionRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = D752C1B6603258C33F565BE0FC3AE482 /* VCRURLSessionRecord.m */; };
+		728F5DB4CF0DA9CD7D5D86702B36D917 /* VCRURLSessionController.h in Headers */ = {isa = PBXBuildFile; fileRef = A9300002939920AE60B9309B738A2BCB /* VCRURLSessionController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7B78D5953134F897848DC9A5ECC510E3 /* VCRURLSessionPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D44A87832CE2A8083684F852074CBBD /* VCRURLSessionPlayer.m */; };
+		7BB46C9CEFE962D4D5E5B43AC83105EC /* Pods-VCRURLSessionExample-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CAED9B02556D706AFD05085DEA8939C8 /* Pods-VCRURLSessionExample-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8D53EFAE9EA2F5D1E5250DD269572C77 /* VCRURLSession-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C4B5E1151B1F6BE0DC3EA10B1E9FD736 /* VCRURLSession-dummy.m */; };
+		8FCC2E2E2576447797EF84598F2FD623 /* VCRURLSessionSampler.m in Sources */ = {isa = PBXBuildFile; fileRef = 80DA2D4347D8A927F9360993103B5473 /* VCRURLSessionSampler.m */; };
+		9036C8347DA5D50274D770EAD2B5C6D9 /* VCRURLSession-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C4BB3406E9D1B7027B1D2E130AF8B619 /* VCRURLSession-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		98DBDB853615DB2DC2C77C22F2CE28BE /* VCRURLSessionController.m in Sources */ = {isa = PBXBuildFile; fileRef = C165D7450C8DF174074172F2A2CC5819 /* VCRURLSessionController.m */; };
+		A3117FA883D1C784D7D68AC73BE6D953 /* VCRURLSessionRecorderDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 2BFA5BBEEAD66405CDAB42ED1CB2CCDA /* VCRURLSessionRecorderDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A984FCFEC7BC284FBADBACD70BA77D7B /* Pods-VCRURLSessionExample-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 47BA6132A11C460405A494BEDC14EFA7 /* Pods-VCRURLSessionExample-dummy.m */; };
+		AC8F1019987FA49B979939EB5A026C47 /* VCRURLSessionSampler.h in Headers */ = {isa = PBXBuildFile; fileRef = B3E792280239A0998BAAB3208E168074 /* VCRURLSessionSampler.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B3B459799BD4016ACC8020E99B7889C3 /* VCRURLSessionRecord.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E635915E2E550CD075DAB643B71CFA3 /* VCRURLSessionRecord.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BD63D7E28EDFFD72DD2F2D62CA104A42 /* VCRURLSessionCassette.m in Sources */ = {isa = PBXBuildFile; fileRef = CC375FCE6155CA339A64C2211A1A433E /* VCRURLSessionCassette.m */; };
+		BEA6637D887E60FA7FAD853F719557D0 /* NSError+VCRURLSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 9056BF0905A793B6B2C0EBA3D90BE9A2 /* NSError+VCRURLSession.m */; };
+		C3DC3A038CF8B2A28C464E9856D69CAF /* NSURLResponse+VCRURLSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DEEC527351E35DD0CBB38F346EC2C63 /* NSURLResponse+VCRURLSession.m */; };
+		C6C8BA2F3596A6E6A31CD7ABDF38E18B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		CF64B663A2D1522554BABE298D12DCFE /* NSURLRequest+VCRURLSession.h in Headers */ = {isa = PBXBuildFile; fileRef = 46C2EC48955EEC9B23CBA9D94850337B /* NSURLRequest+VCRURLSession.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E5FC1FD7A623AD9470780132DAAB6084 /* VCRURLSessionLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C3D954B38682DDE7CEE9CD1FF125AFC /* VCRURLSessionLogger.m */; };
+		F116A64ECB461D9DF9ADEC14B18DA560 /* VCRURLSessionResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 583910DC104979A646D2853E1AC197A7 /* VCRURLSessionResponse.m */; };
+		F78C495958EE7EB2DAB2F701337C7E58 /* NSError+VCRURLSession.h in Headers */ = {isa = PBXBuildFile; fileRef = 6305057C0866A713DCC07052BD48EEE2 /* NSError+VCRURLSession.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FA713D5431E83D9D37C06590CD115965 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		FF7269DBFB9A26D2932BC7BEFCE40480 /* NSURLRequest+VCRURLSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 1133A843BD03D81E31EFCC112E93A700 /* NSURLRequest+VCRURLSession.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		FC639E878F205DDB4F809FB593484AB8 /* PBXContainerItemProxy */ = {
+		37E2F45F7B5475F020E89EEE15BBB0FC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 478D712DD561BA068529B0D2743FA086;
+			remoteGlobalIDString = 7D54B6A5C354D7546B18920D0401D4FC;
 			remoteInfo = VCRURLSession;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0302BC157203915CFBE3EFF010F686F0 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0790C1BCDCCA924E1762F36B4FDF2E76 /* NSHTTPURLResponse+VCRURLSession.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSHTTPURLResponse+VCRURLSession.h"; sourceTree = "<group>"; };
-		07EF316CBCF597255F119495D974C23B /* VCRURLSession-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "VCRURLSession-umbrella.h"; sourceTree = "<group>"; };
-		0891EAED928B56BE369A5709DF730B50 /* VCRURLSession.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = VCRURLSession.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		15DE7C09B7DC351D505B4237C2356CC9 /* VCRURLSessionRecord.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = VCRURLSessionRecord.m; sourceTree = "<group>"; };
-		1F895AE3B7CEE2B4750CA89C5D31EA8D /* Pods-VCRURLSessionExample-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-VCRURLSessionExample-acknowledgements.plist"; sourceTree = "<group>"; };
-		2B75E4A5830F2686EDB0642005B27DA4 /* VCRURLSession.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = VCRURLSession.m; sourceTree = "<group>"; };
-		2BAB798D40B86F245E32A1F9E124ADB7 /* Pods-VCRURLSessionExample.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-VCRURLSessionExample.modulemap"; sourceTree = "<group>"; };
-		2FAD84BE01F448D384620A26BD5B9629 /* VCRURLSession-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "VCRURLSession-dummy.m"; sourceTree = "<group>"; };
-		30D913DBA548DC9E07E4A064BA0CB349 /* VCRURLSessionPlayer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = VCRURLSessionPlayer.h; sourceTree = "<group>"; };
-		3A4C5C711D572DF0F09BD2E10ED7828C /* VCRURLSessionPlayerDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = VCRURLSessionPlayerDelegate.h; sourceTree = "<group>"; };
-		3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		488B1849500324E65DBCD9D6785047AF /* VCRURLSessionResponse.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = VCRURLSessionResponse.m; sourceTree = "<group>"; };
-		5451C1CB6BB54A086DAC32C08BCF36A2 /* Pods-VCRURLSessionExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-VCRURLSessionExample.release.xcconfig"; sourceTree = "<group>"; };
-		5FBACB45190DD802B35BDB7D4A13026A /* VCRURLSessionSampler.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = VCRURLSessionSampler.h; sourceTree = "<group>"; };
-		60339EF7BE1F8C5AD61D45016793E6CB /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6221A85DFBDA15511ECDBDCED1DC948C /* Pods-VCRURLSessionExample-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-VCRURLSessionExample-dummy.m"; sourceTree = "<group>"; };
-		6345F8E379241D6EA4232C3907FEDD1A /* VCRURLSession.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = VCRURLSession.xcconfig; sourceTree = "<group>"; };
-		68C6CF92CCDBC2079E684AF62EDC30BA /* VCRURLSessionResponse.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = VCRURLSessionResponse.h; sourceTree = "<group>"; };
-		6BD0BBFE0BD1E98FA0A5BD56A8F65221 /* NSURLRequest+VCRURLSession.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSURLRequest+VCRURLSession.m"; sourceTree = "<group>"; };
-		74B85D6C6531720DE937037A8E982BF0 /* Pods-VCRURLSessionExample-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-VCRURLSessionExample-umbrella.h"; sourceTree = "<group>"; };
-		7A3665C83C8B2AB4D79EC49F24C4B0F6 /* VCRURLSessionRecorder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = VCRURLSessionRecorder.m; sourceTree = "<group>"; };
-		7D3882EECE03B4A6EA6E6AE6F12BA384 /* VCRURLSessionCassette.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = VCRURLSessionCassette.m; sourceTree = "<group>"; };
-		7F07B5B9E7F4B3B59E5043D00EB2BF62 /* NSURLRequest+VCRURLSession.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSURLRequest+VCRURLSession.h"; sourceTree = "<group>"; };
-		883A58E940D565FC4FB7B8785DB47E6F /* VCRURLSession-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "VCRURLSession-prefix.pch"; sourceTree = "<group>"; };
-		8A25DC446736D01AD0EA7E319DA1AAA1 /* Pods-VCRURLSessionExample-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-VCRURLSessionExample-frameworks.sh"; sourceTree = "<group>"; };
-		8C99B0134F25C030B13DD501E0BF7175 /* VCRURLSessionCassette.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = VCRURLSessionCassette.h; sourceTree = "<group>"; };
-		95E27D4C6814DBDE7636E5898B7B8A51 /* NSError+VCRURLSession.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSError+VCRURLSession.m"; sourceTree = "<group>"; };
-		9772242A6605320F3A4F7DBA7DD71C63 /* Pods_VCRURLSessionExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VCRURLSessionExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		99DD8FA1B15C77C1A291E62CF8E7FFF9 /* VCRURLSessionLogger.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = VCRURLSessionLogger.h; sourceTree = "<group>"; };
-		A3C839EA23CB0B1E2F626D6E39CAC256 /* VCRURLSessionReplayMode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = VCRURLSessionReplayMode.h; sourceTree = "<group>"; };
-		A8543BC8E4D5D2B41777B56A23C78588 /* NSError+VCRURLSession.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSError+VCRURLSession.h"; sourceTree = "<group>"; };
-		AEEB652872944704D1D34A1D17C9071D /* Pods-VCRURLSessionExample-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-VCRURLSessionExample-acknowledgements.markdown"; sourceTree = "<group>"; };
-		B5F6FB2D73DC09D36B2CA92F6100FE16 /* VCRURLSessionRecorderDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = VCRURLSessionRecorderDelegate.h; sourceTree = "<group>"; };
-		B816F1AC79A51955A561D9AF416BC7B3 /* VCRURLSessionLogger.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = VCRURLSessionLogger.m; sourceTree = "<group>"; };
-		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		C815DE4B2890902A960EDF6F7D174D1F /* VCRURLSession.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = VCRURLSession.modulemap; sourceTree = "<group>"; };
-		C8D9DB914D10444815AC9C820E0EB2EE /* Pods-VCRURLSessionExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-VCRURLSessionExample.debug.xcconfig"; sourceTree = "<group>"; };
-		D267FE0FC91A46BF551FB9DEA1691F57 /* VCRURLSessionSampler.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = VCRURLSessionSampler.m; sourceTree = "<group>"; };
-		DBE810C2EE46D4B66FFB0B9528DF1D05 /* NSHTTPURLResponse+VCRURLSession.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSHTTPURLResponse+VCRURLSession.m"; sourceTree = "<group>"; };
-		DD995AE10DF59911F93D472411EDA804 /* NSData+VCRURLSession.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSData+VCRURLSession.h"; sourceTree = "<group>"; };
-		E24FA82493BC096E864BBE9D32068754 /* VCRURLSessionRecorder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = VCRURLSessionRecorder.h; sourceTree = "<group>"; };
-		E3C33723AE8790779D44C805BC75A18E /* VCRURLSession.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = VCRURLSession.h; sourceTree = "<group>"; };
-		E7E664FB6F064B65008EC9D78922D4DC /* Pods-VCRURLSessionExample-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-VCRURLSessionExample-resources.sh"; sourceTree = "<group>"; };
-		E81317D6157ADC243E1F4E1FCA0FC0F9 /* NSData+VCRURLSession.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSData+VCRURLSession.m"; sourceTree = "<group>"; };
-		F0E08F268E113AA7BC2B4C6EF12AF335 /* VCRURLSessionRecord.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = VCRURLSessionRecord.h; sourceTree = "<group>"; };
-		F338AD0D49AEBA310BADFDC9EDE91341 /* VCRURLSessionPlayer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = VCRURLSessionPlayer.m; sourceTree = "<group>"; };
+		0694FC5C1228A612D076558A022A29D9 /* Pods-VCRURLSessionExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-VCRURLSessionExample.debug.xcconfig"; sourceTree = "<group>"; };
+		1133A843BD03D81E31EFCC112E93A700 /* NSURLRequest+VCRURLSession.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSURLRequest+VCRURLSession.m"; path = "VCRURLSession/NSURLRequest+VCRURLSession.m"; sourceTree = "<group>"; };
+		1291BCFB73489483DD0C9C8A844F6D97 /* VCRURLSessionResponse.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VCRURLSessionResponse.h; path = VCRURLSession/VCRURLSessionResponse.h; sourceTree = "<group>"; };
+		174E3291D198B4955AE9A7C50FACE247 /* VCRURLSessionLogger.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VCRURLSessionLogger.h; path = VCRURLSession/VCRURLSessionLogger.h; sourceTree = "<group>"; };
+		1E635915E2E550CD075DAB643B71CFA3 /* VCRURLSessionRecord.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VCRURLSessionRecord.h; path = VCRURLSession/VCRURLSessionRecord.h; sourceTree = "<group>"; };
+		21D48F366727A04C1DA21C87FCC687AC /* VCRURLSessionRecorder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = VCRURLSessionRecorder.m; path = VCRURLSession/VCRURLSessionRecorder.m; sourceTree = "<group>"; };
+		233BA85CA067D8AD93F9AB537D47DDE2 /* VCRURLSession-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "VCRURLSession-Info.plist"; sourceTree = "<group>"; };
+		23D41AC41734D7D0DDE336E9399547D6 /* Pods-VCRURLSessionExample-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-VCRURLSessionExample-frameworks.sh"; sourceTree = "<group>"; };
+		2BFA5BBEEAD66405CDAB42ED1CB2CCDA /* VCRURLSessionRecorderDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VCRURLSessionRecorderDelegate.h; path = VCRURLSession/VCRURLSessionRecorderDelegate.h; sourceTree = "<group>"; };
+		32EC6623AB6F2396CA2EE4048BE761D6 /* VCRURLSessionRecorder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VCRURLSessionRecorder.h; path = VCRURLSession/VCRURLSessionRecorder.h; sourceTree = "<group>"; };
+		3A6579954CF9118E7724FC9326FC3481 /* NSURLResponse+VCRURLSession.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSURLResponse+VCRURLSession.h"; path = "VCRURLSession/NSURLResponse+VCRURLSession.h"; sourceTree = "<group>"; };
+		3E8857BB15B3E0A9B9E4294D80A0B468 /* Pods-VCRURLSessionExample-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-VCRURLSessionExample-acknowledgements.markdown"; sourceTree = "<group>"; };
+		45B6B0672DDE9B3D3BE2A7EC26C1527E /* Pods-VCRURLSessionExample */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-VCRURLSessionExample"; path = Pods_VCRURLSessionExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		46C2EC48955EEC9B23CBA9D94850337B /* NSURLRequest+VCRURLSession.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSURLRequest+VCRURLSession.h"; path = "VCRURLSession/NSURLRequest+VCRURLSession.h"; sourceTree = "<group>"; };
+		47BA6132A11C460405A494BEDC14EFA7 /* Pods-VCRURLSessionExample-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-VCRURLSessionExample-dummy.m"; sourceTree = "<group>"; };
+		47EFD5EE29F1D7F495C638D1C8F9AA9C /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		4C3D954B38682DDE7CEE9CD1FF125AFC /* VCRURLSessionLogger.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = VCRURLSessionLogger.m; path = VCRURLSession/VCRURLSessionLogger.m; sourceTree = "<group>"; };
+		4F138B08268F8B1FDCB12E87A3EFF227 /* VCRURLSession.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = VCRURLSession.modulemap; sourceTree = "<group>"; };
+		583910DC104979A646D2853E1AC197A7 /* VCRURLSessionResponse.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = VCRURLSessionResponse.m; path = VCRURLSession/VCRURLSessionResponse.m; sourceTree = "<group>"; };
+		585E80524E1020F59184FB233941EDE0 /* VCRURLSessionPlayerDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VCRURLSessionPlayerDelegate.h; path = VCRURLSession/VCRURLSessionPlayerDelegate.h; sourceTree = "<group>"; };
+		5DEEC527351E35DD0CBB38F346EC2C63 /* NSURLResponse+VCRURLSession.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSURLResponse+VCRURLSession.m"; path = "VCRURLSession/NSURLResponse+VCRURLSession.m"; sourceTree = "<group>"; };
+		6305057C0866A713DCC07052BD48EEE2 /* NSError+VCRURLSession.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSError+VCRURLSession.h"; path = "VCRURLSession/NSError+VCRURLSession.h"; sourceTree = "<group>"; };
+		6515556733FD9CB6C7B6C973353946A6 /* VCRURLSession.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = VCRURLSession.debug.xcconfig; sourceTree = "<group>"; };
+		654ED2403F1BF87A79001681886CFE76 /* Pods-VCRURLSessionExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-VCRURLSessionExample.release.xcconfig"; sourceTree = "<group>"; };
+		67DA3F42C28A323A5CE9D7C378A5123B /* VCRURLSession-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "VCRURLSession-prefix.pch"; sourceTree = "<group>"; };
+		6D44A87832CE2A8083684F852074CBBD /* VCRURLSessionPlayer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = VCRURLSessionPlayer.m; path = VCRURLSession/VCRURLSessionPlayer.m; sourceTree = "<group>"; };
+		6D65CFCD3B3426E3AC6CFE411933F244 /* VCRURLSession.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = VCRURLSession.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		6E9A7289F939596C549E4F27C245805B /* VCRURLSessionPlayer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VCRURLSessionPlayer.h; path = VCRURLSession/VCRURLSessionPlayer.h; sourceTree = "<group>"; };
+		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		7C982F3E7583A540A327A37C7B566A93 /* Pods-VCRURLSessionExample.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-VCRURLSessionExample.modulemap"; sourceTree = "<group>"; };
+		80DA2D4347D8A927F9360993103B5473 /* VCRURLSessionSampler.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = VCRURLSessionSampler.m; path = VCRURLSession/VCRURLSessionSampler.m; sourceTree = "<group>"; };
+		85D6F72A18C143571C50A71041DA1CAC /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		8D47EFA3F064503BC3E194F5C3ECB131 /* VCRURLSessionReplayMode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VCRURLSessionReplayMode.h; path = VCRURLSession/VCRURLSessionReplayMode.h; sourceTree = "<group>"; };
+		9056BF0905A793B6B2C0EBA3D90BE9A2 /* NSError+VCRURLSession.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSError+VCRURLSession.m"; path = "VCRURLSession/NSError+VCRURLSession.m"; sourceTree = "<group>"; };
+		91616D85BF1863C748FBA2B548B8EB99 /* NSData+VCRURLSession.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSData+VCRURLSession.m"; path = "VCRURLSession/NSData+VCRURLSession.m"; sourceTree = "<group>"; };
+		98D9EBAF54787ACA73EE1101CA607C53 /* VCRURLSession */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = VCRURLSession; path = VCRURLSession.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A6CB931DFD54D26BD007C893C553BF56 /* VCRURLSessionCassette.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VCRURLSessionCassette.h; path = VCRURLSession/VCRURLSessionCassette.h; sourceTree = "<group>"; };
+		A9300002939920AE60B9309B738A2BCB /* VCRURLSessionController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VCRURLSessionController.h; path = VCRURLSession/VCRURLSessionController.h; sourceTree = "<group>"; };
+		B160BC4A7DFA5452B820D19FF7204912 /* VCRURLSession.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = VCRURLSession.release.xcconfig; sourceTree = "<group>"; };
+		B3E792280239A0998BAAB3208E168074 /* VCRURLSessionSampler.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VCRURLSessionSampler.h; path = VCRURLSession/VCRURLSessionSampler.h; sourceTree = "<group>"; };
+		BFDCBB56DBB5B31EBC2230F31BA0D495 /* NSData+VCRURLSession.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSData+VCRURLSession.h"; path = "VCRURLSession/NSData+VCRURLSession.h"; sourceTree = "<group>"; };
+		C165D7450C8DF174074172F2A2CC5819 /* VCRURLSessionController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = VCRURLSessionController.m; path = VCRURLSession/VCRURLSessionController.m; sourceTree = "<group>"; };
+		C4B5E1151B1F6BE0DC3EA10B1E9FD736 /* VCRURLSession-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "VCRURLSession-dummy.m"; sourceTree = "<group>"; };
+		C4BB3406E9D1B7027B1D2E130AF8B619 /* VCRURLSession-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "VCRURLSession-umbrella.h"; sourceTree = "<group>"; };
+		CAED9B02556D706AFD05085DEA8939C8 /* Pods-VCRURLSessionExample-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-VCRURLSessionExample-umbrella.h"; sourceTree = "<group>"; };
+		CC375FCE6155CA339A64C2211A1A433E /* VCRURLSessionCassette.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = VCRURLSessionCassette.m; path = VCRURLSession/VCRURLSessionCassette.m; sourceTree = "<group>"; };
+		D752C1B6603258C33F565BE0FC3AE482 /* VCRURLSessionRecord.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = VCRURLSessionRecord.m; path = VCRURLSession/VCRURLSessionRecord.m; sourceTree = "<group>"; };
+		F54EE6BFE83A6E58627470C6E599D2B1 /* Pods-VCRURLSessionExample-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-VCRURLSessionExample-acknowledgements.plist"; sourceTree = "<group>"; };
+		FCC889D2DAFECB56E442C9CF3DF38766 /* Pods-VCRURLSessionExample-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-VCRURLSessionExample-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		11A7A0AA728C27C553E27AEC38F6ED1C /* Frameworks */ = {
+		442CF5A62100B1228828FC84A5048248 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				412126B0369E1AE947E24063A1ED9BA2 /* Foundation.framework in Frameworks */,
+				FA713D5431E83D9D37C06590CD115965 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		29B080AE742EB0E799E7AC9D15FAE2D2 /* Frameworks */ = {
+		4790CF3C79534001BC328B9DFD2F914C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2C5564545ED2792E0E8441A33A4537E2 /* Foundation.framework in Frameworks */,
+				C6C8BA2F3596A6E6A31CD7ABDF38E18B /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1897143A3F329C6312E9BBF412260860 /* Products */ = {
+		02794CF6A866C99E4C6F5827C0A3D4ED /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				9772242A6605320F3A4F7DBA7DD71C63 /* Pods_VCRURLSessionExample.framework */,
-				0891EAED928B56BE369A5709DF730B50 /* VCRURLSession.framework */,
+				BFDCBB56DBB5B31EBC2230F31BA0D495 /* NSData+VCRURLSession.h */,
+				91616D85BF1863C748FBA2B548B8EB99 /* NSData+VCRURLSession.m */,
+				6305057C0866A713DCC07052BD48EEE2 /* NSError+VCRURLSession.h */,
+				9056BF0905A793B6B2C0EBA3D90BE9A2 /* NSError+VCRURLSession.m */,
+				46C2EC48955EEC9B23CBA9D94850337B /* NSURLRequest+VCRURLSession.h */,
+				1133A843BD03D81E31EFCC112E93A700 /* NSURLRequest+VCRURLSession.m */,
+				3A6579954CF9118E7724FC9326FC3481 /* NSURLResponse+VCRURLSession.h */,
+				5DEEC527351E35DD0CBB38F346EC2C63 /* NSURLResponse+VCRURLSession.m */,
+				A6CB931DFD54D26BD007C893C553BF56 /* VCRURLSessionCassette.h */,
+				CC375FCE6155CA339A64C2211A1A433E /* VCRURLSessionCassette.m */,
+				A9300002939920AE60B9309B738A2BCB /* VCRURLSessionController.h */,
+				C165D7450C8DF174074172F2A2CC5819 /* VCRURLSessionController.m */,
+				174E3291D198B4955AE9A7C50FACE247 /* VCRURLSessionLogger.h */,
+				4C3D954B38682DDE7CEE9CD1FF125AFC /* VCRURLSessionLogger.m */,
+				6E9A7289F939596C549E4F27C245805B /* VCRURLSessionPlayer.h */,
+				6D44A87832CE2A8083684F852074CBBD /* VCRURLSessionPlayer.m */,
+				585E80524E1020F59184FB233941EDE0 /* VCRURLSessionPlayerDelegate.h */,
+				1E635915E2E550CD075DAB643B71CFA3 /* VCRURLSessionRecord.h */,
+				D752C1B6603258C33F565BE0FC3AE482 /* VCRURLSessionRecord.m */,
+				32EC6623AB6F2396CA2EE4048BE761D6 /* VCRURLSessionRecorder.h */,
+				21D48F366727A04C1DA21C87FCC687AC /* VCRURLSessionRecorder.m */,
+				2BFA5BBEEAD66405CDAB42ED1CB2CCDA /* VCRURLSessionRecorderDelegate.h */,
+				8D47EFA3F064503BC3E194F5C3ECB131 /* VCRURLSessionReplayMode.h */,
+				1291BCFB73489483DD0C9C8A844F6D97 /* VCRURLSessionResponse.h */,
+				583910DC104979A646D2853E1AC197A7 /* VCRURLSessionResponse.m */,
+				B3E792280239A0998BAAB3208E168074 /* VCRURLSessionSampler.h */,
+				80DA2D4347D8A927F9360993103B5473 /* VCRURLSessionSampler.m */,
 			);
-			name = Products;
+			name = Core;
 			sourceTree = "<group>";
 		};
-		2BFF9114703BC2BB37C110C86DA2EB30 /* Targets Support Files */ = {
+		0D6A6987D23A306F0E116300C0615797 /* VCRURLSession */ = {
 			isa = PBXGroup;
 			children = (
-				A7CD4EED34AC48BA8BBBADB3E67B3FA4 /* Pods-VCRURLSessionExample */,
-			);
-			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		3D142E7DD48CF3A8F41FFEE274C1A355 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				0302BC157203915CFBE3EFF010F686F0 /* Info.plist */,
-				C815DE4B2890902A960EDF6F7D174D1F /* VCRURLSession.modulemap */,
-				6345F8E379241D6EA4232C3907FEDD1A /* VCRURLSession.xcconfig */,
-				2FAD84BE01F448D384620A26BD5B9629 /* VCRURLSession-dummy.m */,
-				883A58E940D565FC4FB7B8785DB47E6F /* VCRURLSession-prefix.pch */,
-				07EF316CBCF597255F119495D974C23B /* VCRURLSession-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/VCRURLSession";
-			sourceTree = "<group>";
-		};
-		4F0BD27F77352B40F7F204727D0E2527 /* Private */ = {
-			isa = PBXGroup;
-			children = (
-				DD995AE10DF59911F93D472411EDA804 /* NSData+VCRURLSession.h */,
-				E81317D6157ADC243E1F4E1FCA0FC0F9 /* NSData+VCRURLSession.m */,
-				A8543BC8E4D5D2B41777B56A23C78588 /* NSError+VCRURLSession.h */,
-				95E27D4C6814DBDE7636E5898B7B8A51 /* NSError+VCRURLSession.m */,
-				0790C1BCDCCA924E1762F36B4FDF2E76 /* NSHTTPURLResponse+VCRURLSession.h */,
-				DBE810C2EE46D4B66FFB0B9528DF1D05 /* NSHTTPURLResponse+VCRURLSession.m */,
-				7F07B5B9E7F4B3B59E5043D00EB2BF62 /* NSURLRequest+VCRURLSession.h */,
-				6BD0BBFE0BD1E98FA0A5BD56A8F65221 /* NSURLRequest+VCRURLSession.m */,
-				30D913DBA548DC9E07E4A064BA0CB349 /* VCRURLSessionPlayer.h */,
-				F338AD0D49AEBA310BADFDC9EDE91341 /* VCRURLSessionPlayer.m */,
-				F0E08F268E113AA7BC2B4C6EF12AF335 /* VCRURLSessionRecord.h */,
-				15DE7C09B7DC351D505B4237C2356CC9 /* VCRURLSessionRecord.m */,
-				E24FA82493BC096E864BBE9D32068754 /* VCRURLSessionRecorder.h */,
-				7A3665C83C8B2AB4D79EC49F24C4B0F6 /* VCRURLSessionRecorder.m */,
-				5FBACB45190DD802B35BDB7D4A13026A /* VCRURLSessionSampler.h */,
-				D267FE0FC91A46BF551FB9DEA1691F57 /* VCRURLSessionSampler.m */,
-			);
-			path = Private;
-			sourceTree = "<group>";
-		};
-		5E42BD10C5D3FD470811CA1FC0A54B41 /* VCRURLSession */ = {
-			isa = PBXGroup;
-			children = (
-				E3C33723AE8790779D44C805BC75A18E /* VCRURLSession.h */,
-				2B75E4A5830F2686EDB0642005B27DA4 /* VCRURLSession.m */,
-				8C99B0134F25C030B13DD501E0BF7175 /* VCRURLSessionCassette.h */,
-				7D3882EECE03B4A6EA6E6AE6F12BA384 /* VCRURLSessionCassette.m */,
-				99DD8FA1B15C77C1A291E62CF8E7FFF9 /* VCRURLSessionLogger.h */,
-				B816F1AC79A51955A561D9AF416BC7B3 /* VCRURLSessionLogger.m */,
-				3A4C5C711D572DF0F09BD2E10ED7828C /* VCRURLSessionPlayerDelegate.h */,
-				B5F6FB2D73DC09D36B2CA92F6100FE16 /* VCRURLSessionRecorderDelegate.h */,
-				A3C839EA23CB0B1E2F626D6E39CAC256 /* VCRURLSessionReplayMode.h */,
-				68C6CF92CCDBC2079E684AF62EDC30BA /* VCRURLSessionResponse.h */,
-				488B1849500324E65DBCD9D6785047AF /* VCRURLSessionResponse.m */,
-				4F0BD27F77352B40F7F204727D0E2527 /* Private */,
-			);
-			path = VCRURLSession;
-			sourceTree = "<group>";
-		};
-		7D0829C4344818F2575342E3CFB8BB72 /* VCRURLSession */ = {
-			isa = PBXGroup;
-			children = (
-				C40AEF63E4F8432CC0FB808DED7C31FD /* Core */,
-				3D142E7DD48CF3A8F41FFEE274C1A355 /* Support Files */,
+				02794CF6A866C99E4C6F5827C0A3D4ED /* Core */,
+				C32FF86844922149A3825E5521D998A7 /* Pod */,
+				10B6D02F13899343F1719CCF336D8DDB /* Support Files */,
 			);
 			name = VCRURLSession;
 			path = ../..;
 			sourceTree = "<group>";
 		};
-		7DB346D0F39D3F0E887471402A8071AB = {
+		10B6D02F13899343F1719CCF336D8DDB /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
-				EE9744B0938CEDD864D37732B3766816 /* Development Pods */,
-				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				1897143A3F329C6312E9BBF412260860 /* Products */,
-				2BFF9114703BC2BB37C110C86DA2EB30 /* Targets Support Files */,
+				4F138B08268F8B1FDCB12E87A3EFF227 /* VCRURLSession.modulemap */,
+				C4B5E1151B1F6BE0DC3EA10B1E9FD736 /* VCRURLSession-dummy.m */,
+				233BA85CA067D8AD93F9AB537D47DDE2 /* VCRURLSession-Info.plist */,
+				67DA3F42C28A323A5CE9D7C378A5123B /* VCRURLSession-prefix.pch */,
+				C4BB3406E9D1B7027B1D2E130AF8B619 /* VCRURLSession-umbrella.h */,
+				6515556733FD9CB6C7B6C973353946A6 /* VCRURLSession.debug.xcconfig */,
+				B160BC4A7DFA5452B820D19FF7204912 /* VCRURLSession.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/VCRURLSession";
+			sourceTree = "<group>";
+		};
+		1DD41444E6C1FB9787A7CAF6961708CB /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				ED3A5DB23CE2D7AC333F823446D4C444 /* Pods-VCRURLSessionExample */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		23C1C810559CD1404D345A423868F3BC /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0D6A6987D23A306F0E116300C0615797 /* VCRURLSession */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		4EC2DD6629CDC723661866168683FDAF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				45B6B0672DDE9B3D3BE2A7EC26C1527E /* Pods-VCRURLSessionExample */,
+				98D9EBAF54787ACA73EE1101CA607C53 /* VCRURLSession */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		578452D2E740E91742655AC8F1636D1F /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		C32FF86844922149A3825E5521D998A7 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				47EFD5EE29F1D7F495C638D1C8F9AA9C /* LICENSE */,
+				85D6F72A18C143571C50A71041DA1CAC /* README.md */,
+				6D65CFCD3B3426E3AC6CFE411933F244 /* VCRURLSession.podspec */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				23C1C810559CD1404D345A423868F3BC /* Development Pods */,
+				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
+				4EC2DD6629CDC723661866168683FDAF /* Products */,
+				1DD41444E6C1FB9787A7CAF6961708CB /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		A7CD4EED34AC48BA8BBBADB3E67B3FA4 /* Pods-VCRURLSessionExample */ = {
+		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				60339EF7BE1F8C5AD61D45016793E6CB /* Info.plist */,
-				2BAB798D40B86F245E32A1F9E124ADB7 /* Pods-VCRURLSessionExample.modulemap */,
-				AEEB652872944704D1D34A1D17C9071D /* Pods-VCRURLSessionExample-acknowledgements.markdown */,
-				1F895AE3B7CEE2B4750CA89C5D31EA8D /* Pods-VCRURLSessionExample-acknowledgements.plist */,
-				6221A85DFBDA15511ECDBDCED1DC948C /* Pods-VCRURLSessionExample-dummy.m */,
-				8A25DC446736D01AD0EA7E319DA1AAA1 /* Pods-VCRURLSessionExample-frameworks.sh */,
-				E7E664FB6F064B65008EC9D78922D4DC /* Pods-VCRURLSessionExample-resources.sh */,
-				74B85D6C6531720DE937037A8E982BF0 /* Pods-VCRURLSessionExample-umbrella.h */,
-				C8D9DB914D10444815AC9C820E0EB2EE /* Pods-VCRURLSessionExample.debug.xcconfig */,
-				5451C1CB6BB54A086DAC32C08BCF36A2 /* Pods-VCRURLSessionExample.release.xcconfig */,
+				578452D2E740E91742655AC8F1636D1F /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		ED3A5DB23CE2D7AC333F823446D4C444 /* Pods-VCRURLSessionExample */ = {
+			isa = PBXGroup;
+			children = (
+				7C982F3E7583A540A327A37C7B566A93 /* Pods-VCRURLSessionExample.modulemap */,
+				3E8857BB15B3E0A9B9E4294D80A0B468 /* Pods-VCRURLSessionExample-acknowledgements.markdown */,
+				F54EE6BFE83A6E58627470C6E599D2B1 /* Pods-VCRURLSessionExample-acknowledgements.plist */,
+				47BA6132A11C460405A494BEDC14EFA7 /* Pods-VCRURLSessionExample-dummy.m */,
+				23D41AC41734D7D0DDE336E9399547D6 /* Pods-VCRURLSessionExample-frameworks.sh */,
+				FCC889D2DAFECB56E442C9CF3DF38766 /* Pods-VCRURLSessionExample-Info.plist */,
+				CAED9B02556D706AFD05085DEA8939C8 /* Pods-VCRURLSessionExample-umbrella.h */,
+				0694FC5C1228A612D076558A022A29D9 /* Pods-VCRURLSessionExample.debug.xcconfig */,
+				654ED2403F1BF87A79001681886CFE76 /* Pods-VCRURLSessionExample.release.xcconfig */,
 			);
 			name = "Pods-VCRURLSessionExample";
 			path = "Target Support Files/Pods-VCRURLSessionExample";
 			sourceTree = "<group>";
 		};
-		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				BF6342C8B29F4CEEA088EFF7AB4DE362 /* iOS */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		BF6342C8B29F4CEEA088EFF7AB4DE362 /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */,
-			);
-			name = iOS;
-			sourceTree = "<group>";
-		};
-		C40AEF63E4F8432CC0FB808DED7C31FD /* Core */ = {
-			isa = PBXGroup;
-			children = (
-				5E42BD10C5D3FD470811CA1FC0A54B41 /* VCRURLSession */,
-			);
-			name = Core;
-			sourceTree = "<group>";
-		};
-		EE9744B0938CEDD864D37732B3766816 /* Development Pods */ = {
-			isa = PBXGroup;
-			children = (
-				7D0829C4344818F2575342E3CFB8BB72 /* VCRURLSession */,
-			);
-			name = "Development Pods";
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		B13CEF74125D1B4E4EB47BD322413CC2 /* Headers */ = {
+		00854DD6923CB28CD323665F0E6D49C3 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				216B0232B2E16C978E72973DA4975CB0 /* Pods-VCRURLSessionExample-umbrella.h in Headers */,
+				07F5DA2ED18B1D059D5CC34EF343DF98 /* NSData+VCRURLSession.h in Headers */,
+				F78C495958EE7EB2DAB2F701337C7E58 /* NSError+VCRURLSession.h in Headers */,
+				CF64B663A2D1522554BABE298D12DCFE /* NSURLRequest+VCRURLSession.h in Headers */,
+				09C4A660061444987C3656007E7369C7 /* NSURLResponse+VCRURLSession.h in Headers */,
+				9036C8347DA5D50274D770EAD2B5C6D9 /* VCRURLSession-umbrella.h in Headers */,
+				3A527957B75A75CC85EAC13AF59933FB /* VCRURLSessionCassette.h in Headers */,
+				728F5DB4CF0DA9CD7D5D86702B36D917 /* VCRURLSessionController.h in Headers */,
+				2067C52A2A0D7A6D43969FC5EDF90364 /* VCRURLSessionLogger.h in Headers */,
+				4D824E1BA6EEA583AB19A21D2C7B61FC /* VCRURLSessionPlayer.h in Headers */,
+				40F21D7F93641B0AACFB3D6AB760D6F4 /* VCRURLSessionPlayerDelegate.h in Headers */,
+				B3B459799BD4016ACC8020E99B7889C3 /* VCRURLSessionRecord.h in Headers */,
+				15497B3250D4CC287AAAB0EF24267674 /* VCRURLSessionRecorder.h in Headers */,
+				A3117FA883D1C784D7D68AC73BE6D953 /* VCRURLSessionRecorderDelegate.h in Headers */,
+				451A86D62A2C9D577BE95543ECF76A35 /* VCRURLSessionReplayMode.h in Headers */,
+				633E47A87C857ABC2D60F3E350CA7B3F /* VCRURLSessionResponse.h in Headers */,
+				AC8F1019987FA49B979939EB5A026C47 /* VCRURLSessionSampler.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BA8ADEF3793FBFC55968D13E093B043A /* Headers */ = {
+		4B1F15235873F4E199A63B3D5DF64CE6 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7F5C0FE48CC34C0B5F7A3B15B6DA04BB /* NSData+VCRURLSession.h in Headers */,
-				749A5DFCC42CE99B809FB7FF8D0C9E45 /* NSError+VCRURLSession.h in Headers */,
-				94DC7CF5C62A59D1C42EA203459CC021 /* NSHTTPURLResponse+VCRURLSession.h in Headers */,
-				FBF21C415496CAC4BDEE8EA7B1678B6D /* NSURLRequest+VCRURLSession.h in Headers */,
-				4383FDA83D97B186117DFF42AC739463 /* VCRURLSession-umbrella.h in Headers */,
-				0CFBB9F35E1192B92D0AF8C6F70255FC /* VCRURLSession.h in Headers */,
-				0EB6BDC3DC354F6EE5F13660C2B47399 /* VCRURLSessionCassette.h in Headers */,
-				6C1254027609B88706FD37D3DFBF8780 /* VCRURLSessionLogger.h in Headers */,
-				BD45E1B00C97CA57F4F0E47B9616E0B0 /* VCRURLSessionPlayer.h in Headers */,
-				C5D16E88AC0DC7D848EA44EA4A31BE29 /* VCRURLSessionPlayerDelegate.h in Headers */,
-				F885A5C44A5081327952B25B26BB583D /* VCRURLSessionRecord.h in Headers */,
-				58929DF444D51B7DCC0E384602F59794 /* VCRURLSessionRecorder.h in Headers */,
-				02436AFA340F0DF447DE15406A0A132B /* VCRURLSessionRecorderDelegate.h in Headers */,
-				FC4A2F8D6018CABA092045D8EACCC068 /* VCRURLSessionReplayMode.h in Headers */,
-				71935E1194942DF1BA770A6A26CFB8C9 /* VCRURLSessionResponse.h in Headers */,
-				51ED0472B35862520E4289C91177745B /* VCRURLSessionSampler.h in Headers */,
+				7BB46C9CEFE962D4D5E5B43AC83105EC /* Pods-VCRURLSessionExample-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		00345C08581E32F93A0AEC98258FC00C /* Pods-VCRURLSessionExample */ = {
+		520429ECD7BD927A23CE0A416EC89692 /* Pods-VCRURLSessionExample */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 44D93AB54DF3434651BAC6D824AC5FA9 /* Build configuration list for PBXNativeTarget "Pods-VCRURLSessionExample" */;
+			buildConfigurationList = 1323A44975A001F12E571C982FC20592 /* Build configuration list for PBXNativeTarget "Pods-VCRURLSessionExample" */;
 			buildPhases = (
-				15F4D4E89B16EBAFA94D55A0E4ADD099 /* Sources */,
-				11A7A0AA728C27C553E27AEC38F6ED1C /* Frameworks */,
-				B13CEF74125D1B4E4EB47BD322413CC2 /* Headers */,
+				4B1F15235873F4E199A63B3D5DF64CE6 /* Headers */,
+				22810ECE71FC12B11F98BF764F0748D6 /* Sources */,
+				4790CF3C79534001BC328B9DFD2F914C /* Frameworks */,
+				3F6A1E51E8E7727B828D7EB17D2F5364 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				0E533A3F58E591AC24FB4FB4F1A272BB /* PBXTargetDependency */,
+				3F5D755C90891E10724470D2C949E6A0 /* PBXTargetDependency */,
 			);
 			name = "Pods-VCRURLSessionExample";
-			productName = "Pods-VCRURLSessionExample";
-			productReference = 9772242A6605320F3A4F7DBA7DD71C63 /* Pods_VCRURLSessionExample.framework */;
+			productName = Pods_VCRURLSessionExample;
+			productReference = 45B6B0672DDE9B3D3BE2A7EC26C1527E /* Pods-VCRURLSessionExample */;
 			productType = "com.apple.product-type.framework";
 		};
-		478D712DD561BA068529B0D2743FA086 /* VCRURLSession */ = {
+		7D54B6A5C354D7546B18920D0401D4FC /* VCRURLSession */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5BBFD0DD1EDEA2FFD53894C3D54D6A0E /* Build configuration list for PBXNativeTarget "VCRURLSession" */;
+			buildConfigurationList = F277034C1910C6D51E17725AC9701386 /* Build configuration list for PBXNativeTarget "VCRURLSession" */;
 			buildPhases = (
-				DC682451521155234A6CCBE31C4AAB35 /* Sources */,
-				29B080AE742EB0E799E7AC9D15FAE2D2 /* Frameworks */,
-				BA8ADEF3793FBFC55968D13E093B043A /* Headers */,
+				00854DD6923CB28CD323665F0E6D49C3 /* Headers */,
+				A0C57B004D88BDBFFC5BF5CB18633ED2 /* Sources */,
+				442CF5A62100B1228828FC84A5048248 /* Frameworks */,
+				998AC45F9B70A2B5149F1E310D000EF8 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -335,222 +335,347 @@
 			);
 			name = VCRURLSession;
 			productName = VCRURLSession;
-			productReference = 0891EAED928B56BE369A5709DF730B50 /* VCRURLSession.framework */;
+			productReference = 98D9EBAF54787ACA73EE1101CA607C53 /* VCRURLSession */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0700;
-				LastUpgradeCheck = 0700;
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
 			};
-			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				Base,
 				en,
 			);
-			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 1897143A3F329C6312E9BBF412260860 /* Products */;
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = 4EC2DD6629CDC723661866168683FDAF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				00345C08581E32F93A0AEC98258FC00C /* Pods-VCRURLSessionExample */,
-				478D712DD561BA068529B0D2743FA086 /* VCRURLSession */,
+				520429ECD7BD927A23CE0A416EC89692 /* Pods-VCRURLSessionExample */,
+				7D54B6A5C354D7546B18920D0401D4FC /* VCRURLSession */,
 			);
 		};
 /* End PBXProject section */
 
-/* Begin PBXSourcesBuildPhase section */
-		15F4D4E89B16EBAFA94D55A0E4ADD099 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
+/* Begin PBXResourcesBuildPhase section */
+		3F6A1E51E8E7727B828D7EB17D2F5364 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B95B3A0E01293F0F651645AC4BCC1DB6 /* Pods-VCRURLSessionExample-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DC682451521155234A6CCBE31C4AAB35 /* Sources */ = {
+		998AC45F9B70A2B5149F1E310D000EF8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		22810ECE71FC12B11F98BF764F0748D6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				246F6C203BFC689E99D293DE0ABE4C7C /* NSData+VCRURLSession.m in Sources */,
-				1CDE5E7C6F75EB9268532F409C3FBF91 /* NSError+VCRURLSession.m in Sources */,
-				E1FD75DA1167EAE2654BFF2B5C587412 /* NSHTTPURLResponse+VCRURLSession.m in Sources */,
-				862700A47CB626B163E3148BBDEF48E2 /* NSURLRequest+VCRURLSession.m in Sources */,
-				4EA6DD457CF119FF859A1A3B89C59760 /* VCRURLSession-dummy.m in Sources */,
-				E1647895752C0CC93835315A1E43DFD6 /* VCRURLSession.m in Sources */,
-				EA800EAB47C3804B5996C64D19283CCE /* VCRURLSessionCassette.m in Sources */,
-				7ABB6DE9ADE59602D585DE9C1C4B6CB6 /* VCRURLSessionLogger.m in Sources */,
-				4B24DD22266D4F309012F667F046D9D2 /* VCRURLSessionPlayer.m in Sources */,
-				B20F71ADEEBFE406A9421925D84A7179 /* VCRURLSessionRecord.m in Sources */,
-				A41AF629C0B257818591C5BE4D5B6486 /* VCRURLSessionRecorder.m in Sources */,
-				749325AF84C6C890D51549DCC4E2B2E3 /* VCRURLSessionResponse.m in Sources */,
-				4A0325408548BB30CB0E89669EA225CD /* VCRURLSessionSampler.m in Sources */,
+				A984FCFEC7BC284FBADBACD70BA77D7B /* Pods-VCRURLSessionExample-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A0C57B004D88BDBFFC5BF5CB18633ED2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				66799C361FF4D2B019307C8C52CAAB93 /* NSData+VCRURLSession.m in Sources */,
+				BEA6637D887E60FA7FAD853F719557D0 /* NSError+VCRURLSession.m in Sources */,
+				FF7269DBFB9A26D2932BC7BEFCE40480 /* NSURLRequest+VCRURLSession.m in Sources */,
+				C3DC3A038CF8B2A28C464E9856D69CAF /* NSURLResponse+VCRURLSession.m in Sources */,
+				8D53EFAE9EA2F5D1E5250DD269572C77 /* VCRURLSession-dummy.m in Sources */,
+				BD63D7E28EDFFD72DD2F2D62CA104A42 /* VCRURLSessionCassette.m in Sources */,
+				98DBDB853615DB2DC2C77C22F2CE28BE /* VCRURLSessionController.m in Sources */,
+				E5FC1FD7A623AD9470780132DAAB6084 /* VCRURLSessionLogger.m in Sources */,
+				7B78D5953134F897848DC9A5ECC510E3 /* VCRURLSessionPlayer.m in Sources */,
+				6DF936F7CFE8C32F9D09993766CB2744 /* VCRURLSessionRecord.m in Sources */,
+				62989253B4BD7F1E816FEA37993876A2 /* VCRURLSessionRecorder.m in Sources */,
+				F116A64ECB461D9DF9ADEC14B18DA560 /* VCRURLSessionResponse.m in Sources */,
+				8FCC2E2E2576447797EF84598F2FD623 /* VCRURLSessionSampler.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		0E533A3F58E591AC24FB4FB4F1A272BB /* PBXTargetDependency */ = {
+		3F5D755C90891E10724470D2C949E6A0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = VCRURLSession;
-			target = 478D712DD561BA068529B0D2743FA086 /* VCRURLSession */;
-			targetProxy = FC639E878F205DDB4F809FB593484AB8 /* PBXContainerItemProxy */;
+			target = 7D54B6A5C354D7546B18920D0401D4FC /* VCRURLSession */;
+			targetProxy = 37E2F45F7B5475F020E89EEE15BBB0FC /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		07F5DB73B5236570747DE3C999E1AEB9 /* Debug */ = {
+		2E18A49AD8B7400A1ED9E5E88F8215C4 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C8D9DB914D10444815AC9C820E0EB2EE /* Pods-VCRURLSessionExample.debug.xcconfig */;
+			baseConfigurationReference = 6515556733FD9CB6C7B6C973353946A6 /* VCRURLSession.debug.xcconfig */;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-VCRURLSessionExample/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/VCRURLSession/VCRURLSession-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/VCRURLSession/VCRURLSession-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-VCRURLSessionExample/Pods-VCRURLSessionExample.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = Pods_VCRURLSessionExample;
+				MODULEMAP_FILE = "Target Support Files/VCRURLSession/VCRURLSession.modulemap";
+				PRODUCT_MODULE_NAME = VCRURLSession;
+				PRODUCT_NAME = VCRURLSession;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
-		783855A1022CFA7D8A6D096F36931DF0 /* Release */ = {
+		3DB3FA5848EDBCE4E8EA583E1B174299 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6345F8E379241D6EA4232C3907FEDD1A /* VCRURLSession.xcconfig */;
+			baseConfigurationReference = 654ED2403F1BF87A79001681886CFE76 /* Pods-VCRURLSessionExample.release.xcconfig */;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/VCRURLSession/VCRURLSession-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/VCRURLSession/Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-VCRURLSessionExample/Pods-VCRURLSessionExample-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/VCRURLSession/VCRURLSession.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = VCRURLSession;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		9C70AFED7250A6B87AE8A29BE971237C /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5451C1CB6BB54A086DAC32C08BCF36A2 /* Pods-VCRURLSessionExample.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-VCRURLSessionExample/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-VCRURLSessionExample/Pods-VCRURLSessionExample.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = Pods_VCRURLSessionExample;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
-		A70CDAD61F90AC503C7D04CC22DA2923 /* Debug */ = {
+		903A0004D3E6651EFD5D2E16214D101B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
+					"POD_CONFIGURATION_RELEASE=1",
 					"$(inherited)",
 				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				ONLY_ACTIVE_ARCH = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};
-			name = Debug;
+			name = Release;
 		};
-		C1E18A7EB151412EA0033F80DE87F17A /* Debug */ = {
+		AFCF2FE8608FD83F372CBD096EDC1778 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6345F8E379241D6EA4232C3907FEDD1A /* VCRURLSession.xcconfig */;
+			baseConfigurationReference = B160BC4A7DFA5452B820D19FF7204912 /* VCRURLSession.release.xcconfig */;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_PREFIX_HEADER = "Target Support Files/VCRURLSession/VCRURLSession-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/VCRURLSession/Info.plist";
+				INFOPLIST_FILE = "Target Support Files/VCRURLSession/VCRURLSession-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/VCRURLSession/VCRURLSession.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_MODULE_NAME = VCRURLSession;
 				PRODUCT_NAME = VCRURLSession;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		B4EFE046ACF8F37157F6E322C7FCFC28 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		C5F7572796681638A242A793014909AC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0694FC5C1228A612D076558A022A29D9 /* Pods-VCRURLSessionExample.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-VCRURLSessionExample/Pods-VCRURLSessionExample-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-VCRURLSessionExample/Pods-VCRURLSessionExample.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -558,72 +683,38 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
-		};
-		FB45FFD90572718D82AB9092B750F0CA /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = YES;
-				ENABLE_NS_ASSERTIONS = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				STRIP_INSTALLED_PRODUCT = NO;
-				SYMROOT = "${SRCROOT}/../build";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+		1323A44975A001F12E571C982FC20592 /* Build configuration list for PBXNativeTarget "Pods-VCRURLSessionExample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A70CDAD61F90AC503C7D04CC22DA2923 /* Debug */,
-				FB45FFD90572718D82AB9092B750F0CA /* Release */,
+				C5F7572796681638A242A793014909AC /* Debug */,
+				3DB3FA5848EDBCE4E8EA583E1B174299 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		44D93AB54DF3434651BAC6D824AC5FA9 /* Build configuration list for PBXNativeTarget "Pods-VCRURLSessionExample" */ = {
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				07F5DB73B5236570747DE3C999E1AEB9 /* Debug */,
-				9C70AFED7250A6B87AE8A29BE971237C /* Release */,
+				B4EFE046ACF8F37157F6E322C7FCFC28 /* Debug */,
+				903A0004D3E6651EFD5D2E16214D101B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5BBFD0DD1EDEA2FFD53894C3D54D6A0E /* Build configuration list for PBXNativeTarget "VCRURLSession" */ = {
+		F277034C1910C6D51E17725AC9701386 /* Build configuration list for PBXNativeTarget "VCRURLSession" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C1E18A7EB151412EA0033F80DE87F17A /* Debug */,
-				783855A1022CFA7D8A6D096F36931DF0 /* Release */,
+				2E18A49AD8B7400A1ED9E5E88F8215C4 /* Debug */,
+				AFCF2FE8608FD83F372CBD096EDC1778 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 }
