@@ -19,8 +19,8 @@
 		05DAD9E01C58779800899535 /* cassette3.json in Resources */ = {isa = PBXBuildFile; fileRef = 05DAD9DF1C58779800899535 /* cassette3.json */; };
 		3E8DFA381C4213D200634C5E /* VCRURLSessionResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8DFA371C4213D200634C5E /* VCRURLSessionResponse.m */; };
 		49FA34A98DD4E3D136C91DEA /* Pods_VCRURLSessionTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A389DD552AA9209ECBDC2336 /* Pods_VCRURLSessionTests.framework */; };
-		670A40FA1C3CD85200613511 /* VCRURLSession.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 670A40F91C3CD85200613511 /* VCRURLSession.h */; };
-		670A40FC1C3CD85200613511 /* VCRURLSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 670A40FB1C3CD85200613511 /* VCRURLSession.m */; };
+		670A40FA1C3CD85200613511 /* VCRURLSessionController.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 670A40F91C3CD85200613511 /* VCRURLSessionController.h */; };
+		670A40FC1C3CD85200613511 /* VCRURLSessionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 670A40FB1C3CD85200613511 /* VCRURLSessionController.m */; };
 		670A410B1C3CD9AB00613511 /* libVCRURLSession.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 670A40F61C3CD85200613511 /* libVCRURLSession.a */; };
 		670A411C1C3CDD0800613511 /* VCRURLSessionRecorderSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670A411B1C3CDD0800613511 /* VCRURLSessionRecorderSpec.swift */; };
 		6725C10A1C3E37A6009AAE93 /* VCRURLSessionTestsHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 6725C1091C3E37A6009AAE93 /* VCRURLSessionTestsHelper.m */; };
@@ -53,7 +53,7 @@
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
-				670A40FA1C3CD85200613511 /* VCRURLSession.h in CopyFiles */,
+				670A40FA1C3CD85200613511 /* VCRURLSessionController.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,8 +92,8 @@
 		3E8DFA361C4213D200634C5E /* VCRURLSessionResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VCRURLSessionResponse.h; sourceTree = "<group>"; };
 		3E8DFA371C4213D200634C5E /* VCRURLSessionResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VCRURLSessionResponse.m; sourceTree = "<group>"; };
 		670A40F61C3CD85200613511 /* libVCRURLSession.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libVCRURLSession.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		670A40F91C3CD85200613511 /* VCRURLSession.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VCRURLSession.h; sourceTree = "<group>"; };
-		670A40FB1C3CD85200613511 /* VCRURLSession.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VCRURLSession.m; sourceTree = "<group>"; };
+		670A40F91C3CD85200613511 /* VCRURLSessionController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VCRURLSessionController.h; sourceTree = "<group>"; };
+		670A40FB1C3CD85200613511 /* VCRURLSessionController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VCRURLSessionController.m; sourceTree = "<group>"; };
 		670A41061C3CD9AB00613511 /* VCRURLSessionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VCRURLSessionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		670A410A1C3CD9AB00613511 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		670A411A1C3CDD0700613511 /* VCRURLSessionTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "VCRURLSessionTests-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -180,8 +180,8 @@
 				05426C39275A63C600B260E0 /* NSURLRequest+VCRURLSession.m */,
 				05426C3A275A63C600B260E0 /* NSURLResponse+VCRURLSession.h */,
 				05426C3D275A63C600B260E0 /* NSURLResponse+VCRURLSession.m */,
-				670A40F91C3CD85200613511 /* VCRURLSession.h */,
-				670A40FB1C3CD85200613511 /* VCRURLSession.m */,
+				670A40F91C3CD85200613511 /* VCRURLSessionController.h */,
+				670A40FB1C3CD85200613511 /* VCRURLSessionController.m */,
 				674770221C3D07B4004D0FCE /* VCRURLSessionCassette.h */,
 				674770231C3D07B4004D0FCE /* VCRURLSessionCassette.m */,
 				0524DAF01C4F3B6D00B2DC61 /* VCRURLSessionLogger.h */,
@@ -405,7 +405,7 @@
 				05426C47275A63C600B260E0 /* VCRURLSessionRecorder.m in Sources */,
 				05426C43275A63C600B260E0 /* VCRURLSessionRecord.m in Sources */,
 				05426C48275A63C600B260E0 /* NSURLResponse+VCRURLSession.m in Sources */,
-				670A40FC1C3CD85200613511 /* VCRURLSession.m in Sources */,
+				670A40FC1C3CD85200613511 /* VCRURLSessionController.m in Sources */,
 				05426C4A275A63C600B260E0 /* VCRURLSessionPlayer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

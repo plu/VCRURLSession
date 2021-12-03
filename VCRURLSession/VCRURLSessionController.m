@@ -8,7 +8,7 @@
 
 #if DEBUG
 
-#import "VCRURLSession.h"
+#import "VCRURLSessionController.h"
 #import "VCRURLSessionCassette.h"
 #import "VCRURLSessionPlayer.h"
 #import "VCRURLSessionPlayerDelegate.h"
@@ -17,7 +17,7 @@
 #import "VCRURLSessionRecorderDelegate.h"
 #import "VCRURLSessionSampler.h"
 
-@implementation VCRURLSession
+@implementation VCRURLSessionController
 
 + (NSArray *)protocolClasses
 {

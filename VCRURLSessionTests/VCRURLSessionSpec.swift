@@ -10,12 +10,12 @@ import Quick
 import Nimble
 
 class VCRURLSessionSpec: QuickSpec {
-    let testSession = VCRURLSession.prepare(URLSession.shared)
+    let testSession = VCRURLSessionController.prepare(URLSession.shared)
 
     override func spec() {
         beforeEach {
-            VCRURLSession.stopRecording()
-            VCRURLSession.stopReplaying()
+            VCRURLSessionController.stopRecording()
+            VCRURLSessionController.stopReplaying()
         }
 
         describe("errors.json") {
@@ -25,7 +25,7 @@ class VCRURLSessionSpec: QuickSpec {
                 pending("change `pending` to `describe` to generate the cassette") {
                     it("records all requests") {
                         let cassette = VCRURLSessionCassette()
-                        VCRURLSession.startRecording(on: cassette)
+                        VCRURLSessionController.startRecording(on: cassette)
 
                         // 1. Invalid port
                         self.testSession.dataTask(with: NSMutableURLRequest(url: NSURL(string: "http://localhost:70000/")! as URL) as URLRequest).resume()
@@ -48,7 +48,7 @@ class VCRURLSessionSpec: QuickSpec {
                 it("plays all records in correct order") {
                     var responseError: NSError?
                     let cassette = VCRURLSessionCassette(contentsOfFile: cassettePath!)
-                    VCRURLSession.startReplaying(with: cassette, mode: .strict)
+                    VCRURLSessionController.startReplaying(with: cassette, mode: .strict)
 
                     // 1. Invalid port
                     self.testSession.dataTask(with: NSMutableURLRequest(url: NSURL(string: "http://localhost:70000/")! as URL) as URLRequest, completionHandler: { (data, response, error) -> Void in
@@ -81,7 +81,7 @@ class VCRURLSessionSpec: QuickSpec {
                 pending("run `ruby api.rb` and change `pending` to `describe` to generate the cassette") {
                     it("records all requests") {
                         let cassette = VCRURLSessionCassette()
-                        VCRURLSession.startRecording(on: cassette)
+                        VCRURLSessionController.startRecording(on: cassette)
 
                         let getRequest = NSMutableURLRequest(url: NSURL(string: "http://localhost:4567/")! as URL)
                         let postRequest = NSMutableURLRequest(url: NSURL(string: "http://localhost:4567/")! as URL)
@@ -114,7 +114,7 @@ class VCRURLSessionSpec: QuickSpec {
                 it("plays all records in correct order") {
                     var responseString: String?
                     let cassette = VCRURLSessionCassette(contentsOfFile: cassettePath!)
-                    VCRURLSession.startReplaying(with: cassette, mode: .strict)
+                    VCRURLSessionController.startReplaying(with: cassette, mode: .strict)
 
                     let getRequest = NSMutableURLRequest(url: NSURL(string: "http://localhost:4567/")! as URL)
                     let postRequest = NSMutableURLRequest(url: NSURL(string: "http://localhost:4567/")! as URL)
@@ -154,7 +154,7 @@ class VCRURLSessionSpec: QuickSpec {
                 pending("run `ruby api.rb` and change `pending` to `describe` to generate the cassette") {
                     it("records all requests") {
                         let cassette = VCRURLSessionCassette()
-                        VCRURLSession.startRecording(on: cassette)
+                        VCRURLSessionController.startRecording(on: cassette)
 
                         let getRequest = NSMutableURLRequest(url: NSURL(string: "http://localhost:4567/sleep")! as URL)
 
@@ -170,7 +170,7 @@ class VCRURLSessionSpec: QuickSpec {
             describe("playing") {
                 it("plays all records with correct responseTime delay") {
                     let cassette = VCRURLSessionCassette(contentsOfFile: cassettePath!)
-                    VCRURLSession.startReplaying(with: cassette, mode: .strict)
+                    VCRURLSessionController.startReplaying(with: cassette, mode: .strict)
 
                     let getRequest = NSMutableURLRequest(url: NSURL(string: "http://localhost:4567/sleep")! as URL)
                     let startTime = NSDate.timeIntervalSinceReferenceDate
@@ -186,7 +186,7 @@ class VCRURLSessionSpec: QuickSpec {
                 it("plays all records with correct speed") {
                     let cassette = VCRURLSessionCassette(contentsOfFile: cassettePath!)
                     cassette.replaySpeed = 2.0
-                    VCRURLSession.startReplaying(with: cassette, mode: .strict)
+                    VCRURLSessionController.startReplaying(with: cassette, mode: .strict)
 
                     let getRequest = NSMutableURLRequest(url: NSURL(string: "http://localhost:4567/sleep")! as URL)
                     let startTime = NSDate.timeIntervalSinceReferenceDate
@@ -209,7 +209,7 @@ class VCRURLSessionSpec: QuickSpec {
                 pending("run `ruby api.rb` and change `pending` to `describe` to generate the cassette") {
                     it("records two requests") {
                         let cassette = VCRURLSessionCassette()
-                        VCRURLSession.startRecording(on: cassette)
+                        VCRURLSessionController.startRecording(on: cassette)
 
                         let getRequest = NSMutableURLRequest(url: NSURL(string: "http://localhost:4567/")! as URL)
 
@@ -230,7 +230,7 @@ class VCRURLSessionSpec: QuickSpec {
                 it("plays one record") {
                     var responseString: String?
                     let cassette = VCRURLSessionCassette(contentsOfFile: cassettePath!)
-                    VCRURLSession.startReplaying(with: cassette, mode: .strict)
+                    VCRURLSessionController.startReplaying(with: cassette, mode: .strict)
 
                     let getRequest = NSMutableURLRequest(url: NSURL(string: "http://localhost:4567/")! as URL)
 

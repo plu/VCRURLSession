@@ -18,14 +18,14 @@ class VCRURLSessionPlayerTestDelegate: NSObject, VCRURLSessionPlayerDelegate {
 }
 
 class VCRURLSessionPlayerSpec: QuickSpec {
-    let testSession = VCRURLSession.prepare(URLSession.shared)
+    let testSession = VCRURLSessionController.prepare(URLSession.shared)
     let testURL = URL(string: "http://www.google.com")!
     let testDelegate = VCRURLSessionPlayerTestDelegate()
 
     override func spec() {
         beforeEach {
-            VCRURLSession.stopRecording()
-            VCRURLSession.stopReplaying()
+            VCRURLSessionController.stopRecording()
+            VCRURLSessionController.stopReplaying()
         }
 
         describe("stopReplaying") {

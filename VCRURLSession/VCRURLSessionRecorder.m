@@ -8,7 +8,7 @@
 
 #if DEBUG
 
-#import "VCRURLSession.h"
+#import "VCRURLSessionController.h"
 #import "VCRURLSessionLogger.h"
 #import "VCRURLSessionRecorder.h"
 #import "VCRURLSessionRecorderDelegate.h"

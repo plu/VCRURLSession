@@ -19,14 +19,14 @@ class VCRURLSessionRecorderTestDelegate: NSObject, VCRURLSessionRecorderDelegate
 }
 
 class VCRURLSessionRecorderSpec: QuickSpec {
-    let testSession = VCRURLSession.prepare(URLSession.shared)
+    let testSession = VCRURLSessionController.prepare(URLSession.shared)
     let testURL = URL(string: "http://www.google.com")!
     let testDelegate = VCRURLSessionRecorderTestDelegate()
 
     override func spec() {
         beforeEach {
-            VCRURLSession.stopRecording()
-            VCRURLSession.stopReplaying()
+            VCRURLSessionController.stopRecording()
+            VCRURLSessionController.stopReplaying()
         }
 
         describe("stopRecording") {

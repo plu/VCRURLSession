@@ -19,7 +19,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  *  Record and replay your test suite's HTTP requests and responses.
  */
-@interface VCRURLSession : NSObject
+@interface VCRURLSessionController : NSObject
 
 /**
  *  Determine current state of recording (on/off).

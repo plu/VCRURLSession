@@ -5,7 +5,7 @@
 #import "NSError+VCRURLSession.h"
 #import "NSURLResponse+VCRURLSession.h"
 #import "NSURLRequest+VCRURLSession.h"
-#import "VCRURLSession.h"
+#import "VCRURLSessionController.h"
 #import "VCRURLSessionCassette.h"
 #import "VCRURLSessionPlayer.h"
 #import "VCRURLSessionPlayerDelegate.h"
