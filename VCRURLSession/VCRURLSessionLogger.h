@@ -6,6 +6,8 @@
 //  Copyright © 2016 Johannes Plunien. All rights reserved.
 //
 
+#if DEBUG
+
 #import <Foundation/Foundation.h>
 
 /**
@@ -32,3 +34,5 @@ typedef NS_ENUM(NSUInteger, VCRURLSessionLogLevel) {
 + (void)log:(VCRURLSessionLogLevel)logLevel message:(NSString *)message, ...;
 
 @end
+
+#endif

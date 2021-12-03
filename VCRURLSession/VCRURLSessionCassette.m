@@ -6,6 +6,8 @@
 //  Copyright © 2016 Johannes Plunien. All rights reserved.
 //
 
+#if DEBUG
+
 #import "NSData+VCRURLSession.h"
 #import "VCRURLSessionCassette.h"
 #import "VCRURLSessionRecord.h"
@@ -166,3 +168,5 @@ static NSString *VCRURLSessionCassetteUserInfoKey = @"userInfo";
 }
 
 @end
+
+#endif

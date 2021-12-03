@@ -6,6 +6,8 @@
 //  Copyright © 2016 Johannes Plunien. All rights reserved.
 //
 
+#if DEBUG
+
 #import "VCRURLSessionSampler.h"
 #import "VCRURLSessionResponse.h"
 
@@ -69,3 +71,5 @@ VCRURLSessionResponse * (^VCRURLSessionStaticResponseHandler)(NSURLRequest *requ
 }
 
 @end
+
+#endif

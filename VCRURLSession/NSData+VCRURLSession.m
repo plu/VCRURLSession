@@ -7,6 +7,8 @@
 //  Copyright 2008 ManicPanda.com. All rights reserved.
 //
 
+#if DEBUG
+
 #import "NSData+VCRURLSession.h"
 #import <zlib.h>
 
@@ -105,3 +107,5 @@
 }
 
 @end
+
+#endif

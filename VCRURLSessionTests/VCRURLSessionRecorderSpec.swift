@@ -56,7 +56,7 @@ class VCRURLSessionRecorderSpec: QuickSpec {
                 VCRURLSessionRecorder.startRecording(with: self.testDelegate)
                 self.testSession.dataTask(with: self.testURL).resume()
 
-                expect(recordHandlerCalled).toEventually(beTrue(), timeout: 5)
+                expect(recordHandlerCalled).toEventually(beTrue(), timeout: .seconds(5))
             }
         }
     }

@@ -48,8 +48,8 @@ class VCRURLSessionPlayerSpec: QuickSpec {
 
                 waitUntil { done in
                     self.testSession.dataTask(with: self.testURL, completionHandler: { (data, response, error) in
-                        expect((error as! NSError).domain).to(equal(NSURLErrorDomain))
-                        expect((error as! NSError).code).to(equal(NSURLErrorNotConnectedToInternet))
+                        expect((error as NSError?)?.domain).to(equal(NSURLErrorDomain))
+                        expect((error as NSError?)?.code).to(equal(NSURLErrorNotConnectedToInternet))
                         expect(error).notTo(beNil())
                         done()
                     }).resume()
@@ -59,7 +59,7 @@ class VCRURLSessionPlayerSpec: QuickSpec {
             it("returns response in normal mode") {
                 VCRURLSessionPlayer.startReplaying(with: self.testDelegate, mode: .normal)
 
-                waitUntil(timeout: 5) { done in
+                waitUntil(timeout: .seconds(5)) { done in
                     self.testSession.dataTask(with: self.testURL, completionHandler: { (data, response, error) in
                         expect(data).notTo(beNil())
                         expect(response).notTo(beNil())
@@ -92,8 +92,8 @@ class VCRURLSessionPlayerSpec: QuickSpec {
                     self.testSession.dataTask(with: self.testURL, completionHandler: { (data, response, error) in
                         expect(data).to(beNil())
                         expect(response).to(beNil())
-                        expect((error as! NSError).domain).to(equal("foo"))
-                        expect((error as! NSError).code).to(equal(42))
+                        expect((error as NSError?)?.domain).to(equal("foo"))
+                        expect((error as NSError?)?.code).to(equal(42))
                         done()
                     }).resume()
                 }

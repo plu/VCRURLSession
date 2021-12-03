@@ -6,6 +6,8 @@
 //  Copyright © 2016 Johannes Plunien. All rights reserved.
 //
 
+#if DEBUG
+
 #import <Foundation/Foundation.h>
 
 /**
@@ -21,3 +23,5 @@ typedef NS_ENUM(NSUInteger, VCRURLSessionReplayMode) {
      */
     VCRURLSessionReplayModeStrict,
 };
+
+#endif

@@ -8,8 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		0524DAF21C4F3B6D00B2DC61 /* VCRURLSessionLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 0524DAF11C4F3B6D00B2DC61 /* VCRURLSessionLogger.m */; };
+		05426C43275A63C600B260E0 /* VCRURLSessionRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 05426C33275A63C500B260E0 /* VCRURLSessionRecord.m */; };
+		05426C44275A63C600B260E0 /* NSData+VCRURLSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 05426C34275A63C500B260E0 /* NSData+VCRURLSession.m */; };
+		05426C45275A63C600B260E0 /* VCRURLSessionSampler.m in Sources */ = {isa = PBXBuildFile; fileRef = 05426C36275A63C600B260E0 /* VCRURLSessionSampler.m */; };
+		05426C46275A63C600B260E0 /* NSURLRequest+VCRURLSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 05426C39275A63C600B260E0 /* NSURLRequest+VCRURLSession.m */; };
+		05426C47275A63C600B260E0 /* VCRURLSessionRecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = 05426C3B275A63C600B260E0 /* VCRURLSessionRecorder.m */; };
+		05426C48275A63C600B260E0 /* NSURLResponse+VCRURLSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 05426C3D275A63C600B260E0 /* NSURLResponse+VCRURLSession.m */; };
+		05426C49275A63C600B260E0 /* NSError+VCRURLSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 05426C3E275A63C600B260E0 /* NSError+VCRURLSession.m */; };
+		05426C4A275A63C600B260E0 /* VCRURLSessionPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 05426C40275A63C600B260E0 /* VCRURLSessionPlayer.m */; };
 		05DAD9E01C58779800899535 /* cassette3.json in Resources */ = {isa = PBXBuildFile; fileRef = 05DAD9DF1C58779800899535 /* cassette3.json */; };
 		3E8DFA381C4213D200634C5E /* VCRURLSessionResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8DFA371C4213D200634C5E /* VCRURLSessionResponse.m */; };
+		49FA34A98DD4E3D136C91DEA /* Pods_VCRURLSessionTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A389DD552AA9209ECBDC2336 /* Pods_VCRURLSessionTests.framework */; };
 		670A40FA1C3CD85200613511 /* VCRURLSession.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 670A40F91C3CD85200613511 /* VCRURLSession.h */; };
 		670A40FC1C3CD85200613511 /* VCRURLSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 670A40FB1C3CD85200613511 /* VCRURLSession.m */; };
 		670A410B1C3CD9AB00613511 /* libVCRURLSession.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 670A40F61C3CD85200613511 /* libVCRURLSession.a */; };
@@ -21,21 +30,10 @@
 		674770381C3E0EAC004D0FCE /* VCRURLSessionCategoriesSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 674770371C3E0EAC004D0FCE /* VCRURLSessionCategoriesSpec.swift */; };
 		674EBB151C47D9AE00F94839 /* VCRURLSessionRecordSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 674EBB141C47D9AE00F94839 /* VCRURLSessionRecordSpec.swift */; };
 		674EBB171C47E04300F94839 /* cassette2.json in Resources */ = {isa = PBXBuildFile; fileRef = 674EBB161C47E04300F94839 /* cassette2.json */; };
-		6767DB711C4627180065AF25 /* NSData+VCRURLSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 6767DB6A1C4627180065AF25 /* NSData+VCRURLSession.m */; };
-		6767DB721C4627180065AF25 /* NSError+VCRURLSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 6767DB6C1C4627180065AF25 /* NSError+VCRURLSession.m */; };
-		6767DB731C4627180065AF25 /* NSURLResponse+VCRURLSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 6767DB6E1C4627180065AF25 /* NSURLResponse+VCRURLSession.m */; };
-		6767DB741C4627180065AF25 /* NSURLRequest+VCRURLSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 6767DB701C4627180065AF25 /* NSURLRequest+VCRURLSession.m */; };
-		6767DB7D1C46274D0065AF25 /* VCRURLSessionRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 6767DB771C46274D0065AF25 /* VCRURLSessionRecord.m */; };
-		6767DB7E1C46274D0065AF25 /* VCRURLSessionRecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = 6767DB791C46274D0065AF25 /* VCRURLSessionRecorder.m */; };
-		6767DB7F1C46274D0065AF25 /* VCRURLSessionSampler.m in Sources */ = {isa = PBXBuildFile; fileRef = 6767DB7C1C46274D0065AF25 /* VCRURLSessionSampler.m */; };
-		6767DB821C4627740065AF25 /* VCRURLSessionPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6767DB811C4627740065AF25 /* VCRURLSessionPlayer.m */; };
 		6767F3041C479D9100489139 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 6767F3021C479D5600489139 /* libz.tbd */; };
 		67693EFF1C3E4C610045F65B /* VCRURLSessionPlayerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67693EFE1C3E4C610045F65B /* VCRURLSessionPlayerSpec.swift */; };
 		67693F011C3E619A0045F65B /* errors.json in Resources */ = {isa = PBXBuildFile; fileRef = 67693F001C3E619A0045F65B /* errors.json */; };
 		67FF72E71C435E9B006772D6 /* VCRURLSessionCassetteSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FF72E61C435E9B006772D6 /* VCRURLSessionCassetteSpec.swift */; };
-		78A199C021F72ED600DD14D8 /* libswiftSwiftOnoneSupport.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 78A199BF21F72E9F00DD14D8 /* libswiftSwiftOnoneSupport.dylib */; };
-		78A199C121F72EDE00DD14D8 /* libswiftSwiftOnoneSupport.dylib in Copy missing Swift dylib 🤷🏻‍♂️ */ = {isa = PBXBuildFile; fileRef = 78A199BF21F72E9F00DD14D8 /* libswiftSwiftOnoneSupport.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		8DF93E994A216B1F447A00F3 /* Pods_VCRURLSessionTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B502D62C06547B070DB99F0 /* Pods_VCRURLSessionTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,7 +63,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				78A199C121F72EDE00DD14D8 /* libswiftSwiftOnoneSupport.dylib in Copy missing Swift dylib 🤷🏻‍♂️ */,
 			);
 			name = "Copy missing Swift dylib 🤷🏻‍♂️";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -75,6 +72,22 @@
 /* Begin PBXFileReference section */
 		0524DAF01C4F3B6D00B2DC61 /* VCRURLSessionLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VCRURLSessionLogger.h; sourceTree = "<group>"; };
 		0524DAF11C4F3B6D00B2DC61 /* VCRURLSessionLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VCRURLSessionLogger.m; sourceTree = "<group>"; };
+		05426C33275A63C500B260E0 /* VCRURLSessionRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VCRURLSessionRecord.m; sourceTree = "<group>"; };
+		05426C34275A63C500B260E0 /* NSData+VCRURLSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+VCRURLSession.m"; sourceTree = "<group>"; };
+		05426C35275A63C600B260E0 /* VCRURLSessionRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VCRURLSessionRecord.h; sourceTree = "<group>"; };
+		05426C36275A63C600B260E0 /* VCRURLSessionSampler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VCRURLSessionSampler.m; sourceTree = "<group>"; };
+		05426C37275A63C600B260E0 /* NSError+VCRURLSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSError+VCRURLSession.h"; sourceTree = "<group>"; };
+		05426C38275A63C600B260E0 /* VCRURLSessionPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VCRURLSessionPlayer.h; sourceTree = "<group>"; };
+		05426C39275A63C600B260E0 /* NSURLRequest+VCRURLSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURLRequest+VCRURLSession.m"; sourceTree = "<group>"; };
+		05426C3A275A63C600B260E0 /* NSURLResponse+VCRURLSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURLResponse+VCRURLSession.h"; sourceTree = "<group>"; };
+		05426C3B275A63C600B260E0 /* VCRURLSessionRecorder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VCRURLSessionRecorder.m; sourceTree = "<group>"; };
+		05426C3C275A63C600B260E0 /* NSURLRequest+VCRURLSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURLRequest+VCRURLSession.h"; sourceTree = "<group>"; };
+		05426C3D275A63C600B260E0 /* NSURLResponse+VCRURLSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURLResponse+VCRURLSession.m"; sourceTree = "<group>"; };
+		05426C3E275A63C600B260E0 /* NSError+VCRURLSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSError+VCRURLSession.m"; sourceTree = "<group>"; };
+		05426C3F275A63C600B260E0 /* NSData+VCRURLSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+VCRURLSession.h"; sourceTree = "<group>"; };
+		05426C40275A63C600B260E0 /* VCRURLSessionPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VCRURLSessionPlayer.m; sourceTree = "<group>"; };
+		05426C41275A63C600B260E0 /* VCRURLSessionRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VCRURLSessionRecorder.h; sourceTree = "<group>"; };
+		05426C42275A63C600B260E0 /* VCRURLSessionSampler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VCRURLSessionSampler.h; sourceTree = "<group>"; };
 		05DAD9DF1C58779800899535 /* cassette3.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = cassette3.json; sourceTree = "<group>"; };
 		3E8DFA361C4213D200634C5E /* VCRURLSessionResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VCRURLSessionResponse.h; sourceTree = "<group>"; };
 		3E8DFA371C4213D200634C5E /* VCRURLSessionResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VCRURLSessionResponse.m; sourceTree = "<group>"; };
@@ -94,22 +107,6 @@
 		674770371C3E0EAC004D0FCE /* VCRURLSessionCategoriesSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCRURLSessionCategoriesSpec.swift; sourceTree = "<group>"; };
 		674EBB141C47D9AE00F94839 /* VCRURLSessionRecordSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCRURLSessionRecordSpec.swift; sourceTree = "<group>"; };
 		674EBB161C47E04300F94839 /* cassette2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = cassette2.json; sourceTree = "<group>"; };
-		6767DB691C4627180065AF25 /* NSData+VCRURLSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+VCRURLSession.h"; sourceTree = "<group>"; };
-		6767DB6A1C4627180065AF25 /* NSData+VCRURLSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+VCRURLSession.m"; sourceTree = "<group>"; };
-		6767DB6B1C4627180065AF25 /* NSError+VCRURLSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSError+VCRURLSession.h"; sourceTree = "<group>"; };
-		6767DB6C1C4627180065AF25 /* NSError+VCRURLSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSError+VCRURLSession.m"; sourceTree = "<group>"; };
-		6767DB6D1C4627180065AF25 /* NSURLResponse+VCRURLSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURLResponse+VCRURLSession.h"; sourceTree = "<group>"; };
-		6767DB6E1C4627180065AF25 /* NSURLResponse+VCRURLSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURLResponse+VCRURLSession.m"; sourceTree = "<group>"; };
-		6767DB6F1C4627180065AF25 /* NSURLRequest+VCRURLSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURLRequest+VCRURLSession.h"; sourceTree = "<group>"; };
-		6767DB701C4627180065AF25 /* NSURLRequest+VCRURLSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURLRequest+VCRURLSession.m"; sourceTree = "<group>"; };
-		6767DB761C46274D0065AF25 /* VCRURLSessionRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VCRURLSessionRecord.h; sourceTree = "<group>"; };
-		6767DB771C46274D0065AF25 /* VCRURLSessionRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VCRURLSessionRecord.m; sourceTree = "<group>"; };
-		6767DB781C46274D0065AF25 /* VCRURLSessionRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VCRURLSessionRecorder.h; sourceTree = "<group>"; };
-		6767DB791C46274D0065AF25 /* VCRURLSessionRecorder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VCRURLSessionRecorder.m; sourceTree = "<group>"; };
-		6767DB7B1C46274D0065AF25 /* VCRURLSessionSampler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VCRURLSessionSampler.h; sourceTree = "<group>"; };
-		6767DB7C1C46274D0065AF25 /* VCRURLSessionSampler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VCRURLSessionSampler.m; sourceTree = "<group>"; };
-		6767DB801C4627740065AF25 /* VCRURLSessionPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VCRURLSessionPlayer.h; sourceTree = "<group>"; };
-		6767DB811C4627740065AF25 /* VCRURLSessionPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VCRURLSessionPlayer.m; sourceTree = "<group>"; };
 		6767DB831C462BE00065AF25 /* VCRURLSessionPlayerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VCRURLSessionPlayerDelegate.h; sourceTree = "<group>"; };
 		6767DB841C462BE00065AF25 /* VCRURLSessionRecorderDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VCRURLSessionRecorderDelegate.h; sourceTree = "<group>"; };
 		6767F3021C479D5600489139 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
@@ -117,8 +114,7 @@
 		67693EFE1C3E4C610045F65B /* VCRURLSessionPlayerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCRURLSessionPlayerSpec.swift; sourceTree = "<group>"; };
 		67693F001C3E619A0045F65B /* errors.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = errors.json; sourceTree = "<group>"; };
 		67FF72E61C435E9B006772D6 /* VCRURLSessionCassetteSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCRURLSessionCassetteSpec.swift; sourceTree = "<group>"; };
-		6B502D62C06547B070DB99F0 /* Pods_VCRURLSessionTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VCRURLSessionTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		78A199BF21F72E9F00DD14D8 /* libswiftSwiftOnoneSupport.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libswiftSwiftOnoneSupport.dylib; path = Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/libswiftSwiftOnoneSupport.dylib; sourceTree = DEVELOPER_DIR; };
+		A389DD552AA9209ECBDC2336 /* Pods_VCRURLSessionTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VCRURLSessionTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6D7EE85B2B822B6B259E42B /* Pods-VCRURLSessionTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VCRURLSessionTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VCRURLSessionTests/Pods-VCRURLSessionTests.debug.xcconfig"; sourceTree = "<group>"; };
 		D697489B0B99E51CC2DC8613 /* Pods-VCRURLSessionTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VCRURLSessionTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-VCRURLSessionTests/Pods-VCRURLSessionTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -137,8 +133,7 @@
 			files = (
 				6767F3041C479D9100489139 /* libz.tbd in Frameworks */,
 				670A410B1C3CD9AB00613511 /* libVCRURLSession.a in Frameworks */,
-				78A199C021F72ED600DD14D8 /* libswiftSwiftOnoneSupport.dylib in Frameworks */,
-				8DF93E994A216B1F447A00F3 /* Pods_VCRURLSessionTests.framework in Frameworks */,
+				49FA34A98DD4E3D136C91DEA /* Pods_VCRURLSessionTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -177,18 +172,33 @@
 		670A40F81C3CD85200613511 /* VCRURLSession */ = {
 			isa = PBXGroup;
 			children = (
-				6767DB681C4627180065AF25 /* Private */,
+				05426C3F275A63C600B260E0 /* NSData+VCRURLSession.h */,
+				05426C34275A63C500B260E0 /* NSData+VCRURLSession.m */,
+				05426C37275A63C600B260E0 /* NSError+VCRURLSession.h */,
+				05426C3E275A63C600B260E0 /* NSError+VCRURLSession.m */,
+				05426C3C275A63C600B260E0 /* NSURLRequest+VCRURLSession.h */,
+				05426C39275A63C600B260E0 /* NSURLRequest+VCRURLSession.m */,
+				05426C3A275A63C600B260E0 /* NSURLResponse+VCRURLSession.h */,
+				05426C3D275A63C600B260E0 /* NSURLResponse+VCRURLSession.m */,
 				670A40F91C3CD85200613511 /* VCRURLSession.h */,
 				670A40FB1C3CD85200613511 /* VCRURLSession.m */,
 				674770221C3D07B4004D0FCE /* VCRURLSessionCassette.h */,
 				674770231C3D07B4004D0FCE /* VCRURLSessionCassette.m */,
 				0524DAF01C4F3B6D00B2DC61 /* VCRURLSessionLogger.h */,
 				0524DAF11C4F3B6D00B2DC61 /* VCRURLSessionLogger.m */,
+				05426C38275A63C600B260E0 /* VCRURLSessionPlayer.h */,
+				05426C40275A63C600B260E0 /* VCRURLSessionPlayer.m */,
 				6767DB831C462BE00065AF25 /* VCRURLSessionPlayerDelegate.h */,
+				05426C35275A63C600B260E0 /* VCRURLSessionRecord.h */,
+				05426C33275A63C500B260E0 /* VCRURLSessionRecord.m */,
+				05426C41275A63C600B260E0 /* VCRURLSessionRecorder.h */,
+				05426C3B275A63C600B260E0 /* VCRURLSessionRecorder.m */,
 				6767DB841C462BE00065AF25 /* VCRURLSessionRecorderDelegate.h */,
 				67693EFD1C3E489A0045F65B /* VCRURLSessionReplayMode.h */,
 				3E8DFA361C4213D200634C5E /* VCRURLSessionResponse.h */,
 				3E8DFA371C4213D200634C5E /* VCRURLSessionResponse.m */,
+				05426C42275A63C600B260E0 /* VCRURLSessionSampler.h */,
+				05426C36275A63C600B260E0 /* VCRURLSessionSampler.m */,
 			);
 			path = VCRURLSession;
 			sourceTree = "<group>";
@@ -238,35 +248,11 @@
 			name = Helper;
 			sourceTree = "<group>";
 		};
-		6767DB681C4627180065AF25 /* Private */ = {
-			isa = PBXGroup;
-			children = (
-				6767DB691C4627180065AF25 /* NSData+VCRURLSession.h */,
-				6767DB6A1C4627180065AF25 /* NSData+VCRURLSession.m */,
-				6767DB6B1C4627180065AF25 /* NSError+VCRURLSession.h */,
-				6767DB6C1C4627180065AF25 /* NSError+VCRURLSession.m */,
-				6767DB6D1C4627180065AF25 /* NSURLResponse+VCRURLSession.h */,
-				6767DB6E1C4627180065AF25 /* NSURLResponse+VCRURLSession.m */,
-				6767DB6F1C4627180065AF25 /* NSURLRequest+VCRURLSession.h */,
-				6767DB701C4627180065AF25 /* NSURLRequest+VCRURLSession.m */,
-				6767DB801C4627740065AF25 /* VCRURLSessionPlayer.h */,
-				6767DB811C4627740065AF25 /* VCRURLSessionPlayer.m */,
-				6767DB761C46274D0065AF25 /* VCRURLSessionRecord.h */,
-				6767DB771C46274D0065AF25 /* VCRURLSessionRecord.m */,
-				6767DB781C46274D0065AF25 /* VCRURLSessionRecorder.h */,
-				6767DB791C46274D0065AF25 /* VCRURLSessionRecorder.m */,
-				6767DB7B1C46274D0065AF25 /* VCRURLSessionSampler.h */,
-				6767DB7C1C46274D0065AF25 /* VCRURLSessionSampler.m */,
-			);
-			path = Private;
-			sourceTree = "<group>";
-		};
 		FA719F5BBD2CA406DFC0F725 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				78A199BF21F72E9F00DD14D8 /* libswiftSwiftOnoneSupport.dylib */,
 				6767F3021C479D5600489139 /* libz.tbd */,
-				6B502D62C06547B070DB99F0 /* Pods_VCRURLSessionTests.framework */,
+				A389DD552AA9209ECBDC2336 /* Pods_VCRURLSessionTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -318,7 +304,7 @@
 		670A40EE1C3CD85200613511 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0820;
+				LastUpgradeCheck = 1310;
 				ORGANIZATIONNAME = "Johannes Plunien";
 				TargetAttributes = {
 					670A40F51C3CD85200613511 = {
@@ -410,17 +396,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				674770241C3D07B4004D0FCE /* VCRURLSessionCassette.m in Sources */,
-				6767DB821C4627740065AF25 /* VCRURLSessionPlayer.m in Sources */,
-				6767DB711C4627180065AF25 /* NSData+VCRURLSession.m in Sources */,
-				6767DB741C4627180065AF25 /* NSURLRequest+VCRURLSession.m in Sources */,
-				6767DB7F1C46274D0065AF25 /* VCRURLSessionSampler.m in Sources */,
-				6767DB7D1C46274D0065AF25 /* VCRURLSessionRecord.m in Sources */,
+				05426C46275A63C600B260E0 /* NSURLRequest+VCRURLSession.m in Sources */,
+				05426C44275A63C600B260E0 /* NSData+VCRURLSession.m in Sources */,
 				0524DAF21C4F3B6D00B2DC61 /* VCRURLSessionLogger.m in Sources */,
 				3E8DFA381C4213D200634C5E /* VCRURLSessionResponse.m in Sources */,
-				6767DB721C4627180065AF25 /* NSError+VCRURLSession.m in Sources */,
-				6767DB7E1C46274D0065AF25 /* VCRURLSessionRecorder.m in Sources */,
+				05426C49275A63C600B260E0 /* NSError+VCRURLSession.m in Sources */,
+				05426C45275A63C600B260E0 /* VCRURLSessionSampler.m in Sources */,
+				05426C47275A63C600B260E0 /* VCRURLSessionRecorder.m in Sources */,
+				05426C43275A63C600B260E0 /* VCRURLSessionRecord.m in Sources */,
+				05426C48275A63C600B260E0 /* NSURLResponse+VCRURLSession.m in Sources */,
 				670A40FC1C3CD85200613511 /* VCRURLSession.m in Sources */,
-				6767DB731C4627180065AF25 /* NSURLResponse+VCRURLSession.m in Sources */,
+				05426C4A275A63C600B260E0 /* VCRURLSessionPlayer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -453,18 +439,28 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -487,9 +483,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_SWIFT_FLAGS = "-D DEBUG";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -498,18 +495,28 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -526,7 +533,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";

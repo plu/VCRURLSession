@@ -6,6 +6,8 @@
 //  Copyright © 2016 Johannes Plunien. All rights reserved.
 //
 
+#if DEBUG
+
 #import "NSURLRequest+VCRURLSession.h"
 
 static NSString *VCRURLSessionRequestHeadersKey = @"headers";
@@ -33,3 +35,5 @@ static NSString *VCRURLSessionRequestURLKey = @"url";
 }
 
 @end
+
+#endif

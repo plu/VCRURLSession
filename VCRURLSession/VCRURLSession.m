@@ -6,6 +6,8 @@
 //  Copyright © 2016 Johannes Plunien. All rights reserved.
 //
 
+#if DEBUG
+
 #import "VCRURLSession.h"
 #import "VCRURLSessionCassette.h"
 #import "VCRURLSessionPlayer.h"
@@ -102,3 +104,5 @@
 }
 
 @end
+
+#endif

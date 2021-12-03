@@ -2,6 +2,11 @@
 
 ## Changelog
 
+### 2.0.0 (2021-12-03
+
+* Add Swift Package Manager support
+* Wrap all code in `if DEBUG`
+
 ### 1.4.0 (2017-01-05)
 
 * Set `NSURLSessionConfiguration.URLCache` to `nil` when recording/replaying

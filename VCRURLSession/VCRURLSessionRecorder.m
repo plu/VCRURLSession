@@ -6,6 +6,8 @@
 //  Copyright © 2016 Johannes Plunien. All rights reserved.
 //
 
+#if DEBUG
+
 #import "VCRURLSession.h"
 #import "VCRURLSessionLogger.h"
 #import "VCRURLSessionRecorder.h"
@@ -135,3 +137,5 @@ static id<VCRURLSessionRecorderDelegate> VCRURLSessionRecorderSharedDelegate = n
 }
 
 @end
+
+#endif

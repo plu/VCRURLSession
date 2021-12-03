@@ -6,6 +6,8 @@
 //  Copyright © 2016 Johannes Plunien. All rights reserved.
 //
 
+#if DEBUG
+
 #import "VCRURLSessionLogger.h"
 #import "VCRURLSessionPlayer.h"
 #import "VCRURLSessionPlayerDelegate.h"
@@ -109,3 +111,5 @@ static VCRURLSessionReplayMode VCRURLSessionPlayerSharedMode = VCRURLSessionRepl
 }
 
 @end
+
+#endif

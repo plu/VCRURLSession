@@ -6,6 +6,8 @@
 //  Copyright © 2016 Johannes Plunien. All rights reserved.
 //
 
+#if DEBUG
+
 #import "NSURLResponse+VCRURLSession.h"
 #import <MobileCoreServices/MobileCoreServices.h>
 
@@ -104,3 +106,5 @@ static NSString *VCRURLSessionResponseURLKey = @"url";
 }
 
 @end
+
+#endif

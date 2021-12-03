@@ -6,6 +6,8 @@
 //  Copyright © 2016 Johannes Plunien. All rights reserved.
 //
 
+#if DEBUG
+
 #import "NSError+VCRURLSession.h"
 #import "NSURLResponse+VCRURLSession.h"
 #import "NSURLRequest+VCRURLSession.h"
@@ -88,3 +90,5 @@ static NSString *VCRURLSessionRecordErrorKey = @"error";
 }
 
 @end
+
+#endif

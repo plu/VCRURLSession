@@ -6,6 +6,8 @@
 //  Copyright © 2016 Johannes Plunien. All rights reserved.
 //
 
+#if DEBUG
+
 #import <Foundation/Foundation.h>
 
 @interface NSData (VCRURLSession)
@@ -14,3 +16,5 @@
 - (NSData *)VCRURLSession_gzippedData;
 
 @end
+
+#endif

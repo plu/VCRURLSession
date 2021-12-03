@@ -6,6 +6,8 @@
 //  Copyright © 2016 Johannes Plunien. All rights reserved.
 //
 
+#if DEBUG
+
 #import "VCRURLSessionLogger.h"
 
 static VCRURLSessionLogLevel VCRURLSessionLoggerLogLevel = VCRURLSessionLogLevelNone;
@@ -33,3 +35,5 @@ static VCRURLSessionLogLevel VCRURLSessionLoggerLogLevel = VCRURLSessionLogLevel
 }
 
 @end
+
+#endif

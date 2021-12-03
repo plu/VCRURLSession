@@ -6,6 +6,8 @@
 //  Copyright © 2016 Johannes Plunien. All rights reserved.
 //
 
+#if DEBUG
+
 #import "NSError+VCRURLSession.h"
 
 static NSString *VCRURLSessionErrorCodeKey = @"code";
@@ -34,3 +36,5 @@ static NSString *VCRURLSessionErrorUserInfoKey = @"userInfo";
 }
 
 @end
+
+#endif

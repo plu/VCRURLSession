@@ -6,6 +6,8 @@
 //  Copyright © 2016 Johannes Plunien. All rights reserved.
 //
 
+#if DEBUG
+
 #import "VCRURLSessionResponse.h"
 
 @interface VCRURLSessionResponse ()
@@ -32,3 +34,5 @@
 }
 
 @end
+
+#endif
