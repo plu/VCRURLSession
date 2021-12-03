@@ -17,6 +17,7 @@ let package = Package(
             path: "VCRURLSession",
             publicHeadersPath: "./",
             cSettings: [
+                .define("DEBUG", to: "1", .when(configuration: .debug)),
                 .define("NS_BLOCK_ASSERTIONS", to: "1")
             ]
         )
