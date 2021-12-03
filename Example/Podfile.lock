@@ -1,7 +1,7 @@
 PODS:
-  - VCRURLSession (2.0.1):
-    - VCRURLSession/Core (= 2.0.1)
-  - VCRURLSession/Core (2.0.1)
+  - VCRURLSession (2.0.2):
+    - VCRURLSession/Core (= 2.0.2)
+  - VCRURLSession/Core (2.0.2)
 
 DEPENDENCIES:
   - VCRURLSession (from `../`)
@@ -11,7 +11,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  VCRURLSession: 3f01ab66434bdd98e5962835f80d183536cd8151
+  VCRURLSession: 1ed36dc927b6c83751c5740b63fa16588f7c9120
 
 PODFILE CHECKSUM: dd704deeaa9457852db60909de8b776edd8fecd0
 
