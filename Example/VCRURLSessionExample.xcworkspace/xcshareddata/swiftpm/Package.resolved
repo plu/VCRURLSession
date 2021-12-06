@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "VCRURLSession",
+        "repositoryURL": "https://github.com/plu/VCRURLSession",
+        "state": {
+          "branch": "master",
+          "revision": "719d9796238dd6c431dbb29f2107ec5b5e668b3d",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}

@@ -3,10 +3,16 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		05ADAA2D275DFF97003D1FEF /* VCRURLSessionViaSPMApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05ADAA2C275DFF97003D1FEF /* VCRURLSessionViaSPMApp.swift */; };
+		05ADAA2F275DFF97003D1FEF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05ADAA2E275DFF97003D1FEF /* ContentView.swift */; };
+		05ADAA31275DFF9A003D1FEF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05ADAA30275DFF9A003D1FEF /* Assets.xcassets */; };
+		05ADAA34275DFF9A003D1FEF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05ADAA33275DFF9A003D1FEF /* Preview Assets.xcassets */; };
+		05ADAA3E275E0449003D1FEF /* VCRURLSession in Frameworks */ = {isa = PBXBuildFile; productRef = 05ADAA3D275E0449003D1FEF /* VCRURLSession */; };
+		05ADAA40275E0501003D1FEF /* VCRURLSession in Frameworks */ = {isa = PBXBuildFile; productRef = 05ADAA3F275E0501003D1FEF /* VCRURLSession */; };
 		6723F7341C4772EF00CE5C77 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6723F7331C4772EF00CE5C77 /* main.m */; };
 		6723F7371C4772EF00CE5C77 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6723F7361C4772EF00CE5C77 /* AppDelegate.m */; };
 		6723F73A1C4772EF00CE5C77 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6723F7391C4772EF00CE5C77 /* ViewController.m */; };
@@ -18,6 +24,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		05ADAA2A275DFF97003D1FEF /* VCRURLSessionViaSPM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VCRURLSessionViaSPM.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		05ADAA2C275DFF97003D1FEF /* VCRURLSessionViaSPMApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCRURLSessionViaSPMApp.swift; sourceTree = "<group>"; };
+		05ADAA2E275DFF97003D1FEF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		05ADAA30275DFF9A003D1FEF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		05ADAA33275DFF9A003D1FEF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		1ECE8D904BDE7E62DA493EDB /* Pods_VCRURLSessionExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VCRURLSessionExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F7CFF70E081C5F1F4D0F374 /* Pods-VCRURLSessionExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VCRURLSessionExample.release.xcconfig"; path = "Target Support Files/Pods-VCRURLSessionExample/Pods-VCRURLSessionExample.release.xcconfig"; sourceTree = "<group>"; };
 		6723F72F1C4772EF00CE5C77 /* VCRURLSessionExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VCRURLSessionExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -35,17 +46,45 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		05ADAA27275DFF97003D1FEF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				05ADAA40275E0501003D1FEF /* VCRURLSession in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		6723F72C1C4772EF00CE5C77 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				B214CAD77F710AB28429E52E /* Pods_VCRURLSessionExample.framework in Frameworks */,
+				05ADAA3E275E0449003D1FEF /* VCRURLSession in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		05ADAA2B275DFF97003D1FEF /* VCRURLSessionViaSPM */ = {
+			isa = PBXGroup;
+			children = (
+				05ADAA2E275DFF97003D1FEF /* ContentView.swift */,
+				05ADAA2C275DFF97003D1FEF /* VCRURLSessionViaSPMApp.swift */,
+				05ADAA30275DFF9A003D1FEF /* Assets.xcassets */,
+				05ADAA32275DFF9A003D1FEF /* Preview Content */,
+			);
+			path = VCRURLSessionViaSPM;
+			sourceTree = "<group>";
+		};
+		05ADAA32275DFF9A003D1FEF /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				05ADAA33275DFF9A003D1FEF /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
 		394BF8DABB37F573F82C399A /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -68,6 +107,7 @@
 			children = (
 				6723F74A1C47778600CE5C77 /* Cassettes */,
 				6723F7311C4772EF00CE5C77 /* VCRURLSessionExample */,
+				05ADAA2B275DFF97003D1FEF /* VCRURLSessionViaSPM */,
 				6723F7301C4772EF00CE5C77 /* Products */,
 				394BF8DABB37F573F82C399A /* Pods */,
 				4AF71D7DF41B1CC301643816 /* Frameworks */,
@@ -78,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				6723F72F1C4772EF00CE5C77 /* VCRURLSessionExample.app */,
+				05ADAA2A275DFF97003D1FEF /* VCRURLSessionViaSPM.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -117,6 +158,26 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		05ADAA29275DFF97003D1FEF /* VCRURLSessionViaSPM */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 05ADAA35275DFF9A003D1FEF /* Build configuration list for PBXNativeTarget "VCRURLSessionViaSPM" */;
+			buildPhases = (
+				05ADAA26275DFF97003D1FEF /* Sources */,
+				05ADAA27275DFF97003D1FEF /* Frameworks */,
+				05ADAA28275DFF97003D1FEF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VCRURLSessionViaSPM;
+			packageProductDependencies = (
+				05ADAA3F275E0501003D1FEF /* VCRURLSession */,
+			);
+			productName = VCRURLSessionViaSPM;
+			productReference = 05ADAA2A275DFF97003D1FEF /* VCRURLSessionViaSPM.app */;
+			productType = "com.apple.product-type.application";
+		};
 		6723F72E1C4772EF00CE5C77 /* VCRURLSessionExample */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6723F7461C4772F000CE5C77 /* Build configuration list for PBXNativeTarget "VCRURLSessionExample" */;
@@ -132,6 +193,9 @@
 			dependencies = (
 			);
 			name = VCRURLSessionExample;
+			packageProductDependencies = (
+				05ADAA3D275E0449003D1FEF /* VCRURLSession */,
+			);
 			productName = VCRURLSessionExample;
 			productReference = 6723F72F1C4772EF00CE5C77 /* VCRURLSessionExample.app */;
 			productType = "com.apple.product-type.application";
@@ -142,9 +206,13 @@
 		6723F7271C4772EF00CE5C77 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 1310;
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "Johannes Plunien";
 				TargetAttributes = {
+					05ADAA29275DFF97003D1FEF = {
+						CreatedOnToolsVersion = 13.1;
+					};
 					6723F72E1C4772EF00CE5C77 = {
 						CreatedOnToolsVersion = 7.2;
 					};
@@ -160,16 +228,29 @@
 				Base,
 			);
 			mainGroup = 6723F7261C4772EF00CE5C77;
+			packageReferences = (
+				05ADAA3C275E0449003D1FEF /* XCRemoteSwiftPackageReference "VCRURLSession" */,
+			);
 			productRefGroup = 6723F7301C4772EF00CE5C77 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				6723F72E1C4772EF00CE5C77 /* VCRURLSessionExample */,
+				05ADAA29275DFF97003D1FEF /* VCRURLSessionViaSPM */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		05ADAA28275DFF97003D1FEF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				05ADAA34275DFF9A003D1FEF /* Preview Assets.xcassets in Resources */,
+				05ADAA31275DFF9A003D1FEF /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		6723F72D1C4772EF00CE5C77 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -227,6 +308,15 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		05ADAA26275DFF97003D1FEF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				05ADAA2F275DFF97003D1FEF /* ContentView.swift in Sources */,
+				05ADAA2D275DFF97003D1FEF /* VCRURLSessionViaSPMApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		6723F72B1C4772EF00CE5C77 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -259,6 +349,107 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		05ADAA36275DFF9A003D1FEF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"VCRURLSessionViaSPM/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "de.ebay-kleinanzeigen.VCRURLSessionViaSPM";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		05ADAA37275DFF9A003D1FEF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"VCRURLSessionViaSPM/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "de.ebay-kleinanzeigen.VCRURLSessionViaSPM";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		6723F7441C4772F000CE5C77 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -345,7 +536,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = VCRURLSessionExample/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.plunien.VCRURLSessionExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -357,7 +551,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = VCRURLSessionExample/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.plunien.VCRURLSessionExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -366,6 +563,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		05ADAA35275DFF9A003D1FEF /* Build configuration list for PBXNativeTarget "VCRURLSessionViaSPM" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				05ADAA36275DFF9A003D1FEF /* Debug */,
+				05ADAA37275DFF9A003D1FEF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		6723F72A1C4772EF00CE5C77 /* Build configuration list for PBXProject "VCRURLSessionExample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -385,6 +591,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		05ADAA3C275E0449003D1FEF /* XCRemoteSwiftPackageReference "VCRURLSession" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/plu/VCRURLSession";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		05ADAA3D275E0449003D1FEF /* VCRURLSession */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 05ADAA3C275E0449003D1FEF /* XCRemoteSwiftPackageReference "VCRURLSession" */;
+			productName = VCRURLSession;
+		};
+		05ADAA3F275E0501003D1FEF /* VCRURLSession */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 05ADAA3C275E0449003D1FEF /* XCRemoteSwiftPackageReference "VCRURLSession" */;
+			productName = VCRURLSession;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 6723F7271C4772EF00CE5C77 /* Project object */;
 }
