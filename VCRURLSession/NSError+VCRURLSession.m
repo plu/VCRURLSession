@@ -12,18 +12,12 @@
 
 static NSString *VCRURLSessionErrorCodeKey = @"code";
 static NSString *VCRURLSessionErrorDomainKey = @"domain";
-static NSString *VCRURLSessionErrorUserInfoKey = @"userInfo";
 
 @implementation NSError (VCRURLSession)
 
 - (instancetype)VCRURLSession_initWithDictionary:(NSDictionary *)dictionary
 {
-    NSDictionary *userInfo;
-    if (dictionary[VCRURLSessionErrorUserInfoKey]) {
-        NSData *userInfoData = [[NSData alloc] initWithBase64EncodedString:dictionary[VCRURLSessionErrorUserInfoKey] options:0];
-        userInfo = [NSKeyedUnarchiver unarchiveObjectWithData:userInfoData];
-    }
-    return [NSError errorWithDomain:dictionary[VCRURLSessionErrorDomainKey] code:[dictionary[VCRURLSessionErrorCodeKey] integerValue] userInfo:userInfo];
+    return [NSError errorWithDomain:dictionary[VCRURLSessionErrorDomainKey] code:[dictionary[VCRURLSessionErrorCodeKey] integerValue] userInfo:nil];
 }
 
 - (NSDictionary *)VCRURLSession_dictionaryValue
@@ -31,7 +25,6 @@ static NSString *VCRURLSessionErrorUserInfoKey = @"userInfo";
     return @{
         VCRURLSessionErrorCodeKey : @(self.code),
         VCRURLSessionErrorDomainKey : self.domain,
-        VCRURLSessionErrorUserInfoKey : [[NSKeyedArchiver archivedDataWithRootObject:self.userInfo] base64EncodedStringWithOptions:0],
     };
 }
 
